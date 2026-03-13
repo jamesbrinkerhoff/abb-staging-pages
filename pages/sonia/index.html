@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonia Gomez — Authority, Influence & Offers That Sell</title>
+  <meta name="description" content="A polished homepage prototype for Sonia Gomez — speaker, strategist, and trusted guide for experts building premium offers in the age of AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4efe7;
+      --surface: rgba(255,255,255,0.68);
+      --surface-strong: #fffaf4;
+      --ink: #231714;
+      --muted: #6f615c;
+      --line: rgba(35, 23, 20, 0.12);
+      --accent: #ab5c45;
+      --accent-dark: #8e4a35;
+      --accent-soft: rgba(171, 92, 69, 0.12);
+      --gold: #c9a96a;
+      --shadow: 0 24px 60px rgba(56, 31, 21, 0.12);
+      --radius: 24px;
+      --container: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(201,169,106,0.18), transparent 32%),
+        radial-gradient(circle at 80% 20%, rgba(171,92,69,0.14), transparent 30%),
+        linear-gradient(180deg, #fbf7f1 0%, #f4efe7 52%, #f8f3ed 100%);
+      line-height: 1.6;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .16;
+      background-image: radial-gradient(rgba(35,23,20,.06) 0.6px, transparent 0.6px);
+      background-size: 12px 12px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.65), transparent 92%);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container {
+      width: min(var(--container), calc(100% - 40px));
+      margin: 0 auto;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.5);
+      color: var(--muted);
+    }
+    .eyebrow::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(171,92,69,.14);
+    }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(248,243,237,.72);
+      border-bottom: 1px solid rgba(35,23,20,.08);
+    }
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, var(--ink), #46332c);
+      color: #fff;
+      font-family: 'Instrument Serif', serif;
+      font-size: 22px;
+      box-shadow: var(--shadow);
+    }
+    .nav {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .nav a:hover { color: var(--ink); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0) scale(.98); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: #fff;
+      box-shadow: 0 18px 36px rgba(171, 92, 69, .22);
+    }
+    .btn-secondary {
+      border-color: var(--line);
+      color: var(--ink);
+      background: rgba(255,255,255,.6);
+    }
+    .btn-ghost {
+      padding: 0;
+      background: none;
+      color: var(--accent-dark);
+      border: none;
+      font-weight: 700;
+    }
+    .hero {
+      padding: 80px 0 48px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+      gap: 36px;
+      align-items: stretch;
+    }
+    .hero-copy,
+    .hero-card,
+    .panel,
+    .result-card,
+    .path-card,
+    .speaking-card,
+    .cta-panel,
+    .story-grid > div {
+      animation: fadeUp .7s ease both;
+    }
+    .hero-copy {
+      padding: 24px 8px 24px 0;
+    }
+    .hero h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.02;
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+    }
+    .hero h1 {
+      font-size: clamp(52px, 8vw, 96px);
+      max-width: 11ch;
+      margin: 22px 0 22px;
+    }
+    .hero .lede {
+      font-size: 19px;
+      max-width: 62ch;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 38px;
+    }
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 24px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+    }
+    .trust-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .trust-row span::before {
+      content: '•';
+      color: var(--gold);
+      font-size: 20px;
+      line-height: 0;
+    }
+    .hero-card {
+      position: relative;
+      border-radius: 30px;
+      padding: 28px;
+      background: linear-gradient(160deg, rgba(255,250,244,.95), rgba(252,243,235,.82));
+      border: 1px solid rgba(35,23,20,.08);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      inset: auto -40px -60px auto;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(171,92,69,.18), transparent 65%);
+      border-radius: 50%;
+    }
+    .portrait {
+      position: relative;
+      height: 390px;
+      border-radius: 24px;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(35,23,20,.16), rgba(35,23,20,.04)),
+        url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80') center/cover;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.3);
+    }
+    .portrait-badge {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: rgba(255,250,244,.92);
+      border: 1px solid rgba(35,23,20,.08);
+      box-shadow: 0 14px 32px rgba(45,22,14,.12);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .stat {
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.66);
+      border: 1px solid rgba(35,23,20,.08);
+    }
+    .stat strong {
+      display: block;
+      font-size: 26px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    section {
+      padding: 64px 0;
+    }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, .8fr);
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+    h2 {
+      font-size: clamp(38px, 5vw, 64px);
+      max-width: 12ch;
+    }
+    .section-copy {
+      color: var(--muted);
+      max-width: 50ch;
+      justify-self: end;
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 22px;
+    }
+    .panel {
+      border-radius: 28px;
+      background: var(--surface);
+      border: 1px solid rgba(35,23,20,.08);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+      padding: 28px;
+    }
+    .panel p:last-child { margin-bottom: 0; }
+    .quote-panel {
+      background: linear-gradient(160deg, rgba(255,255,255,.6), rgba(251,240,230,.92));
+    }
+    .quote-line {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(28px, 3vw, 42px);
+      line-height: 1.08;
+      margin-bottom: 26px;
+    }
+    .mini-card {
+      padding: 18px 18px 0;
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 10px;
+    }
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .pillar {
+      padding: 26px;
+      border-radius: 26px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(35,23,20,.08);
+      box-shadow: var(--shadow);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .pillar:hover,
+    .path-card:hover,
+    .result-card:hover,
+    .speaking-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 60px rgba(45,22,14,.16);
+    }
+    .pillar .icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+    .pillar h3,
+    .result-card h3,
+    .path-card h3,
+    .speaking-card h3,
+    .cta-panel h3 {
+      font-size: clamp(28px, 3vw, 38px);
+      margin-bottom: 12px;
+    }
+    .pillar p,
+    .result-card p,
+    .path-card p,
+    .speaking-card p,
+    .panel p,
+    .cta-panel p,
+    .section-copy,
+    .hero .lede {
+      color: var(--muted);
+    }
+    .results-grid,
+    .path-grid,
+    .speaking-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .result-card,
+    .path-card,
+    .speaking-card {
+      padding: 26px;
+      border-radius: 26px;
+      background: rgba(255,255,255,.75);
+      border: 1px solid rgba(35,23,20,.08);
+      box-shadow: var(--shadow);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .result-number,
+    .price-tag {
+      display: inline-flex;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-weight: 800;
+      margin-bottom: 18px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    .result-card ul,
+    .path-card ul,
+    .speaking-card ul {
+      margin: 18px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    .path-card.featured {
+      background: linear-gradient(180deg, rgba(35,23,20,.96), rgba(55,37,32,.98));
+      color: #fff8f1;
+    }
+    .path-card.featured p,
+    .path-card.featured ul,
+    .path-card.featured .meta {
+      color: rgba(255,248,241,.78);
+    }
+    .path-card.featured .price-tag {
+      background: rgba(255,255,255,.14);
+      color: #fff8f1;
+    }
+    .meta {
+      display: block;
+      margin-top: 8px;
+      font-size: 13px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+    }
+    .testimonial {
+      padding: 26px;
+      border-radius: 26px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(35,23,20,.08);
+      box-shadow: var(--shadow);
+    }
+    .testimonial strong {
+      display: block;
+      margin-top: 18px;
+      font-size: 15px;
+    }
+    .cta-panel {
+      padding: 34px;
+      border-radius: 32px;
+      background: linear-gradient(140deg, rgba(255,250,244,.9), rgba(245,231,220,.94));
+      border: 1px solid rgba(35,23,20,.08);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 26px;
+      align-items: center;
+    }
+    .cta-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .cta-form label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+    }
+    .cta-form input {
+      flex: 1 1 240px;
+      min-height: 54px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(35,23,20,.12);
+      background: rgba(255,255,255,.85);
+      font: inherit;
+      color: var(--ink);
+    }
+    .cta-note {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 14px;
+    }
+    .footer {
+      padding: 34px 0 56px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      border-top: 1px solid rgba(35,23,20,.08);
+      padding-top: 24px;
+    }
+    .success {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(171,92,69,.12);
+      color: var(--accent-dark);
+      font-weight: 700;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .story-grid,
+      .cta-panel,
+      .section-head,
+      .pillars,
+      .results-grid,
+      .path-grid,
+      .speaking-grid,
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+      .section-copy { justify-self: start; }
+      .portrait { height: 320px; }
+      .hero-stats { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 760px) {
+      .site-header .container { flex-wrap: wrap; gap: 14px; }
+      .nav { gap: 14px; flex-wrap: wrap; font-size: 14px; }
+      .hero { padding-top: 48px; }
+      .hero h1 { max-width: none; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .btn { width: 100%; }
+      .hero-stats { grid-template-columns: 1fr; }
+      .container { width: min(var(--container), calc(100% - 28px)); }
+      section { padding: 48px 0; }
+      .panel,
+      .pillar,
+      .result-card,
+      .path-card,
+      .speaking-card,
+      .testimonial,
+      .cta-panel,
+      .hero-card { padding: 22px; border-radius: 24px; }
+      .cta-form { flex-direction: column; }
+      .cta-form input,
+      .cta-form .btn { width: 100%; }
+      .trust-row { gap: 10px 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
+    :focus-visible {
+      outline: 2px solid var(--accent-dark);
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#top">
+        <span class="brand-mark">S</span>
+        <span>Sonia Gomez</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#work">Work With Sonia</a>
+        <a href="#results">Results</a>
+        <a href="#speaking">Speaking</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">For experts, founders & professionals</span>
+          <h1>Build the kind of authority AI cannot imitate.</h1>
+          <p class="lede">
+            Sonia helps experienced experts turn trust, presence, and real-world credibility into premium offers that sell — from the stage, on the screen, and in the room.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work">Explore ways to work together</a>
+            <a class="btn btn-secondary" href="#speaking">Book Sonia to speak</a>
+          </div>
+          <div class="trust-row" aria-label="Trusted by and featured at">
+            <span>ClickFunnels</span>
+            <span>7-Figure Stage</span>
+            <span>Nautilus Holdings</span>
+            <span>Emerald Circle</span>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Sonia overview card">
+          <div class="portrait" role="img" aria-label="Editorial portrait placeholder for Sonia Gomez">
+            <div class="portrait-badge">Speaker · Strategist · Closer</div>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>$2M+</strong>
+              <span>client revenue influenced through Sonia's positioning work</span>
+            </div>
+            <div class="stat">
+              <strong>10+ years</strong>
+              <span>helping experts package, present, and sell with confidence</span>
+            </div>
+            <div class="stat">
+              <strong>High trust</strong>
+              <span>offers built around presence, clarity, and real buying behavior</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="container story-grid">
+        <div class="panel quote-panel">
+          <span class="eyebrow">Why Sonia</span>
+          <div class="quote-line">In the age of automation, proximity becomes the premium.</div>
+          <p>
+            Every expert now has access to the same AI tools, the same templates, and the same automations. What they do not have is your story, your presence, and your ability to make people trust you quickly.
+          </p>
+          <p>
+            Sonia helps founders, consultants, and seasoned professionals package that advantage into offers, presentations, and authority assets that actually move buyers.
+          </p>
+        </div>
+        <div class="panel">
+          <span class="eyebrow">A note from Sonia</span>
+          <p>
+            “Most experts do not have a marketing problem. They have an offer problem, a positioning problem, or a trust problem. Solve those, and sales become a byproduct.”
+          </p>
+          <div class="mini-card">
+            <strong>What changes here</strong>
+            <p>Clarity on what you sell, confidence in how you say it, and a business that does not depend on you constantly chasing attention.</p>
+          </div>
+          <div class="mini-card">
+            <strong>What stays true</strong>
+            <p>No hype, no generic guru language, and no pretending automation can replace human trust.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">How Sonia helps</span>
+            <h2>Three shifts that change everything.</h2>
+          </div>
+          <p class="section-copy">
+            Sonia’s work is not about prettier marketing. It is about aligning offer, authority, and influence so the right buyers lean in.
+          </p>
+        </div>
+        <div class="pillars">
+          <article class="pillar">
+            <div class="icon">01</div>
+            <h3>Premium Offer Design</h3>
+            <p>Extract, architect, and price a premium offer around what buyers already value — not what the market is casually ignoring.</p>
+          </article>
+          <article class="pillar">
+            <div class="icon">02</div>
+            <h3>Speaking That Sells</h3>
+            <p>Develop stage, screen, and room presence that earns trust, shifts belief, and moves audiences toward real action without feeling forced.</p>
+          </article>
+          <article class="pillar">
+            <div class="icon">03</div>
+            <h3>AI-Powered Positioning</h3>
+            <p>Use deep buyer research and competitive insight to remove guesswork, tighten positioning, and build offers from evidence rather than opinion.</p>
+          </article>
+          <article class="pillar">
+            <div class="icon">04</div>
+            <h3>Proximity Experiences</h3>
+            <p>Leverage workshops, VIP days, and live rooms where authority compounds faster because trust is built face-to-face.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="results">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Client results</span>
+            <h2>What happens when positioning meets influence.</h2>
+          </div>
+          <p class="section-copy">
+            These outcomes are not hustle stories. They are clarity stories — the result of packaging expertise into something buyers understand and want.
+          </p>
+        </div>
+        <div class="results-grid">
+          <article class="result-card">
+            <span class="result-number">$450K from 9 buyers</span>
+            <h3>Built live in one session</h3>
+            <p>Igor turned existing expertise into a premium consulting package with a clear offer structure and stronger sales language.</p>
+          </article>
+          <article class="result-card">
+            <span class="result-number">$10K in 24 hours</span>
+            <h3>First premium offer</h3>
+            <p>Kameron launched a cleaner, more valuable offer and immediately saw buyers respond once the positioning matched the value.</p>
+          </article>
+          <article class="result-card">
+            <span class="result-number">$257K from one event</span>
+            <h3>Sold from the stage</h3>
+            <p>Sarah refined her authority, pricing, and speaking structure so the room already trusted the offer before the invitation landed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Ways to work together</span>
+            <h2>Your path from expert to authority.</h2>
+          </div>
+          <p class="section-copy">
+            Start with a workshop, move into a strategic plan, or build the full ecosystem. The path depends on how quickly you want momentum.
+          </p>
+        </div>
+        <div class="path-grid">
+          <article class="path-card">
+            <span class="price-tag">Start here · $0</span>
+            <h3>Free Workshop</h3>
+            <span class="meta">Live offer architecture with Sonia</span>
+            <p>A fast-moving workshop for experts ready to clarify positioning, sharpen their offer, and leave with practical next steps.</p>
+            <ul>
+              <li>Live offer positioning session</li>
+              <li>Three frameworks you can use immediately</li>
+              <li>Q&A with Sonia</li>
+            </ul>
+          </article>
+          <article class="path-card featured">
+            <span class="price-tag">Most popular · $97</span>
+            <h3>VIP Workshop</h3>
+            <span class="meta">Workshop + AI tools + hot seat support</span>
+            <p>Everything in the free workshop, plus platform access, deeper support, and a stronger runway to actually implement what gets built.</p>
+            <ul>
+              <li>30-day AI platform access</li>
+              <li>Priority Q&A and team support</li>
+              <li>Hot seat coaching with Sonia</li>
+            </ul>
+          </article>
+          <article class="path-card">
+            <span class="price-tag">Done with you · $497+</span>
+            <h3>Strategic Action Plan</h3>
+            <span class="meta">Positioning, research, and deployment-ready clarity</span>
+            <p>A 90-minute strategy session paired with research and a practical brief so decisions are rooted in evidence rather than instinct alone.</p>
+            <ul>
+              <li>90-minute call with Sonia</li>
+              <li>AI-backed offer audit</li>
+              <li>Strategic brief and action plan</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="speaking">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Book Sonia to speak</span>
+            <h2>High-trust presentations that move a room.</h2>
+          </div>
+          <p class="section-copy">
+            Sonia’s talks are not motivational wallpaper. They are practical, high-energy sessions that shift belief and leave audiences with something they can use immediately.
+          </p>
+        </div>
+        <div class="speaking-grid">
+          <article class="speaking-card">
+            <h3>Bulletproof Your Business in the Age of AI</h3>
+            <p>Why human connection, presence, and trust are becoming the highest-leverage business assets in a market flooded with automated sameness.</p>
+          </article>
+          <article class="speaking-card">
+            <h3>The Art of the Outrageous Offer</h3>
+            <p>How experts create premium offers that feel obvious to buyers — and how those offers can sell from a stage, screen, or private room.</p>
+          </article>
+          <article class="speaking-card">
+            <h3>Speaking to Sell</h3>
+            <p>Turn keynotes, workshops, podcasts, and webinars into revenue without sounding scripted, pushy, or “salesy.”</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Kind words</span>
+            <h2>From people who stopped underselling what they knew.</h2>
+          </div>
+          <p class="section-copy">
+            The through-line is always the same: clearer positioning, stronger authority, and a business that no longer depends on constant explanation.
+          </p>
+        </div>
+        <div class="testimonials">
+          <article class="testimonial">
+            <p>“Working with Sonia changed how I see my entire business. We fixed the offer, and the sales followed.”</p>
+            <strong>Kameron G. · Leadership Coach</strong>
+          </article>
+          <article class="testimonial">
+            <p>“Before Sonia, I was charging low and burning out. Now I have a premium program and a presentation that actually sells.”</p>
+            <strong>Sarah R. · AI Consultant</strong>
+          </article>
+          <article class="testimonial">
+            <p>“Sonia and James do not just teach you to sell. They help you become the kind of person people want to buy from.”</p>
+            <strong>Boyce W. · Business Strategist</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="cta-panel">
+          <div>
+            <span class="eyebrow">Free live workshop</span>
+            <h3>Build your premium offer live in three hours.</h3>
+            <p>
+              Join Sonia for a live working session where your offer gets clearer, stronger, and far easier to sell. If you already know you need the deeper path, use the speaking or consulting route instead.
+            </p>
+            <form class="cta-form" id="signup-form">
+              <div>
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="you@company.com" required />
+              </div>
+              <button class="btn btn-primary" type="submit">Join the list</button>
+            </form>
+            <p class="cta-note">Weekly insights on premium offers, authority, and trust in the age of AI. No spam. Just the real stuff.</p>
+            <div id="signup-success" class="success" hidden>You’re in. Sonia’s team will keep you posted on the next workshop and fresh training.</div>
+          </div>
+          <div class="panel" style="margin:0; background: rgba(255,255,255,.55);">
+            <span class="eyebrow">Direct contact</span>
+            <h3>Available for keynotes, workshops, and private strategy.</h3>
+            <p>If you are booking Sonia for a conference, podcast, or private room, start with the high-level context and desired outcome.</p>
+            <p><strong>Email:</strong> sonia@soniagomez.tv</p>
+            <p><strong>Typical response:</strong> within 24 hours</p>
+            <a class="btn btn-secondary" href="mailto:sonia@soniagomez.tv">Email Sonia’s team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>Sonia Gomez — authority, influence, and premium offers for experts.</span>
+      <span><a href="https://authoritybrandbuilder.io">Authority Brand Builder</a> · <a href="https://soniagomez.net">Current site</a></span>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('signup-form');
+    const success = document.getElementById('signup-success');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      form.reset();
+      success.hidden = false;
+    });
+  </script>
+</body>
+</html>
