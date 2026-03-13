@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABB Staging - Test Page</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #FF6B35, #f5c542);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p { color: #999; font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .status {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 2rem;
+            border: 2px solid #FF6B35;
+            border-radius: 50px;
+            color: #FF6B35;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ABB Staging Environment</h1>
+        <p>Auto-deploy from GitHub is working.</p>
+        <p>Push HTML to <code>pages/{folder}/index.html</code> and it goes live.</p>
+        <div class="status">Connected</div>
+    </div>
+</body>
+</html>
