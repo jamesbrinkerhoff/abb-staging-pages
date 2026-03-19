@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Authority Brand Buildout — Optimized Preview</title>
+  <meta name="description" content="A cleaner, higher-converting preview of The Authority Brand Buildout for established experts who want an AI-amplified operating system, not more homework." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f4ef;
+      --surface: #fffdf8;
+      --surface-soft: #f1eee6;
+      --ink: #152321;
+      --muted: #586764;
+      --line: rgba(21, 35, 33, 0.12);
+      --teal: #0f766e;
+      --teal-dark: #0a5d57;
+      --teal-soft: rgba(15, 118, 110, 0.10);
+      --gold: #c9a86a;
+      --shadow: 0 18px 44px rgba(16, 33, 31, 0.08);
+      --radius: 24px;
+      --container: 1180px;
+      --space-xs: 6px;
+      --space-sm: 12px;
+      --space-md: 18px;
+      --space-lg: 28px;
+      --space-xl: 44px;
+      --space-2xl: 78px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(201,168,106,0.15), transparent 28%),
+        radial-gradient(circle at 90% 10%, rgba(15,118,110,0.10), transparent 24%),
+        var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.12;
+      background-image: radial-gradient(rgba(21,35,33,0.05) 0.65px, transparent 0.65px);
+      background-size: 14px 14px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.55), transparent 92%);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(var(--container), calc(100% - 32px)); margin: 0 auto; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.55);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--teal);
+      box-shadow: 0 0 0 6px rgba(15,118,110,0.12);
+    }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 25;
+      background: rgba(245,244,239,0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(21,35,33,0.08);
+    }
+    .site-header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 13px;
+      color: var(--ink);
+    }
+    .nav { display: flex; gap: 22px; color: var(--muted); font-size: 14px; }
+    .nav a:hover { color: var(--ink); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0) scale(.98); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+      color: white;
+      box-shadow: 0 14px 34px rgba(15, 118, 110, 0.22);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.6);
+      border-color: var(--line);
+      color: var(--ink);
+    }
+    .hero {
+      padding: var(--space-2xl) 0 var(--space-xl);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr);
+      gap: 34px;
+      align-items: start;
+    }
+    h1, h2, h3 {
+      margin: 0;
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      line-height: 1.04;
+    }
+    h1 { font-size: clamp(46px, 7vw, 88px); max-width: 10ch; margin: 22px 0 18px; }
+    h2 { font-size: clamp(34px, 5vw, 58px); max-width: 12ch; }
+    h3 { font-size: clamp(26px, 3vw, 38px); }
+    .hero-copy p.lede {
+      font-size: 19px;
+      color: var(--muted);
+      max-width: 58ch;
+      margin: 0 0 24px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .micro-note {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    .card {
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(21,35,33,0.08);
+      box-shadow: var(--shadow);
+      border-radius: 28px;
+      padding: 24px;
+      backdrop-filter: blur(10px);
+    }
+    .hero-card {
+      background: linear-gradient(170deg, rgba(255,253,248,0.96), rgba(246,240,229,0.88));
+    }
+    .hero-card .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .stat {
+      border-radius: 18px;
+      padding: 16px;
+      background: rgba(255,255,255,0.68);
+      border: 1px solid rgba(21,35,33,0.08);
+    }
+    .stat strong { display: block; font-size: 26px; line-height: 1; margin-bottom: 8px; }
+    .stat span { color: var(--muted); font-size: 13px; }
+    section { padding: var(--space-xl) 0; }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) minmax(280px,.85fr);
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+    .section-head p { margin: 0; color: var(--muted); }
+    .problem-grid,
+    .results-grid,
+    .proof-grid,
+    .faq-grid { display: grid; gap: 18px; }
+    .problem-grid { grid-template-columns: 1.05fr .95fr; }
+    .results-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .proof-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .faq-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .stack { display: grid; gap: 18px; }
+    .bullets { display: grid; gap: 12px; margin-top: 16px; }
+    .bullet {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 12px;
+      align-items: start;
+      color: var(--muted);
+    }
+    .bullet::before {
+      content: '•';
+      color: var(--gold);
+      font-size: 24px;
+      line-height: 1;
+      margin-top: -1px;
+    }
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+    .deliverable {
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.74);
+      border: 1px solid rgba(21,35,33,0.08);
+      box-shadow: var(--shadow);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .deliverable:hover, .result:hover, .proof:hover, .faq:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 54px rgba(16,33,31,0.12);
+    }
+    .deliverable .tag, .result .tag {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--teal-soft);
+      color: var(--teal-dark);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .deliverable p, .result p, .proof p, .faq p { color: var(--muted); margin-bottom: 0; }
+    .result, .proof, .faq {
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.74);
+      border: 1px solid rgba(21,35,33,0.08);
+      box-shadow: var(--shadow);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .quote {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(28px, 3vw, 42px);
+      line-height: 1.08;
+    }
+    .guarantee {
+      background: linear-gradient(145deg, #12211f, #1d3734);
+      color: #f6f2ea;
+    }
+    .guarantee p, .guarantee li { color: rgba(246,242,234,0.82); }
+    .guarantee .eyebrow { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); color: rgba(255,255,255,0.76); }
+    .guarantee .eyebrow::before { background: var(--gold); box-shadow: 0 0 0 6px rgba(201,168,106,0.15); }
+    .guarantee-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .cta-band {
+      padding: 32px;
+      border-radius: 28px;
+      background: linear-gradient(140deg, rgba(255,255,255,0.82), rgba(241,238,230,0.92));
+      border: 1px solid rgba(21,35,33,0.08);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+    }
+    .footer {
+      padding: 34px 0 60px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .footer .container { border-top: 1px solid rgba(21,35,33,0.08); padding-top: 20px; }
+    @media (max-width: 980px) {
+      .hero-grid,
+      .problem-grid,
+      .section-head,
+      .results-grid,
+      .proof-grid,
+      .faq-grid,
+      .deliverables-grid,
+      .guarantee-grid,
+      .cta-band { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .site-header .container { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .nav { flex-wrap: wrap; gap: 12px; }
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; }
+      .hero-card .stat-grid { grid-template-columns: 1fr; }
+      .container { width: min(var(--container), calc(100% - 24px)); }
+      section { padding: 34px 0; }
+      .card, .deliverable, .result, .proof, .faq, .cta-band { padding: 20px; border-radius: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
+    :focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">Authority Brand Builder</div>
+      <nav class="nav" aria-label="Page sections">
+        <a href="#deliverables">What you get</a>
+        <a href="#results">Results</a>
+        <a href="#difference">Why this is different</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">For established experts who are done being the best-kept secret</span>
+          <h1>We do not teach you to “build a brand.” We build your operating system.</h1>
+          <p class="lede">Your offer. Your sales presentation. Your AI-powered competitive intelligence. Your stage booking pipeline. Built with you in two VIP days, then refined over 90 days of private coaching until it starts producing revenue.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/apply">Apply for Your Strategy Session</a>
+            <a class="btn btn-secondary" href="#deliverables">See exactly what you get</a>
+          </div>
+          <div class="micro-note">Application only. Limited to 2–3 new clients per month.</div>
+        </div>
+
+        <aside class="card hero-card">
+          <span class="eyebrow">What this offer really is</span>
+          <h3>A 90-day buildout for experts who want finished assets, not more homework.</h3>
+          <div class="bullets">
+            <div class="bullet">2 intensive VIP days to architect the offer, pitch, and positioning.</div>
+            <div class="bullet">AI-backed market intelligence prepared before the buildout starts.</div>
+            <div class="bullet">90 days of coaching and refinement so the system gets used, not admired.</div>
+          </div>
+          <div class="stat-grid">
+            <div class="stat"><strong>$10M+</strong><span>client results using Sonia’s frameworks</span></div>
+            <div class="stat"><strong>7-agent AI</strong><span>research pipeline behind the positioning work</span></div>
+            <div class="stat"><strong>2 VIP days</strong><span>for building the core assets in person</span></div>
+            <div class="stat"><strong>90 days</strong><span>of coaching, launch support, and refinement</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="container problem-grid">
+        <div class="card">
+          <span class="eyebrow">The real problem</span>
+          <h2>You do not have a content problem. You have a system problem.</h2>
+          <p>Most experts have already spent money on mood boards, content plans, frameworks, and “post consistently” advice. None of that fixes the actual issue: there is no machine turning expertise into a premium offer, a clear message, and a room-ready sales process.</p>
+          <p>This buildout is designed to fix that. Not with theory. With finished assets.</p>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Why this lands now</span>
+          <div class="quote">In an AI-saturated market, trust is no longer a nice-to-have. It is the premium.</div>
+          <p>The experts who win next are not the loudest. They are the ones with the clearest offer, the strongest room presence, and the best operating system behind them.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Your strategic partners</span>
+            <h2>Human mastery plus AI amplification.</h2>
+          </div>
+          <p>Sonia handles the human side AI cannot replace — trust, speaking, selling, relationship depth. James handles the systems side — market intelligence, positioning research, and AI infrastructure that gives the strategy real teeth.</p>
+        </div>
+        <div class="results-grid">
+          <div class="result"><span class="tag">Sonia Gomez</span><h3>Speak-to-sell mastery</h3><p>High-ticket selling from stages, podcasts, webinars, and rooms where trust has to be earned in real time.</p></div>
+          <div class="result"><span class="tag">James Brinkerhoff Jr.</span><h3>AI-backed strategy systems</h3><p>Competitive intelligence, market research, and operating systems that remove guesswork and sharpen positioning.</p></div>
+          <div class="result"><span class="tag">Combined edge</span><h3>Finished assets, not “guidance”</h3><p>You leave with a working system, a usable pitch, and an offer designed to sell — not another pile of notes.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="deliverables">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">What you get</span>
+            <h2>Your complete operating system, built in 90 days.</h2>
+          </div>
+          <p>We tightened the structure here so a buyer can scan what matters in seconds, not drown in a long list before they understand the promise.</p>
+        </div>
+        <div class="deliverables-grid">
+          <article class="deliverable">
+            <span class="tag">VIP Buildout</span>
+            <h3>2 in-person VIP days with Sonia</h3>
+            <p>Your offer gets architected, your presentation gets built, and your objections get mapped in real time. You leave with finished work.</p>
+          </article>
+          <article class="deliverable">
+            <span class="tag">AI Research</span>
+            <h3>Competitive intelligence report</h3>
+            <p>The 7-agent AI pipeline maps competitors, pricing, positioning gaps, and market opportunities before the buildout begins.</p>
+          </article>
+          <article class="deliverable">
+            <span class="tag">Offer</span>
+            <h3>Full offer architecture</h3>
+            <p>Name, price, promise, deliverables, and ascension path — designed to sell, not just sound clever.</p>
+          </article>
+          <article class="deliverable">
+            <span class="tag">Pitch</span>
+            <h3>Speak-to-sell presentation</h3>
+            <p>A complete presentation built slide by slide for stage, webinar, podcast, or boardroom selling.</p>
+          </article>
+          <article class="deliverable">
+            <span class="tag">Sales System</span>
+            <h3>Objections, closes, and room conversion</h3>
+            <p>Your top objections are mapped, trial closes are built in, and your selling process stops feeling improvised.</p>
+          </article>
+          <article class="deliverable">
+            <span class="tag">Messaging</span>
+            <h3>Buyer psychology and market language map</h3>
+            <p>AI-extracted buyer language gives you messaging that feels specific, credible, and far more expensive than guesswork.</p>
+          </article>
+          <article class="deliverable">
+            <span class="tag">Platform</span>
+            <h3>ABB platform access included</h3>
+            <p>authoritybrandbuilder.io remains the operating layer after the VIP days — research vault, AI tools, pipeline support, and CRM infrastructure.</p>
+          </article>
+          <article class="deliverable">
+            <span class="tag">Execution</span>
+            <h3>90-day roadmap + weekly support</h3>
+            <p>Weekly 1:1 support with Sonia turns the buildout into launch and refinement instead of shelfware.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="results">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Results</span>
+            <h2>What happens when the offer finally matches the expertise.</h2>
+          </div>
+          <p>These are the numbers that make the page credible. They should be easier to scan, compare, and trust.</p>
+        </div>
+        <div class="results-grid">
+          <div class="result">
+            <span class="tag">$450K</span>
+            <h3>From a single presentation</h3>
+            <p>Igor Kheifets — Email Marketing Expert</p>
+          </div>
+          <div class="result">
+            <span class="tag">$257K</span>
+            <h3>From one event</h3>
+            <p>Kameron George — Entrepreneur</p>
+          </div>
+          <div class="result">
+            <span class="tag">$10K</span>
+            <h3>Closed in 24 hours</h3>
+            <p>Sarah — AI Consultant</p>
+          </div>
+        </div>
+        <div class="proof-grid" style="margin-top: 18px;">
+          <div class="proof">
+            <h3>What buyers should feel here</h3>
+            <p>“This is for someone serious. They are not selling me a course. They are helping me build the machine behind the revenue.”</p>
+          </div>
+          <div class="proof">
+            <h3>What should be tightened later</h3>
+            <p>Add stronger proof blocks, client photos, and clearer mini-case studies. The page has the bones; the next pass should deepen credibility visually.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="difference">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Why this is different</span>
+            <h2>Most programs give skills without systems. This gives both.</h2>
+          </div>
+          <p>The old page had the right ingredients but too little hierarchy. This version makes the distinction cleaner and easier to trust.</p>
+        </div>
+        <div class="deliverables-grid">
+          <div class="deliverable"><span class="tag">Research first</span><h3>7-agent AI pipeline</h3><p>You start from market data, not assumptions, guesswork, or brand vibes.</p></div>
+          <div class="deliverable"><span class="tag">Built live</span><h3>Pitch created with you</h3><p>The sales presentation is built in context, not handed over as a theory deck.</p></div>
+          <div class="deliverable"><span class="tag">Coached, not left alone</span><h3>Confidence from reps</h3><p>The system includes live refinement and support so execution actually improves.</p></div>
+          <div class="deliverable"><span class="tag">Compounding layer</span><h3>Platform access after the build</h3><p>The AI operating system keeps working after the VIP days, rather than expiring as a one-time event.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container guarantee card">
+        <div class="guarantee-grid">
+          <div>
+            <span class="eyebrow">Sonia’s promise</span>
+            <h2>The Double-Your-Investment Guarantee</h2>
+            <p>Once the offer is finalized during the VIP days, the promise is straightforward: generate a minimum of $30,000 in revenue within 90 days, or Sonia continues working with you until you do.</p>
+          </div>
+          <div>
+            <h3>Your part of the deal</h3>
+            <div class="bullets">
+              <div class="bullet">Follow the plan built during the engagement.</div>
+              <div class="bullet">Present to a live or virtual audience at least two times in the 90-day window.</div>
+              <div class="bullet">Show up, present, and make the offer.</div>
+            </div>
+            <p style="margin-top: 18px;">This is a serious promise, which means it should be framed with less clutter and more clarity than the original page gave it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">FAQ</span>
+            <h2>Questions serious buyers will actually ask.</h2>
+          </div>
+          <p>These are compressed for readability. The original page had strong answers, but too much uninterrupted text.</p>
+        </div>
+        <div class="faq-grid">
+          <div class="faq"><h3>What if I already have an offer?</h3><p>That is common. The work here is often less about inventing and more about sharpening, repositioning, repricing, and rebuilding the sales path around what the market will actually buy.</p></div>
+          <div class="faq"><h3>How is this different from coaching?</h3><p>Because the outcome is a buildout. You leave with assets, systems, positioning, and platform access — not just insight and assignments.</p></div>
+          <div class="faq"><h3>Do I need to be technical?</h3><p>No. The AI layer is built for experts, not developers. James handles the technical infrastructure. Your job is to use the system, present, and sell.</p></div>
+          <div class="faq"><h3>Can I start smaller?</h3><p>Yes. The Authority Audit is the lower-friction entry point for people who need clarity before they are ready for the full buildout.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <span class="eyebrow">Ready to build the system?</span>
+            <h3>This is for established experts who are done paying for homework instead of results.</h3>
+            <p style="margin: 10px 0 0; color: var(--muted);">Apply for a private strategy session with Sonia. If it is a fit, the buildout gets mapped clearly from there.</p>
+          </div>
+          <div>
+            <a class="btn btn-primary" href="/apply">Apply for Your Strategy Session</a>
+            <div class="micro-note" style="text-align:center;">Limited to 2–3 new clients per month.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Optimized preview for Authority Brand Builder — focused on stronger hierarchy, scan-ability, and CTA clarity.</div>
+  </footer>
+</body>
+</html>
