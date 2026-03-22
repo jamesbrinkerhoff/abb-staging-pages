@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonia Gomez — Personal Brand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg-soft: #11182c;
+      --surface: rgba(17, 24, 44, 0.78);
+      --surface-strong: #121a30;
+      --ink: #f5f7fb;
+      --muted: #a8b1c7;
+      --line: rgba(255, 255, 255, 0.10);
+      --accent: #8b5cf6;
+      --accent-2: #b794ff;
+      --accent-soft: rgba(139, 92, 246, 0.16);
+      --success: #4ade80;
+      --shadow: 0 24px 64px rgba(0, 0, 0, 0.32);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(139, 92, 246, 0.18), transparent 26%),
+        radial-gradient(circle at 80% 10%, rgba(59, 130, 246, 0.10), transparent 24%),
+        linear-gradient(180deg, #0b1020 0%, #0d1324 42%, #0a0f1c 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255,255,255,0.06) 0.8px, transparent 0.8px);
+      background-size: 26px 26px;
+      opacity: 0.25;
+      z-index: 0;
+    }
+
+    a { color: inherit; }
+    .page { position: relative; z-index: 1; }
+    .container { width: min(var(--max), calc(100% - 28px)); margin: 0 auto; }
+
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(11, 16, 32, 0.62);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), #4f46e5);
+      color: white;
+      font-weight: 800;
+      box-shadow: 0 12px 24px rgba(139, 92, 246, 0.35);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    .btn {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 0 20px;
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    .btn:active { transform: scale(0.98); }
+    .btn-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--accent), #4f46e5);
+      box-shadow: 0 16px 30px rgba(139, 92, 246, 0.30);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 36px rgba(139, 92, 246, 0.34);
+    }
+    .btn-secondary {
+      color: var(--ink);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--line);
+    }
+
+    .hero {
+      padding: 54px 0 28px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-copy {
+      padding: 34px;
+      position: relative;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--accent-2);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: .96;
+      letter-spacing: -0.03em;
+    }
+
+    h1 {
+      margin-top: 18px;
+      font-family: Fraunces, serif;
+      font-size: clamp(54px, 8vw, 98px);
+      max-width: 8ch;
+    }
+
+    .hero-title {
+      margin-top: 16px;
+      font-size: 18px;
+      color: #d9def0;
+      font-weight: 700;
+    }
+
+    .hero-lead {
+      margin-top: 18px;
+      max-width: 58ch;
+      color: var(--muted);
+      line-height: 1.85;
+      font-size: 17px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    .hero-micro {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hero-micro span {
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 620px;
+      padding: 18px;
+      display: grid;
+      align-items: stretch;
+    }
+
+    .photo-card {
+      border-radius: 26px;
+      min-height: 100%;
+      background:
+        linear-gradient(180deg, rgba(11,16,32,0.12), rgba(11,16,32,0.28)),
+        url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1400&q=80') center/cover;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .photo-badge {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      max-width: 280px;
+      background: rgba(11, 16, 32, 0.74);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 20px;
+      padding: 16px;
+      backdrop-filter: blur(12px);
+    }
+
+    .photo-badge strong {
+      display: block;
+      color: white;
+      margin-bottom: 6px;
+    }
+
+    .photo-badge span {
+      color: #cbd3e7;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .section {
+      padding: 22px 0;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      font-family: Fraunces, serif;
+      font-size: clamp(34px, 5vw, 58px);
+      margin-top: 10px;
+    }
+
+    .section-head p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .88fr 1.12fr;
+      gap: 18px;
+    }
+
+    .about-photo {
+      min-height: 420px;
+      background:
+        linear-gradient(180deg, rgba(139,92,246,0.08), rgba(17,24,44,0.20)),
+        url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80') center/cover;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+    }
+
+    .about-copy,
+    .proof-panel,
+    .contact-panel,
+    .tile,
+    .proof-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+    }
+
+    .about-copy,
+    .proof-panel,
+    .contact-panel { padding: 24px; }
+
+    .about-copy p,
+    .proof-panel p,
+    .contact-panel p,
+    .tile p,
+    .proof-card p {
+      color: var(--muted);
+      line-height: 1.82;
+    }
+
+    .highlight-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .highlight {
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .highlight strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #e9ecf7;
+    }
+
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .tile { padding: 22px; }
+
+    .tile-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent-soft), rgba(79,70,229,0.18));
+      border: 1px solid rgba(139,92,246,0.24);
+      margin-bottom: 14px;
+      color: var(--accent-2);
+      font-size: 22px;
+    }
+
+    .tile h3,
+    .proof-card h3,
+    .contact-panel h3,
+    .about-copy h3 { font-size: 28px; }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .logo-band {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .logo-pill {
+      padding: 12px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #d6ddf0;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    .proof-cards {
+      display: grid;
+      gap: 18px;
+    }
+
+    .proof-card { padding: 20px; }
+
+    .proof-card .mini {
+      display: inline-block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--accent-2);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 18px;
+    }
+
+    .form {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #dce2f1;
+      margin-bottom: 8px;
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: white;
+      font: inherit;
+      padding: 14px 14px;
+      outline: none;
+    }
+
+    .field textarea {
+      min-height: 132px;
+      resize: vertical;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      text-decoration: none;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #e8ecf8;
+    }
+
+    .contact-link span { color: var(--muted); font-size: 14px; }
+
+    .footer {
+      padding: 18px 0 42px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .proof-grid,
+      .contact-grid,
+      .tiles {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual { min-height: 420px; }
+    }
+
+    @media (max-width: 720px) {
+      .nav { flex-direction: column; align-items: flex-start; }
+      .nav-links { gap: 12px; }
+      .hero-copy,
+      .proof-panel,
+      .contact-panel,
+      .about-copy,
+      .tile,
+      .proof-card { padding: 20px; }
+      .hero-cta { flex-direction: column; }
+      .btn { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="nav-wrap">
+      <div class="container nav">
+        <div class="brand">
+          <div class="brand-mark">SG</div>
+          <div>
+            <div style="font-weight:800; color:var(--ink)">Sonia Gomez</div>
+            <div style="font-size:13px; color:var(--muted)">soniagomez.net</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#what-i-do">What I Do</a>
+          <a href="#proof">Proof</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="panel hero-copy reveal in-view">
+          <span class="eyebrow">Personal brand website · dark mode</span>
+          <h1>Sonia Gomez</h1>
+          <div class="hero-title">Speaker • Sales Trainer • Offer Messaging Strategist</div>
+          <p class="hero-lead">I help established experts turn what they know into an offer people understand, trust, and buy — on stage, in the room, and across the rest of the business.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#contact">Book a Call</a>
+            <a class="btn btn-secondary" href="#what-i-do">See What I Do</a>
+          </div>
+          <div class="hero-micro">
+            <span>Built for speaking-led sales</span>
+            <span>Offer-first positioning</span>
+            <span>Placeholder content ready to swap</span>
+          </div>
+        </div>
+        <div class="panel hero-visual reveal in-view">
+          <div class="photo-card">
+            <div class="photo-badge">
+              <strong>Photo placeholder</strong>
+              <span>Swap this image for Sonia’s actual headshot or keynote photography later. The layout is already prepared for it.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">About</span>
+          <h2>The personal brand behind the pitch.</h2>
+          <p>This section is designed to humanize Sonia without slipping into generic bio copy. It should help people understand what makes her different and why her work feels sharper than the usual coaching and content noise.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-photo reveal"></div>
+          <div class="about-copy reveal">
+            <h3>Short bio placeholder</h3>
+            <p>Sonia Gomez is a speaker, sales trainer, and messaging strategist who helps high-level experts package their experience into offers that make sense to the market and sell with more clarity. Her work sits at the intersection of offer design, speaking-to-sell, and commercial confidence.</p>
+            <div class="highlight-list">
+              <div class="highlight">
+                <strong>What makes you different</strong>
+                You are not teaching people how to become influencers. You help serious people build an offer that can support a real business.
+              </div>
+              <div class="highlight">
+                <strong>How this should feel</strong>
+                Professional, direct, warm, and credible — more trusted guide than internet personality.
+              </div>
+              <div class="highlight">
+                <strong>What to replace later</strong>
+                Add Sonia’s real story, best positioning line, and one proof-rich paragraph about client results or stage wins.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="what-i-do">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What I do</span>
+          <h2>Three clear ways to work with Sonia.</h2>
+          <p>These are placeholders for the three cleanest categories of value. They are intentionally broad enough to visualize the homepage, but focused enough to be swapped for real copy later.</p>
+        </div>
+        <div class="tiles">
+          <article class="tile reveal">
+            <div class="tile-icon">🎤</div>
+            <h3>Speaking-to-Sell Strategy</h3>
+            <p>Turn presentations, podcasts, workshops, and webinars into a sales asset instead of just a visibility exercise.</p>
+          </article>
+          <article class="tile reveal">
+            <div class="tile-icon">🧭</div>
+            <h3>Offer Positioning</h3>
+            <p>Clarify what you sell, why it matters, and how to communicate it so buyers understand the value quickly.</p>
+          </article>
+          <article class="tile reveal">
+            <div class="tile-icon">📈</div>
+            <h3>Message & Conversion Support</h3>
+            <p>Strengthen the language, structure, and path that help prospects move from curiosity to confidence.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proof">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Social proof</span>
+          <h2>Space for trust to do its job.</h2>
+          <p>This area is built to hold logos, “as seen in” badges, testimonials, or event credibility blocks. Right now it uses placeholders so the layout is complete before the real assets are dropped in.</p>
+        </div>
+        <div class="proof-grid">
+          <div class="proof-panel reveal">
+            <h3>As seen in / trusted by</h3>
+            <p>Use this band for logos, media mentions, podcast appearances, client brands, or event hosts.</p>
+            <div class="logo-band">
+              <div class="logo-pill">LOGO / PODCAST</div>
+              <div class="logo-pill">EVENT / HOST</div>
+              <div class="logo-pill">CLIENT BRAND</div>
+              <div class="logo-pill">MEDIA FEATURE</div>
+              <div class="logo-pill">WORKSHOP PARTNER</div>
+            </div>
+          </div>
+          <div class="proof-cards">
+            <div class="proof-card reveal">
+              <div class="mini">Testimonial placeholder</div>
+              <h3>“This changed how I explained my offer.”</h3>
+              <p>Add a short quote from a client here. Keep it concrete. The best social proof sounds specific, not worshipful.</p>
+            </div>
+            <div class="proof-card reveal">
+              <div class="mini">Proof placeholder</div>
+              <h3>“We finally had a message people could buy.”</h3>
+              <p>This second block can be another testimonial, a stage result, or a quick proof statement with metrics once available.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Contact</span>
+          <h2>Make the next step obvious.</h2>
+          <p>This section gives you two options: a simple contact form and direct links to your real channels. It keeps the page personal and useful without overcomplicating the footer.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-panel reveal">
+            <h3>Send a message</h3>
+            <p>Use this as a visual placeholder for a future working contact form or replace it with your preferred CRM/embed later.</p>
+            <form class="form">
+              <div class="field">
+                <label>Name</label>
+                <input type="text" placeholder="Your name" />
+              </div>
+              <div class="field">
+                <label>Email</label>
+                <input type="email" placeholder="you@example.com" />
+              </div>
+              <div class="field">
+                <label>What are you working on?</label>
+                <textarea placeholder="Tell me a little about your business, offer, or what you need help with."></textarea>
+              </div>
+              <button class="btn btn-primary" type="button">Get in Touch</button>
+            </form>
+          </div>
+          <div class="contact-panel reveal">
+            <h3>Direct links</h3>
+            <p>Swap these placeholders with Sonia’s real email, LinkedIn, X/Twitter, and calendar link.</p>
+            <div class="contact-links">
+              <a class="contact-link" href="#">
+                <div>
+                  <strong>Email</strong>
+                  <span>hello@soniagomez.net</span>
+                </div>
+                <div>→</div>
+              </a>
+              <a class="contact-link" href="#">
+                <div>
+                  <strong>LinkedIn</strong>
+                  <span>linkedin.com/in/soniagomez</span>
+                </div>
+                <div>→</div>
+              </a>
+              <a class="contact-link" href="#">
+                <div>
+                  <strong>Twitter / X</strong>
+                  <span>x.com/soniagomez</span>
+                </div>
+                <div>→</div>
+              </a>
+              <a class="contact-link" href="#">
+                <div>
+                  <strong>Calendar</strong>
+                  <span>Book a fit call</span>
+                </div>
+                <div>→</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container footer">
+      Single-file mockup for SoniaGomez.net — dark, minimal, mobile-responsive, placeholder-ready.
+    </div>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
