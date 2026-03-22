@@ -144,6 +144,41 @@
         linear-gradient(135deg, #0d2f36 0%, #41256f 58%, #ef6f61 130%);
       color: #fff;
     }
+    .hero-image-wrap {
+      position: relative;
+      min-height: 640px;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 28px 70px rgba(9, 18, 30, .24);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.08);
+    }
+    .hero-image-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10,16,24,.05), rgba(10,16,24,.28));
+    }
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-image-badge {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      z-index: 2;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      padding: 14px 16px;
+      border-radius: 18px;
+      max-width: 320px;
+      line-height: 1.6;
+      font-size: .92rem;
+    }
     .hero::after {
       content: "";
       position: absolute;
@@ -500,15 +535,13 @@
         <p class="hero-note">For speakers, operators, consultants, founders, licensed professionals, and experts with real depth — not beginners looking for a shortcut.</p>
       </div>
 
-      <aside class="hero-card reveal d1 visible">
-        <span class="eyebrow teal">Why this direction</span>
-        <h2>Warmer. Brighter. More alive.</h2>
-        <div class="hero-stack">
-          <div class="hero-point">This version borrows the vibrant energy of template 04 without turning Sonia into a wellness cliché. It keeps the page warm, human, and approachable while still leading with strategic clarity.</div>
-          <div class="hero-point">The page is designed to feel emotionally open on the surface and commercially disciplined underneath.</div>
-          <div class="hero-point">Best fit if you want Sonia to feel magnetic and personal, not cold or overly corporate.</div>
+      <div class="hero-image-wrap reveal d1 visible" aria-label="Placeholder Sonia portrait area">
+        <img class="hero-image" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80" alt="Placeholder portrait for Sonia Gomez homepage concept" />
+        <div class="hero-image-badge">
+          <strong style="display:block;font-family:Nunito,sans-serif;font-size:1rem;margin-bottom:4px;">Template 04 energy, ABB positioning.</strong>
+          Placeholder photography is back in for layout review so you can judge the visual balance properly.
         </div>
-      </aside>
+      </div>
     </div>
   </section>
 
@@ -595,16 +628,19 @@
 
       <div class="grid-3" style="margin-top:28px;">
         <article class="card reveal">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Placeholder strategy session scene" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;margin-bottom:18px;" />
           <span class="eyebrow coral">Strategic fit</span>
           <h3>Private advisory</h3>
           <p>For experts who need hands-on help clarifying the offer, tightening the message, and restructuring how the market experiences their work.</p>
         </article>
         <article class="card reveal d1">
+          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80" alt="Placeholder speaking event scene" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;margin-bottom:18px;" />
           <span class="eyebrow teal">Visibility path</span>
           <h3>Speaking to sell</h3>
           <p>For people who already have rooms, stages, interviews, or workshops and need those moments to create conversion instead of polite applause.</p>
         </article>
         <article class="card reveal d2">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Placeholder team collaboration scene" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;margin-bottom:18px;" />
           <span class="eyebrow purple">Company build</span>
           <h3>Authority Brand Builder</h3>
           <p>For those who need the broader ecosystem: offer architecture, research-backed strategy, and the operational support to turn expertise into assets.</p>
