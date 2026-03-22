@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonia Gomez — Lead Capture Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f4f7fb;--ink:#18222b;--muted:#64707a;--navy:#20384d;--gold:#b98a43;--line:rgba(32,56,77,.12);--card:#ffffff}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,sans-serif;background:radial-gradient(circle at top right,rgba(185,138,67,.10),transparent 24%),linear-gradient(180deg,#f8fbff,#eef3f8);color:var(--ink)} .container{width:min(1080px,calc(100% - 28px));margin:0 auto}
+    h1,h2,h3{font-family:Fraunces,serif;line-height:.98;letter-spacing:-.02em;margin:0}.hero{padding:36px 0}.wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center}.eyebrow{display:inline-block;padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
+    h1{font-size:clamp(46px,6vw,86px);max-width:9ch;margin-top:16px}.lead{margin-top:18px;max-width:56ch;color:var(--muted);line-height:1.82;font-size:17px}.stack{display:grid;gap:12px;margin-top:20px}.point{padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.78);border:1px solid var(--line);color:var(--muted)}
+    .form-card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:0 20px 46px rgba(32,56,77,.10)} .form-card h2{font-size:40px;color:#162534}.form-card p{margin-top:10px;color:var(--muted);line-height:1.75}.field{margin-top:14px}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:8px;color:var(--navy)} .field input{width:100%;height:52px;border-radius:16px;border:1px solid var(--line);padding:0 14px;font:inherit}
+    .btn{width:100%;height:54px;border:none;border-radius:999px;margin-top:16px;background:var(--navy);color:#fff;font-weight:800;font-size:15px} .micro{margin-top:12px;font-size:13px;color:var(--muted);line-height:1.6}
+    .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}.proof-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px}.proof-card strong{display:block;font-family:Fraunces,serif;font-size:34px;color:var(--navy)} .proof-card span{display:block;margin-top:6px;color:var(--muted);line-height:1.65}
+    @media (max-width:980px){.wrap,.proof{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="container wrap">
+      <div>
+        <span class="eyebrow">Mockup 04 · Lead Capture / Squeeze</span>
+        <h1>Still struggling to explain what you sell?</h1>
+        <p class="lead">This version is intentionally narrow and conversion-focused. It is not a full homepage. It is a landing page for capturing leads into Sonia’s offer-first world — ideal for workshops, ads, social traffic, and podcast listeners who need a fast next step.</p>
+        <div class="stack">
+          <div class="point"><strong style="color:var(--navy)">Lead magnet angle:</strong> a checklist, mini-training, or offer-diagnostic that gives immediate clarity.</div>
+          <div class="point"><strong style="color:var(--navy)">Best use case:</strong> traffic from social, speaking, podcasts, webinars, and ads.</div>
+          <div class="point"><strong style="color:var(--navy)">Big difference:</strong> this is built to convert one action fast, not explain the whole business.</div>
+        </div>
+      </div>
+      <div class="form-card">
+        <span class="eyebrow">Conversion-first</span>
+        <h2>Get the Offer Clarity Checklist</h2>
+        <p>A quick way to see whether your issue is really branding, content, or the offer itself.</p>
+        <div class="field"><label>First name</label><input placeholder="Your first name"></div>
+        <div class="field"><label>Email</label><input placeholder="you@company.com"></div>
+        <button class="btn">Send me the checklist</button>
+        <div class="micro">This mockup demonstrates a true squeeze-page direction from the template library. Short path. One CTA. Minimal navigation. Built to capture, not narrate.</div>
+      </div>
+    </div>
+    <div class="container proof">
+      <div class="proof-card"><strong>1 CTA</strong><span>No distractions. This is for list growth and warm lead capture.</span></div>
+      <div class="proof-card"><strong>Fast read</strong><span>Visitors understand the next step in under 10 seconds.</span></div>
+      <div class="proof-card"><strong>Campaign-ready</strong><span>Useful for paid traffic, speaker funnels, or workshop registrations.</span></div>
+    </div>
+  </section>
+</body>
+</html>
