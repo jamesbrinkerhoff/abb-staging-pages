@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonia Gomez — Homepage Draft</title>
+  <meta name="description" content="Draft homepage for Sonia Gomez of Authority Brand Builder — offer-first positioning, speaker-led authority, and a clear path from expertise to a premium offer that sells." />
+  <meta property="og:title" content="Sonia Gomez — Homepage Draft" />
+  <meta property="og:description" content="A full homepage draft for Sonia Gomez built around offer-first positioning, speaking-to-sell, and premium expert offers." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbfbfd;
+      --surface: #ffffff;
+      --surface-soft: #f4f7fb;
+      --ink: #18212d;
+      --muted: #5f6978;
+      --line: rgba(24, 33, 45, .08);
+      --teal: #1fa89a;
+      --teal-dark: #177e75;
+      --teal-soft: #e3f7f3;
+      --purple: #6f45d6;
+      --purple-soft: #f1ebff;
+      --coral: #ef6f61;
+      --coral-soft: #fff1ee;
+      --gold: #f2c04b;
+      --shadow: 0 18px 48px rgba(45, 34, 88, .10);
+      --radius: 22px;
+      --space: clamp(72px, 10vw, 112px);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    .container { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
+    .section { padding: var(--space) 0; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .42rem .95rem;
+      border-radius: 999px;
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .eyebrow.teal { background: var(--teal-soft); color: var(--teal-dark); }
+    .eyebrow.purple { background: var(--purple-soft); color: var(--purple); }
+    .eyebrow.coral { background: var(--coral-soft); color: var(--coral); }
+    h1, h2, h3, h4 {
+      margin: 0;
+      font-family: Nunito, sans-serif;
+      line-height: 1.03;
+      letter-spacing: -.03em;
+    }
+    p { margin: 0; }
+    .section-title {
+      font-size: clamp(2.3rem, 4.6vw, 4rem);
+      margin-top: 16px;
+      max-width: 12ch;
+    }
+    .section-sub {
+      margin-top: 16px;
+      max-width: 64ch;
+      color: var(--muted);
+      line-height: 1.85;
+      font-size: 1.04rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--teal), var(--purple));
+      color: #fff;
+      box-shadow: 0 14px 28px rgba(90, 62, 170, .18);
+    }
+    .btn-secondary {
+      background: #fff;
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--ink);
+      box-shadow: 0 12px 28px rgba(242, 192, 75, .20);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(251, 251, 253, .90);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(31, 168, 154, .08);
+    }
+    .nav-inner {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 74px;
+      gap: 16px;
+    }
+    .brand {
+      text-decoration: none;
+      font-family: Nunito, sans-serif;
+      font-size: 1.22rem;
+      font-weight: 900;
+    }
+    .brand span { color: var(--teal); }
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: .94rem;
+    }
+    .nav-links a:hover { color: var(--teal); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(31,168,154,.18), transparent 24%),
+        radial-gradient(circle at 82% 20%, rgba(111,69,214,.17), transparent 24%),
+        radial-gradient(circle at 76% 76%, rgba(239,111,97,.14), transparent 20%),
+        linear-gradient(135deg, #102d35 0%, #392463 54%, #e26a5d 130%);
+      color: #fff;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(8,12,22,.20), rgba(8,12,22,.06));
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 34px;
+      align-items: center;
+      min-height: calc(100vh - 74px);
+      padding: 56px 0;
+    }
+    .hero-copy h1 {
+      font-size: clamp(3.2rem, 7vw, 6.1rem);
+      max-width: 10ch;
+      margin-top: 18px;
+    }
+    .hero-copy h1 .hl {
+      background: linear-gradient(90deg, var(--gold), #ffe5a1);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    .hero-copy p {
+      margin-top: 20px;
+      max-width: 59ch;
+      font-size: 1.08rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,.84);
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .hero-pill {
+      padding: .6rem .9rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.16);
+      color: rgba(255,255,255,.8);
+      font-size: .88rem;
+      font-weight: 700;
+    }
+    .hero-visual {
+      position: relative;
+      min-height: 670px;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 30px 80px rgba(9, 18, 30, .24);
+      background: rgba(255,255,255,.08);
+    }
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-overlay-card {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      z-index: 2;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 22px;
+      padding: 18px;
+      backdrop-filter: blur(14px);
+      color: #fff;
+    }
+    .hero-overlay-card strong {
+      display: block;
+      font-family: Nunito, sans-serif;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .trust-band {
+      margin-top: -34px;
+      position: relative;
+      z-index: 5;
+    }
+    .trust-grid {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .trust-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .trust-card strong {
+      display: block;
+      font-family: Nunito, sans-serif;
+      font-size: 1.85rem;
+      color: var(--purple);
+      margin-bottom: 8px;
+    }
+    .trust-card span {
+      display: block;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .card h3 { font-size: 1.6rem; margin-top: 14px; }
+    .card p, .card li { color: var(--muted); line-height: 1.8; }
+    .card ul { margin: 14px 0 0; padding-left: 18px; }
+    .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 30px; }
+
+    .audience-stack { display: grid; gap: 12px; margin-top: 22px; }
+    .audience-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--teal-soft), rgba(255,255,255,.94));
+      border: 1px solid rgba(31,168,154,.10);
+    }
+    .mark {
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--teal);
+      font-weight: 900;
+      margin-top: 2px;
+      box-shadow: 0 8px 18px rgba(31,168,154,.14);
+    }
+
+    .quote-band {
+      background: linear-gradient(135deg, rgba(111,69,214,.08), rgba(31,168,154,.08));
+      border-top: 1px solid rgba(111,69,214,.08);
+      border-bottom: 1px solid rgba(111,69,214,.08);
+    }
+    .quote-wrap {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto;
+      text-align: center;
+      padding: 84px 0;
+    }
+    .quote-wrap blockquote {
+      margin: 20px auto 0;
+      font-family: Nunito, sans-serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.12;
+      max-width: 16ch;
+    }
+    .quote-wrap p {
+      margin: 16px auto 0;
+      max-width: 58ch;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .method {
+      background: linear-gradient(135deg, var(--teal), var(--purple));
+      color: #fff;
+      border-radius: 30px;
+      padding: 34px;
+      box-shadow: 0 24px 58px rgba(68, 43, 128, .22);
+    }
+    .method p { color: rgba(255,255,255,.84); }
+    .step-grid { display: grid; gap: 14px; margin-top: 24px; }
+    .step {
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .step-num {
+      width: 60px;
+      height: 60px;
+      border-radius: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,.14);
+      color: var(--gold);
+      font-family: Nunito, sans-serif;
+      font-size: 1.35rem;
+      font-weight: 900;
+    }
+
+    .offer-grid, .proof-grid, .faq-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px; }
+    .offer-card img, .proof-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 18px;
+      margin-bottom: 18px;
+    }
+    .proof-card blockquote {
+      margin: 16px 0 0;
+      color: var(--muted);
+      line-height: 1.8;
+      font-style: italic;
+    }
+    .proof-card .who {
+      margin-top: 14px;
+      font-size: .92rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .cta-band {
+      background: linear-gradient(135deg, #162730 0%, #31505d 44%, #6f45d6 100%);
+      color: #fff;
+      border-radius: 30px;
+      padding: 36px;
+      box-shadow: 0 24px 62px rgba(21, 37, 54, .22);
+    }
+    .cta-band p {
+      margin-top: 16px;
+      max-width: 62ch;
+      color: rgba(255,255,255,.82);
+      line-height: 1.85;
+    }
+
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.68);
+      padding: 42px 0;
+      margin-top: 90px;
+    }
+    .footer-inner {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-brand { color: #fff; font-family: Nunito, sans-serif; font-weight: 900; }
+    .footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,.56); text-decoration: none; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: .08s; }
+    .d2 { transition-delay: .16s; }
+    .d3 { transition-delay: .24s; }
+
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    @media (max-width: 1020px) {
+      .hero-inner, .split, .info-grid, .offer-grid, .proof-grid, .faq-grid, .trust-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .trust-band { margin-top: 24px; }
+      .hero { min-height: auto; }
+    }
+    @media (max-width: 640px) {
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; }
+      .step { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 520px; }
+      .cta-band, .method { padding: 24px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="#top">Sonia<span>Gomez</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#who">Who It's For</a></li>
+        <li><a href="#method">Method</a></li>
+        <li><a href="#work">Work Together</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="btn btn-primary" href="#apply">Apply</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-copy reveal visible">
+        <span class="eyebrow coral">Speaker · Sales trainer · Offer-first strategist</span>
+        <h1>Build the <span class="hl">offer</span> first. Then let the brand grow from something real.</h1>
+        <p>Sonia Gomez helps established experts turn years of experience, credibility, and hard-won insight into a premium offer the market can actually understand — and buy. The point is not more content. The point is clarity, positioning, and a sales path that works when you speak, teach, present, and lead.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#apply">Apply for a Fit Call</a>
+          <a class="btn btn-secondary" href="#method">See How It Works</a>
+        </div>
+        <div class="hero-meta">
+          <span class="hero-pill">For established experts</span>
+          <span class="hero-pill">Speaking-to-sell</span>
+          <span class="hero-pill">No hype. No guru theater.</span>
+        </div>
+      </div>
+      <div class="hero-visual reveal d1 visible" aria-label="Placeholder portrait area for Sonia Gomez homepage draft">
+        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80" alt="Placeholder portrait for Sonia Gomez homepage draft" />
+        <div class="hero-overlay-card">
+          <strong>This is a strategic homepage, not a personality shrine.</strong>
+          The page is built to make the business legible: who it is for, what changes, why Sonia is credible, and what the next step is.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-band">
+    <div class="trust-grid">
+      <div class="trust-card reveal">
+        <strong>Offer-first</strong>
+        <span>The offer is the engine. The brand is what grows after the market can repeat what you actually do.</span>
+      </div>
+      <div class="trust-card reveal d1">
+        <strong>Speaker-led</strong>
+        <span>Built for experts who want podcasts, workshops, webinars, and stages to create real sales momentum.</span>
+      </div>
+      <div class="trust-card reveal d2">
+        <strong>High-fit only</strong>
+        <span>Not for beginners. Not for the business-opportunity crowd. Not for people looking for easy positioning tricks.</span>
+      </div>
+      <div class="trust-card reveal d3">
+        <strong>Strategy + delivery</strong>
+        <span>Sonia leads from the front while the broader ABB system supports the structure behind the scenes.</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="about">
+    <div class="container split">
+      <div class="reveal">
+        <span class="eyebrow teal">About Sonia</span>
+        <h2 class="section-title">Sonia is the public-facing guide for experts who are tired of sounding more generic than they really are.</h2>
+        <p class="section-sub">She sits at the intersection of speaking, sales, and strategic clarity. Her work is for people with real depth — executives, authors, founders, licensed professionals, and experienced operators — who know they have something valuable but cannot yet express it in a way that lands cleanly in the market.</p>
+        <p class="section-sub">This is not about inflating the brand. It is about pulling the real value into focus, shaping it into an offer, and creating a clearer path from expertise to revenue.</p>
+      </div>
+      <div class="card reveal d1">
+        <span class="eyebrow purple">What makes this different</span>
+        <h3>Less brand theater. More market clarity.</h3>
+        <ul>
+          <li>The work begins with the offer, not surface-level branding.</li>
+          <li>Speaking is treated as a sales mechanism, not merely a visibility tactic.</li>
+          <li>The goal is to clarify what the market can buy, not to produce prettier noise.</li>
+          <li>Everything is meant to help serious experts become easier to understand, trust, and choose.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="who" style="background:linear-gradient(180deg,#fff,#f8fbfd);">
+    <div class="container split">
+      <div class="card reveal">
+        <span class="eyebrow coral">Who it's for</span>
+        <h3>Established experts with substance</h3>
+        <div class="audience-stack">
+          <div class="audience-item"><span class="mark">✓</span><div><strong>Executives and founders</strong><br><span>People with real accomplishments, a body of work, and the need to translate that into a sharper market position.</span></div></div>
+          <div class="audience-item"><span class="mark">✓</span><div><strong>Licensed and credentialed professionals</strong><br><span>Experts whose knowledge is deep but whose current positioning still feels muddy, broad, or too hard to explain.</span></div></div>
+          <div class="audience-item"><span class="mark">✓</span><div><strong>Authors, speakers, and advisors</strong><br><span>People who already have rooms, audiences, or opportunities — but need a stronger commercial structure underneath the visibility.</span></div></div>
+        </div>
+      </div>
+      <div class="card reveal d1">
+        <span class="eyebrow teal">Who it's not for</span>
+        <h3>Not everyone is a fit. Good.</h3>
+        <ul>
+          <li>Beginners looking for a shortcut or identity makeover</li>
+          <li>People who want hype before they have substance</li>
+          <li>Founders chasing content volume without offer clarity</li>
+          <li>Anyone who wants the language of authority without doing the work required to deserve it</li>
+        </ul>
+        <p style="margin-top:16px;color:var(--muted);line-height:1.8;">That boundary matters. Clear positioning gets easier the moment you stop trying to be for everyone.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="quote-wrap reveal">
+      <span class="eyebrow purple">Core philosophy</span>
+      <blockquote>“Your brand is not the thing. It is what grows when the offer finally becomes clear enough for people to talk about.”</blockquote>
+      <p>This is the spine of the page. It separates Sonia from generic personal-brand advice and anchors the entire site in a more commercially honest philosophy.</p>
+    </div>
+  </section>
+
+  <section class="section" id="method">
+    <div class="container">
+      <div class="method reveal">
+        <span class="eyebrow" style="background:rgba(255,255,255,.12);color:#fff;">The method</span>
+        <h2 class="section-title" style="color:#fff;max-width:11ch;margin-top:14px;">Clarify the offer. Sharpen the message. Sell from the room.</h2>
+        <p style="margin-top:16px;max-width:64ch;line-height:1.85;">This is the practical sequence underneath the brand page. The order matters. First the offer. Then the message. Then the sales environment. Visibility comes after the thing is structurally sound.</p>
+        <div class="step-grid">
+          <div class="step">
+            <div class="step-num">01</div>
+            <div><strong>Extract the commercial asset.</strong><br><span>Find the part of your expertise the market can actually understand, value, and buy — not just admire politely.</span></div>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <div><strong>Package the offer clearly.</strong><br><span>Shape the promise, the audience, the problem, and the transformation so the message stops wandering.</span></div>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <div><strong>Use speaking to accelerate trust.</strong><br><span>Turn stages, podcasts, workshops, webinars, and presentations into environments where the right people lean forward.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="container">
+      <span class="eyebrow teal reveal">Ways to work together</span>
+      <h2 class="section-title reveal d1">A few clear paths. Not a pile of disconnected offers.</h2>
+      <p class="section-sub reveal d2">The final production version may refine these names and offers, but the structure is correct: a small number of entry points, each tied to a real business outcome.</p>
+      <div class="offer-grid">
+        <article class="card offer-card reveal">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Placeholder strategy session scene" />
+          <span class="eyebrow coral">Private advisory</span>
+          <h3>Strategic offer clarification</h3>
+          <p>For experts who need hands-on help defining the right offer, tightening the message, and building a sales path that matches the value of the work.</p>
+        </article>
+        <article class="card offer-card reveal d1">
+          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80" alt="Placeholder speaking event scene" />
+          <span class="eyebrow teal">Speaking-to-sell</span>
+          <h3>Presentations that convert</h3>
+          <p>For people who already have rooms, stages, workshops, or interviews and want those moments to create trust and forward motion instead of just applause.</p>
+        </article>
+        <article class="card offer-card reveal d2">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Placeholder team collaboration scene" />
+          <span class="eyebrow purple">ABB ecosystem</span>
+          <h3>Authority Brand Builder</h3>
+          <p>For founders and experts who want the broader system behind the page: research, positioning, packaging, and operational support that turns expertise into assets.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:linear-gradient(180deg,#fff,#f7fafc);">
+    <div class="container">
+      <span class="eyebrow coral reveal">Why this works</span>
+      <h2 class="section-title reveal d1">The page does not try to impress first. It tries to orient first.</h2>
+      <div class="info-grid">
+        <article class="card reveal">
+          <h3>Clear fit</h3>
+          <p>Visitors quickly understand whether they are in the right place, which saves time and increases the quality of conversations.</p>
+        </article>
+        <article class="card reveal d1">
+          <h3>Commercial honesty</h3>
+          <p>The messaging avoids vague empowerment language and keeps the focus on the actual market problem: unclear expertise that has not yet been packaged well.</p>
+        </article>
+        <article class="card reveal d2">
+          <h3>Better authority</h3>
+          <p>Real authority comes from clarity, proof, and coherence. The page is designed to support that, not fake it.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow purple reveal">Proof section draft</span>
+      <h2 class="section-title reveal d1">This is where real case studies and testimonials should eventually live.</h2>
+      <p class="section-sub reveal d2">I do not have James-approved proof blocks yet, so these are structural placeholders only. The section exists because the homepage needs it. The final content should be replaced with actual outcomes, client stories, and speaking wins.</p>
+      <div class="proof-grid">
+        <article class="card proof-card reveal">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80" alt="Placeholder executive meeting scene" />
+          <span class="eyebrow teal">Client outcome placeholder</span>
+          <blockquote>“We had years of experience and no clean way to explain the offer. The work forced the business to become more legible — and everything got easier after that.”</blockquote>
+          <div class="who">Placeholder executive client</div>
+        </article>
+        <article class="card proof-card reveal d1">
+          <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=900&q=80" alt="Placeholder workshop presentation scene" />
+          <span class="eyebrow coral">Speaking result placeholder</span>
+          <blockquote>“The difference was not confidence. It was structure. Once the offer and talk aligned, the room finally knew what to do next.”</blockquote>
+          <div class="who">Placeholder speaker client</div>
+        </article>
+        <article class="card proof-card reveal d2">
+          <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" alt="Placeholder advisor strategy scene" />
+          <span class="eyebrow purple">Positioning result placeholder</span>
+          <blockquote>“We stopped trying to sound broad and important. We got specific. That was the turning point.”</blockquote>
+          <div class="who">Placeholder founder client</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <span class="eyebrow teal reveal">FAQ</span>
+      <h2 class="section-title reveal d1">Questions the right people usually ask before they reach out.</h2>
+      <div class="faq-grid">
+        <article class="card reveal">
+          <h3>Is this for beginners?</h3>
+          <p>No. The page is written for people with real experience, real depth, and enough substance to build something premium.</p>
+        </article>
+        <article class="card reveal d1">
+          <h3>Do I need a big audience first?</h3>
+          <p>Not necessarily. A cleaner offer and sharper message often matter more than raw audience size. Better clarity makes every room work harder.</p>
+        </article>
+        <article class="card reveal d2">
+          <h3>Is this branding or sales strategy?</h3>
+          <p>It is both, but in the proper order. First clarify what the market can buy. Then build the brand expression around that.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="apply">
+    <div class="container">
+      <div class="cta-band reveal">
+        <span class="eyebrow" style="background:rgba(255,255,255,.12);color:#fff;">Next step</span>
+        <h2 class="section-title" style="color:#fff;max-width:12ch;margin-top:14px;">If the expertise is there, the offer ought to show it.</h2>
+        <p>This draft is strong enough to review the homepage structure, tone, and positioning direction now. It still needs real Sonia proof, bio specifics, and offer naming before it should be considered final. But the bones are correct, and the bones matter.</p>
+        <div class="hero-actions" style="margin-top:24px;">
+          <a class="btn btn-gold" href="mailto:hello@authoritybrandbuilder.com?subject=Strategic%20Fit%20Call">Request a Fit Call</a>
+          <a class="btn btn-secondary" href="https://authoritybrandbuilder.com" target="_blank" rel="noopener">Visit Authority Brand Builder</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Sonia Gomez</div>
+        <div>Homepage draft for review — built from James's current strategic context.</div>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#method">Method</a>
+        <a href="#work">Work Together</a>
+        <a href="#apply">Apply</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => {
+      if (!el.classList.contains('visible')) io.observe(el);
+    });
+  </script>
+</body>
+</html>
