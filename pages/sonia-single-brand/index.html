@@ -6,22 +6,22 @@
   <title>Sonia Gomez — Personal Brand</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0b1020;
-      --bg-soft: #11182c;
-      --surface: rgba(17, 24, 44, 0.78);
-      --surface-strong: #121a30;
-      --ink: #f5f7fb;
-      --muted: #a8b1c7;
-      --line: rgba(255, 255, 255, 0.10);
-      --accent: #8b5cf6;
-      --accent-2: #b794ff;
-      --accent-soft: rgba(139, 92, 246, 0.16);
-      --success: #4ade80;
-      --shadow: 0 24px 64px rgba(0, 0, 0, 0.32);
-      --radius: 24px;
+      --bg: #120f16;
+      --bg-soft: #1a1520;
+      --surface: rgba(27, 21, 32, 0.78);
+      --surface-strong: #201827;
+      --ink: #f7f1eb;
+      --muted: #c9bbc5;
+      --line: rgba(255, 245, 238, 0.10);
+      --accent: #d8a07f;
+      --accent-2: #e7c0aa;
+      --accent-3: #b26a84;
+      --accent-soft: rgba(216, 160, 127, 0.16);
+      --shadow: 0 24px 64px rgba(0, 0, 0, 0.36);
+      --radius: 26px;
       --max: 1180px;
     }
 
@@ -32,9 +32,9 @@
       font-family: Inter, system-ui, sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at 15% 20%, rgba(139, 92, 246, 0.18), transparent 26%),
-        radial-gradient(circle at 80% 10%, rgba(59, 130, 246, 0.10), transparent 24%),
-        linear-gradient(180deg, #0b1020 0%, #0d1324 42%, #0a0f1c 100%);
+        radial-gradient(circle at 12% 16%, rgba(216,160,127,0.18), transparent 24%),
+        radial-gradient(circle at 84% 10%, rgba(178,106,132,0.14), transparent 26%),
+        linear-gradient(180deg, #120f16 0%, #15111a 42%, #0d0a11 100%);
       overflow-x: hidden;
     }
 
@@ -43,13 +43,12 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
-      background-image: radial-gradient(rgba(255,255,255,0.06) 0.8px, transparent 0.8px);
-      background-size: 26px 26px;
-      opacity: 0.25;
+      background-image: radial-gradient(rgba(255,255,255,0.05) .8px, transparent .8px);
+      background-size: 28px 28px;
+      opacity: .18;
       z-index: 0;
     }
 
-    a { color: inherit; }
     .page { position: relative; z-index: 1; }
     .container { width: min(var(--max), calc(100% - 28px)); margin: 0 auto; }
 
@@ -57,8 +56,8 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      backdrop-filter: blur(18px);
-      background: rgba(11, 16, 32, 0.62);
+      backdrop-filter: blur(16px);
+      background: rgba(18, 15, 22, 0.58);
       border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
@@ -79,15 +78,15 @@
     }
 
     .brand-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 14px;
+      width: 40px;
+      height: 40px;
+      border-radius: 16px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, var(--accent), #4f46e5);
+      background: linear-gradient(135deg, var(--accent), var(--accent-3));
       color: white;
       font-weight: 800;
-      box-shadow: 0 12px 24px rgba(139, 92, 246, 0.35);
+      box-shadow: 0 16px 28px rgba(216, 160, 127, 0.28);
     }
 
     .nav-links {
@@ -99,19 +98,15 @@
       font-size: 14px;
     }
 
-    .nav-links a {
-      text-decoration: none;
-      transition: color .2s ease;
-    }
-
+    .nav-links a { text-decoration: none; transition: color .2s ease; }
     .nav-links a:hover { color: var(--ink); }
 
     .btn {
       appearance: none;
       border: 0;
       border-radius: 999px;
-      padding: 0 20px;
-      min-height: 48px;
+      padding: 0 22px;
+      min-height: 50px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -121,30 +116,23 @@
       cursor: pointer;
       transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
     }
-
     .btn:active { transform: scale(0.98); }
     .btn-primary {
-      color: white;
-      background: linear-gradient(135deg, var(--accent), #4f46e5);
-      box-shadow: 0 16px 30px rgba(139, 92, 246, 0.30);
+      color: #1d1419;
+      background: linear-gradient(135deg, var(--accent-2), var(--accent));
+      box-shadow: 0 18px 32px rgba(216, 160, 127, 0.22);
     }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 20px 36px rgba(139, 92, 246, 0.34);
-    }
+    .btn-primary:hover { transform: translateY(-2px); }
     .btn-secondary {
       color: var(--ink);
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.05);
       border: 1px solid var(--line);
     }
 
-    .hero {
-      padding: 54px 0 28px;
-    }
-
+    .hero { padding: 54px 0 28px; }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr .9fr;
+      grid-template-columns: 1.05fr .95fr;
       gap: 22px;
       align-items: stretch;
     }
@@ -152,14 +140,17 @@
     .panel {
       background: var(--surface);
       border: 1px solid var(--line);
-      border-radius: 30px;
+      border-radius: 32px;
       box-shadow: var(--shadow);
       overflow: hidden;
     }
 
     .hero-copy {
-      padding: 34px;
+      padding: 36px;
       position: relative;
+      background:
+        radial-gradient(circle at top left, rgba(216,160,127,0.06), transparent 28%),
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
     }
 
     .eyebrow {
@@ -179,29 +170,30 @@
 
     h1, h2, h3 {
       margin: 0;
-      line-height: .96;
+      line-height: .94;
       letter-spacing: -0.03em;
+      font-family: 'Cormorant Garamond', serif;
     }
 
     h1 {
       margin-top: 18px;
-      font-family: Fraunces, serif;
-      font-size: clamp(54px, 8vw, 98px);
+      font-size: clamp(62px, 9vw, 110px);
       max-width: 8ch;
+      font-weight: 600;
     }
 
     .hero-title {
-      margin-top: 16px;
-      font-size: 18px;
-      color: #d9def0;
-      font-weight: 700;
+      margin-top: 14px;
+      font-size: 19px;
+      color: #e8d9d3;
+      font-weight: 600;
     }
 
     .hero-lead {
       margin-top: 18px;
       max-width: 58ch;
       color: var(--muted);
-      line-height: 1.85;
+      line-height: 1.9;
       font-size: 17px;
     }
 
@@ -209,7 +201,7 @@
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
-      margin-top: 26px;
+      margin-top: 28px;
     }
 
     .hero-micro {
@@ -230,82 +222,85 @@
 
     .hero-visual {
       position: relative;
-      min-height: 620px;
+      min-height: 640px;
       padding: 18px;
       display: grid;
       align-items: stretch;
     }
 
     .photo-card {
-      border-radius: 26px;
+      border-radius: 28px;
       min-height: 100%;
       background:
-        linear-gradient(180deg, rgba(11,16,32,0.12), rgba(11,16,32,0.28)),
+        linear-gradient(180deg, rgba(18,15,22,0.08), rgba(18,15,22,0.36)),
         url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1400&q=80') center/cover;
       position: relative;
       overflow: hidden;
       border: 1px solid rgba(255,255,255,0.10);
     }
 
+    .photo-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 45%, rgba(18,15,22,0.45) 100%);
+    }
+
     .photo-badge {
       position: absolute;
       right: 18px;
       bottom: 18px;
-      max-width: 280px;
-      background: rgba(11, 16, 32, 0.74);
+      max-width: 300px;
+      background: rgba(18, 15, 22, 0.62);
       border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 20px;
-      padding: 16px;
+      border-radius: 22px;
+      padding: 18px;
       backdrop-filter: blur(12px);
+      z-index: 2;
     }
 
     .photo-badge strong {
       display: block;
       color: white;
       margin-bottom: 6px;
+      font-size: 18px;
+      font-family: 'Cormorant Garamond', serif;
     }
 
     .photo-badge span {
-      color: #cbd3e7;
+      color: #dac9d0;
       font-size: 14px;
       line-height: 1.7;
     }
 
-    .section {
-      padding: 22px 0;
-    }
-
-    .section-head {
-      max-width: 760px;
-      margin-bottom: 18px;
-    }
-
+    .section { padding: 24px 0; }
+    .section-head { max-width: 780px; margin-bottom: 18px; }
     .section-head h2 {
-      font-family: Fraunces, serif;
-      font-size: clamp(34px, 5vw, 58px);
+      font-size: clamp(40px, 5vw, 64px);
       margin-top: 10px;
+      font-weight: 600;
     }
-
     .section-head p {
       margin: 12px 0 0;
       color: var(--muted);
-      line-height: 1.8;
+      line-height: 1.86;
       font-size: 16px;
     }
 
     .about-grid {
       display: grid;
-      grid-template-columns: .88fr 1.12fr;
+      grid-template-columns: .9fr 1.1fr;
       gap: 18px;
     }
 
     .about-photo {
-      min-height: 420px;
+      min-height: 440px;
       background:
-        linear-gradient(180deg, rgba(139,92,246,0.08), rgba(17,24,44,0.20)),
+        linear-gradient(180deg, rgba(216,160,127,0.08), rgba(18,15,22,0.24)),
         url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80') center/cover;
-      border-radius: 24px;
+      border-radius: 26px;
       border: 1px solid var(--line);
+      box-shadow: var(--shadow);
     }
 
     .about-copy,
@@ -315,13 +310,13 @@
     .proof-card {
       background: var(--surface);
       border: 1px solid var(--line);
-      border-radius: 24px;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+      border-radius: 26px;
+      box-shadow: 0 14px 36px rgba(0,0,0,0.20);
     }
 
     .about-copy,
     .proof-panel,
-    .contact-panel { padding: 24px; }
+    .contact-panel { padding: 26px; }
 
     .about-copy p,
     .proof-panel p,
@@ -329,26 +324,22 @@
     .tile p,
     .proof-card p {
       color: var(--muted);
-      line-height: 1.82;
+      line-height: 1.86;
     }
 
-    .highlight-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 16px;
-    }
-
+    .highlight-list { display: grid; gap: 12px; margin-top: 16px; }
     .highlight {
-      padding: 14px 16px;
+      padding: 15px 16px;
       background: rgba(255,255,255,0.04);
       border-radius: 18px;
       border: 1px solid rgba(255,255,255,0.08);
     }
-
     .highlight strong {
       display: block;
       margin-bottom: 6px;
-      color: #e9ecf7;
+      color: #f1e6df;
+      font-size: 18px;
+      font-family: 'Cormorant Garamond', serif;
     }
 
     .tiles {
@@ -357,29 +348,30 @@
       gap: 18px;
     }
 
-    .tile { padding: 22px; }
-
+    .tile { padding: 24px; }
     .tile-icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 16px;
+      width: 48px;
+      height: 48px;
+      border-radius: 18px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, var(--accent-soft), rgba(79,70,229,0.18));
-      border: 1px solid rgba(139,92,246,0.24);
+      background: linear-gradient(135deg, rgba(216,160,127,0.18), rgba(178,106,132,0.18));
+      border: 1px solid rgba(216,160,127,0.22);
       margin-bottom: 14px;
       color: var(--accent-2);
       font-size: 22px;
     }
-
     .tile h3,
     .proof-card h3,
     .contact-panel h3,
-    .about-copy h3 { font-size: 28px; }
+    .about-copy h3 {
+      font-size: 34px;
+      font-weight: 600;
+    }
 
     .proof-grid {
       display: grid;
-      grid-template-columns: 1.15fr .85fr;
+      grid-template-columns: 1.1fr .9fr;
       gap: 18px;
       align-items: stretch;
     }
@@ -396,19 +388,14 @@
       border-radius: 999px;
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.08);
-      color: #d6ddf0;
+      color: #e7d5dc;
       font-size: 13px;
       font-weight: 700;
       letter-spacing: .02em;
     }
 
-    .proof-cards {
-      display: grid;
-      gap: 18px;
-    }
-
-    .proof-card { padding: 20px; }
-
+    .proof-cards { display: grid; gap: 18px; }
+    .proof-card { padding: 22px; }
     .proof-card .mini {
       display: inline-block;
       font-size: 12px;
@@ -425,20 +412,14 @@
       gap: 18px;
     }
 
-    .form {
-      display: grid;
-      gap: 14px;
-      margin-top: 18px;
-    }
-
+    .form { display: grid; gap: 14px; margin-top: 18px; }
     .field label {
       display: block;
       font-size: 13px;
       font-weight: 700;
-      color: #dce2f1;
+      color: #eadfd9;
       margin-bottom: 8px;
     }
-
     .field input,
     .field textarea {
       width: 100%;
@@ -450,11 +431,7 @@
       padding: 14px 14px;
       outline: none;
     }
-
-    .field textarea {
-      min-height: 132px;
-      resize: vertical;
-    }
+    .field textarea { min-height: 132px; resize: vertical; }
 
     .contact-links {
       display: grid;
@@ -467,14 +444,13 @@
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      padding: 14px 16px;
+      padding: 15px 16px;
       border-radius: 18px;
       text-decoration: none;
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.08);
-      color: #e8ecf8;
+      color: #f1e7e1;
     }
-
     .contact-link span { color: var(--muted); font-size: 14px; }
 
     .footer {
@@ -488,7 +464,6 @@
       transform: translateY(20px);
       transition: opacity .6s ease, transform .6s ease;
     }
-
     .reveal.in-view {
       opacity: 1;
       transform: translateY(0);
@@ -502,7 +477,6 @@
       .tiles {
         grid-template-columns: 1fr;
       }
-
       .hero-visual { min-height: 420px; }
     }
 
@@ -551,25 +525,25 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="panel hero-copy reveal in-view">
-          <span class="eyebrow">Personal brand website · dark mode</span>
+          <span class="eyebrow">Personal brand website · luxury dark</span>
           <h1>Sonia Gomez</h1>
           <div class="hero-title">Speaker • Sales Trainer • Offer Messaging Strategist</div>
-          <p class="hero-lead">I help established experts turn what they know into an offer people understand, trust, and buy — on stage, in the room, and across the rest of the business.</p>
+          <p class="hero-lead">I help established experts refine their message, sharpen their offer, and step into a more powerful sales identity — so the work they have built finally lands with the weight it deserves.</p>
           <div class="hero-cta">
             <a class="btn btn-primary" href="#contact">Book a Call</a>
             <a class="btn btn-secondary" href="#what-i-do">See What I Do</a>
           </div>
           <div class="hero-micro">
-            <span>Built for speaking-led sales</span>
+            <span>Elegant, feminine, premium</span>
             <span>Offer-first positioning</span>
-            <span>Placeholder content ready to swap</span>
+            <span>Ready for real content later</span>
           </div>
         </div>
         <div class="panel hero-visual reveal in-view">
           <div class="photo-card">
             <div class="photo-badge">
               <strong>Photo placeholder</strong>
-              <span>Swap this image for Sonia’s actual headshot or keynote photography later. The layout is already prepared for it.</span>
+              <span>This is where Sonia’s actual key visual should go — polished headshot, keynote still, or premium portrait that feels elevated rather than stock-corporate.</span>
             </div>
           </div>
         </div>
@@ -580,26 +554,26 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">About</span>
-          <h2>The personal brand behind the pitch.</h2>
-          <p>This section is designed to humanize Sonia without slipping into generic bio copy. It should help people understand what makes her different and why her work feels sharper than the usual coaching and content noise.</p>
+          <h2>The woman behind the conviction.</h2>
+          <p>This version is intentionally softer in shape, richer in tone, and more luxurious in feel — but it still keeps a conversion spine. It should feel like a premium personal brand, not a generic coaching website and not a hard corporate page.</p>
         </div>
         <div class="about-grid">
           <div class="about-photo reveal"></div>
           <div class="about-copy reveal">
             <h3>Short bio placeholder</h3>
-            <p>Sonia Gomez is a speaker, sales trainer, and messaging strategist who helps high-level experts package their experience into offers that make sense to the market and sell with more clarity. Her work sits at the intersection of offer design, speaking-to-sell, and commercial confidence.</p>
+            <p>Sonia Gomez is a speaker, sales trainer, and strategist who helps accomplished experts turn what they know into a clearer, more desirable offer. Her work is especially powerful for people who already have credibility and depth, but need sharper packaging, stronger messaging, and a more compelling path to premium sales.</p>
             <div class="highlight-list">
               <div class="highlight">
                 <strong>What makes you different</strong>
-                You are not teaching people how to become influencers. You help serious people build an offer that can support a real business.
+                You are not teaching people how to become louder. You help them become clearer, more persuasive, and more commercially legible.
               </div>
               <div class="highlight">
                 <strong>How this should feel</strong>
-                Professional, direct, warm, and credible — more trusted guide than internet personality.
+                Refined. Warm. Commanding. Personal enough to trust, structured enough to convert.
               </div>
               <div class="highlight">
                 <strong>What to replace later</strong>
-                Add Sonia’s real story, best positioning line, and one proof-rich paragraph about client results or stage wins.
+                Add Sonia’s real story, strongest positioning line, best social proof, and a cleaner description of how speaking fits into the business model.
               </div>
             </div>
           </div>
@@ -611,24 +585,24 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">What I do</span>
-          <h2>Three clear ways to work with Sonia.</h2>
-          <p>These are placeholders for the three cleanest categories of value. They are intentionally broad enough to visualize the homepage, but focused enough to be swapped for real copy later.</p>
+          <h2>Three ways I help experts become more magnetic and more sellable.</h2>
+          <p>The structure is still simple, but the tone and visual treatment are more elevated. This is designed to feel like a luxury service brand rather than a fast moving startup page.</p>
         </div>
         <div class="tiles">
           <article class="tile reveal">
             <div class="tile-icon">🎤</div>
             <h3>Speaking-to-Sell Strategy</h3>
-            <p>Turn presentations, podcasts, workshops, and webinars into a sales asset instead of just a visibility exercise.</p>
+            <p>Use live presentation environments more intentionally — from workshops to podcasts to rooms where authority and clarity matter more than noise.</p>
           </article>
           <article class="tile reveal">
-            <div class="tile-icon">🧭</div>
+            <div class="tile-icon">🪞</div>
             <h3>Offer Positioning</h3>
-            <p>Clarify what you sell, why it matters, and how to communicate it so buyers understand the value quickly.</p>
+            <p>Refine the message, promise, and structure of what you sell so the market understands the value faster and trusts it more deeply.</p>
           </article>
           <article class="tile reveal">
-            <div class="tile-icon">📈</div>
-            <h3>Message & Conversion Support</h3>
-            <p>Strengthen the language, structure, and path that help prospects move from curiosity to confidence.</p>
+            <div class="tile-icon">✨</div>
+            <h3>Brand & Conversion Alignment</h3>
+            <p>Make the outer expression of the brand match the strength of the offer so your presence, message, and sales path all feel coherent.</p>
           </article>
         </div>
       </div>
@@ -638,31 +612,31 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">Social proof</span>
-          <h2>Space for trust to do its job.</h2>
-          <p>This area is built to hold logos, “as seen in” badges, testimonials, or event credibility blocks. Right now it uses placeholders so the layout is complete before the real assets are dropped in.</p>
+          <h2>Luxury still needs proof.</h2>
+          <p>This section keeps the premium visual treatment but leaves room for the practical credibility blocks that make elegant pages actually convert.</p>
         </div>
         <div class="proof-grid">
           <div class="proof-panel reveal">
             <h3>As seen in / trusted by</h3>
-            <p>Use this band for logos, media mentions, podcast appearances, client brands, or event hosts.</p>
+            <p>Use these slots for event logos, media, podcasts, notable clients, or strategic partner brands.</p>
             <div class="logo-band">
-              <div class="logo-pill">LOGO / PODCAST</div>
-              <div class="logo-pill">EVENT / HOST</div>
-              <div class="logo-pill">CLIENT BRAND</div>
+              <div class="logo-pill">EVENT LOGO</div>
+              <div class="logo-pill">PODCAST BADGE</div>
               <div class="logo-pill">MEDIA FEATURE</div>
-              <div class="logo-pill">WORKSHOP PARTNER</div>
+              <div class="logo-pill">CLIENT BRAND</div>
+              <div class="logo-pill">PARTNER LOGO</div>
             </div>
           </div>
           <div class="proof-cards">
             <div class="proof-card reveal">
               <div class="mini">Testimonial placeholder</div>
-              <h3>“This changed how I explained my offer.”</h3>
-              <p>Add a short quote from a client here. Keep it concrete. The best social proof sounds specific, not worshipful.</p>
+              <h3>“She gave me language my market could finally respond to.”</h3>
+              <p>Add a short, specific quote that speaks to clarity, confidence, or measurable client results.</p>
             </div>
             <div class="proof-card reveal">
-              <div class="mini">Proof placeholder</div>
-              <h3>“We finally had a message people could buy.”</h3>
-              <p>This second block can be another testimonial, a stage result, or a quick proof statement with metrics once available.</p>
+              <div class="mini">Case result placeholder</div>
+              <h3>“The offer finally matched the level of the expertise.”</h3>
+              <p>This can later become a proof panel with numbers, stage outcomes, or a short transformation story.</p>
             </div>
           </div>
         </div>
@@ -673,13 +647,13 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">Contact</span>
-          <h2>Make the next step obvious.</h2>
-          <p>This section gives you two options: a simple contact form and direct links to your real channels. It keeps the page personal and useful without overcomplicating the footer.</p>
+          <h2>Let the next step feel simple and elegant.</h2>
+          <p>The contact section stays minimal and premium. No clutter, no desperate energy, just a clean path to connection.</p>
         </div>
         <div class="contact-grid">
           <div class="contact-panel reveal">
             <h3>Send a message</h3>
-            <p>Use this as a visual placeholder for a future working contact form or replace it with your preferred CRM/embed later.</p>
+            <p>Replace this placeholder form with your preferred embed later, or keep the structure and wire it to your CRM.</p>
             <form class="form">
               <div class="field">
                 <label>Name</label>
@@ -691,43 +665,19 @@
               </div>
               <div class="field">
                 <label>What are you working on?</label>
-                <textarea placeholder="Tell me a little about your business, offer, or what you need help with."></textarea>
+                <textarea placeholder="Tell me a little about your business, your offer, or what you need help clarifying."></textarea>
               </div>
               <button class="btn btn-primary" type="button">Get in Touch</button>
             </form>
           </div>
           <div class="contact-panel reveal">
             <h3>Direct links</h3>
-            <p>Swap these placeholders with Sonia’s real email, LinkedIn, X/Twitter, and calendar link.</p>
+            <p>Swap in the real links once you are ready.</p>
             <div class="contact-links">
-              <a class="contact-link" href="#">
-                <div>
-                  <strong>Email</strong>
-                  <span>hello@soniagomez.net</span>
-                </div>
-                <div>→</div>
-              </a>
-              <a class="contact-link" href="#">
-                <div>
-                  <strong>LinkedIn</strong>
-                  <span>linkedin.com/in/soniagomez</span>
-                </div>
-                <div>→</div>
-              </a>
-              <a class="contact-link" href="#">
-                <div>
-                  <strong>Twitter / X</strong>
-                  <span>x.com/soniagomez</span>
-                </div>
-                <div>→</div>
-              </a>
-              <a class="contact-link" href="#">
-                <div>
-                  <strong>Calendar</strong>
-                  <span>Book a fit call</span>
-                </div>
-                <div>→</div>
-              </a>
+              <a class="contact-link" href="#"><div><strong>Email</strong><span>hello@soniagomez.net</span></div><div>→</div></a>
+              <a class="contact-link" href="#"><div><strong>LinkedIn</strong><span>linkedin.com/in/soniagomez</span></div><div>→</div></a>
+              <a class="contact-link" href="#"><div><strong>Twitter / X</strong><span>x.com/soniagomez</span></div><div>→</div></a>
+              <a class="contact-link" href="#"><div><strong>Calendar</strong><span>Book a fit call</span></div><div>→</div></a>
             </div>
           </div>
         </div>
@@ -735,7 +685,7 @@
     </section>
 
     <div class="container footer">
-      Single-file mockup for SoniaGomez.net — dark, minimal, mobile-responsive, placeholder-ready.
+      Refined SoniaGomez.net concept — more luxurious, more feminine, more premium, while keeping a clear business purpose.
     </div>
   </div>
 
@@ -748,7 +698,6 @@
         }
       });
     }, { threshold: 0.14 });
-
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 </body>
