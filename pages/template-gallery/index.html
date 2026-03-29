@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Template Gallery — Full Design Collection</title>
+  <meta name="description" content="A full gallery of complete website templates built to show the range of websites we can design for clients — from personal brands and service businesses to courses, events, SaaS, agencies, and premium experts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e1117;
+      --surface: #141925;
+      --surface-2: #1b2331;
+      --text: #edf2ff;
+      --muted: #9aa6bf;
+      --line: rgba(255,255,255,.08);
+      --accent: #7c5cff;
+      --accent-2: #2dd4bf;
+      --accent-3: #ff8a5b;
+      --radius: 22px;
+      --shadow: 0 18px 40px rgba(0,0,0,.25);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(124,92,255,.16), transparent 22%),
+        radial-gradient(circle at top right, rgba(45,212,191,.12), transparent 22%),
+        linear-gradient(180deg, #0b0f16 0%, #0f1420 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    header {
+      padding: 88px 0 42px;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: .45rem .85rem;
+      border-radius: 999px;
+      background: rgba(124,92,255,.14);
+      color: #cbbdff;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 {
+      font-family: Syne, sans-serif;
+      line-height: 1.02;
+      letter-spacing: -.03em;
+      margin: 0;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      max-width: 11ch;
+    }
+    .lead {
+      margin-top: 20px;
+      max-width: 70ch;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .stat {
+      padding: .85rem 1rem;
+      border-radius: 16px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    main { padding: 44px 0 90px; }
+    .section-title {
+      font-size: 1.65rem;
+      margin-bottom: 18px;
+    }
+    .section-copy {
+      max-width: 70ch;
+      color: var(--muted);
+      margin-bottom: 26px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(124,92,255,.35);
+      box-shadow: 0 22px 44px rgba(0,0,0,.3);
+    }
+    .thumb {
+      aspect-ratio: 16/10;
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+    .thumb::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent, rgba(0,0,0,.2));
+      pointer-events: none;
+    }
+    .mini-browser {
+      height: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.92);
+    }
+    .mini-top {
+      height: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 12px;
+      background: rgba(15,18,24,.08);
+      border-bottom: 1px solid rgba(0,0,0,.08);
+    }
+    .mini-dot { width: 9px; height: 9px; border-radius: 50%; background: rgba(15,18,24,.25); }
+    .mini-body { padding: 14px; display: grid; gap: 10px; }
+    .bar, .block, .pill { border-radius: 999px; }
+    .bar { height: 12px; background: rgba(15,18,24,.16); }
+    .bar.w70 { width: 70%; }
+    .bar.w50 { width: 50%; }
+    .bar.w40 { width: 40%; }
+    .block { height: 92px; background: rgba(15,18,24,.08); border-radius: 18px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    .pill { height: 24px; background: rgba(15,18,24,.12); width: 90px; }
+    .card-copy { padding: 20px; display: grid; gap: 12px; }
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      padding: .4rem .75rem;
+      border-radius: 999px;
+      background: rgba(45,212,191,.12);
+      color: #9ef2e5;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .card h3 { font-size: 1.35rem; }
+    .card p { color: var(--muted); margin: 0; }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px; }
+    .meta span {
+      font-size: .84rem;
+      color: #c7d2e6;
+      padding: .4rem .7rem;
+      background: rgba(255,255,255,.04);
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform .18s ease, opacity .18s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), #9d84ff);
+    }
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    footer {
+      padding: 36px 0 56px;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    @media (max-width: 640px) {
+      header { padding-top: 64px; }
+      .actions { flex-direction: column; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <span class="eyebrow">Full design gallery</span>
+      <h1>Complete website templates, not half-finished mockups.</h1>
+      <p class="lead">This gallery shows the range of websites we can build for clients — all as complete single-page website experiences with real structure, real hierarchy, and full sections from hero to footer. Every template has a point of view, a use case, and a finished feel.</p>
+      <div class="stats">
+        <div class="stat">10 complete website templates</div>
+        <div class="stat">Different market types and conversion goals</div>
+        <div class="stat">Single-file HTML builds</div>
+        <div class="stat">Designed to be customized fast</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2 class="section-title">The collection</h2>
+      <p class="section-copy">These are not just hero sections. Each file is a complete design showing what we can do for experts, agencies, coaches, startups, events, service businesses, lead funnels, and premium brands.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb" style="background:linear-gradient(135deg,#1a1b26,#3b3f63 55%,#e86b52 120%);">
+            <div class="mini-browser"><div class="mini-top"><span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span></div><div class="mini-body"><div class="pill" style="background:#f2aa4c;width:100px;"></div><div class="bar w70" style="background:#242739;"></div><div class="bar w50" style="background:#3e4667;"></div><div class="block" style="background:linear-gradient(135deg,#1b2134,#5b3f6f,#e86b52);"></div><div class="row"><div class="block" style="height:56px;background:#22283d;"></div><div class="block" style="height:56px;background:#29324a;"></div><div class="block" style="height:56px;background:#313a56;"></div></div></div></div>
+          </div>
+          <div class="card-copy">
+            <span class="tag">Authority / speaker</span>
+            <h3>Bold Dark Authority</h3>
+            <p>Premium, dramatic, conversion-aware site for speakers, authority brands, and high-ticket experts who need weight and presence.</p>
+            <div class="meta"><span>Dark premium</span><span>Speaking-led</span><span>Expert brand</span></div>
+            <div class="actions"><a class="btn btn-primary" href="./01-bold-dark-authority.html">Open Template</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background:linear-gradient(135deg,#f2efe9,#f8f3ee 60%,#c7beb0 120%);">
+            <div class="mini-browser"><div class="mini-top"><span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span></div><div class="mini-body"><div class="pill" style="background:#141414;width:88px;"></div><div class="bar w70"></div><div class="bar w40"></div><div class="block" style="background:#e8e1d7;"></div><div class="row"><div class="block" style="height:56px;background:#efe8de;"></div><div class="block" style="height:56px;background:#e7dfd5;"></div><div class="block" style="height:56px;background:#ddd4c8;"></div></div></div></div>
+          </div>
+          <div class="card-copy">
+            <span class="tag" style="background:rgba(255,138,91,.12);color:#ffb293;">Editorial</span>
+            <h3>Editorial Personal Brand</h3>
+            <p>Refined, content-first design for personal brands, authors, strategists, and media-facing experts who need voice and authority without corporate stiffness.</p>
+            <div class="meta"><span>Editorial</span><span>Author / creator</span><span>Strong typography</span></div>
+            <div class="actions"><a class="btn btn-primary" href="./02-editorial-personal-brand.html">Open Template</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background:linear-gradient(135deg,#f6f8fb,#eef4fb 60%,#d9e6f4 120%);">
+            <div class="mini-browser"><div class="mini-top"><span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span></div><div class="mini-body"><div class="pill" style="background:#2563eb;width:108px;"></div><div class="bar w70"></div><div class="bar w50"></div><div class="block" style="background:#dbeafe;"></div><div class="row"><div class="block" style="height:56px;background:#f3f8ff;"></div><div class="block" style="height:56px;background:#edf5ff;"></div><div class="block" style="height:56px;background:#e2efff;"></div></div></div></div>
+          </div>
+          <div class="card-copy">
+            <span class="tag" style="background:rgba(37,99,235,.12);color:#b9d1ff;">Professional</span>
+            <h3>Light Professional Coach</h3>
+            <p>High-trust, polished layout for consultants, advisors, executive coaches, and professional service brands that need clarity and confidence.</p>
+            <div class="meta"><span>Trust-first</span><span>Professional services</span><span>Clean conversion</span></div>
+            <div class="actions"><a class="btn btn-primary" href="./03-light-professional-coach.html">Open Template</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background:linear-gradient(135deg,#fff3ec,#f9efff 55%,#d8fff6 120%);">
+            <div class="mini-browser"><div class="mini-top"><span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span></div><div class="mini-body"><div class="pill" style="background:#1fa89a;width:96px;"></div><div class="bar w70"></div><div class="bar w50"></div><div class="block" style="background:linear-gradient(135deg,#1fa89a,#6f45d6,#ef6f61);"></div><div class="row"><div class="block" style="height:56px;background:#dff7f3;"></div><div class="block" style="height:56px;background:#f4edff;"></div><div class="block" style="height:56px;background:#fff0eb;"></div></div></div></div>
+          </div>
+          <div class="card-copy">
+            <span class="tag" style="background:rgba(31,168,154,.14);color:#8af0e1;">Vibrant</span>
+            <h3>Colorful Lifestyle / Brand</h3>
+            <p>Warm, magnetic, high-energy website design for creators, wellness brands, personal brands, and charismatic expert-led businesses.</p>
+            <div class="meta"><span>Warm</span><span>Vibrant</span><span>High personality</span></div>
+            <div class="actions"><a class="btn btn-primary" href="./04-colorful-wellness-lifestyle.html">Open Template</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background:linear-gradient(135deg,#111827,#1f2937 55%,#0f766e 120%);">
+            <div class="mini-browser"><div class="mini-top"><span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span></div><div class="mini-body"><div class="pill" style="background:#f59e0b;width:116px;"></div><div class="bar w70" style="background:#22304a;"></div><div class="bar w40" style="background:#314260;"></div><div class="block" style="background:#1f3f46;"></div><div class="block" style="height:52px;background:#0c1828;"></div></div></div>
+          </div>
+          <div class="card-copy">
+            <span class="tag" style="background:rgba(245,158,11,.12);color:#ffd993;">Lead gen</span>
+            <h3>Lead Capture Squeeze Page</h3>
+            <p>Focused, high-conversion landing page built for webinar registration, free guides, audit funnels, and list-building campaigns.</p>
+            <div class="meta"><span>Lead magnet</span><span>Squeeze page</span><span>CTA-focused</span></div>
+            <div class="actions"><a class="btn btn-primary" href="./05-lead-capture-squeeze.html">Open Template</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background:linear-gradient(135deg,#140d24,#28153d 50%,#ff8a5b 125%);">
+            <div class="mini-browser"><div class="mini-top"><span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span></div><div class="mini-body"><div class="pill" style="background:#ff8a5b;width:120px;"></div><div class="bar w70" style="background:#2a1e44;"></div><div class="bar w50" style="background:#3b2a5a;"></div><div class="block" style="background:#39235f;"></div><div class="row"><div class="block" style="height:56px;background:#28193f;"></div><div class="block" style="height:56px;background:#331f4e;"></div><div class="block" style="height:56px;background:#42275e;"></div></div></div></div>
+          </div>
+          <div class="card-copy">
+            <span class="tag" style="background:rgba(255,138,91,.12);color:#ffc0a7;">Sales page</span>
+            <h3>Course / Program Sales Page</h3>
+            <p>Long-form structure for selling offers, premium programs, digital courses, mentorship containers, and transformation-driven products.</p>
+            <div class="meta"><span>Long form</span><span>Offer education</span><span>Program sales</span></div>
+            <div class="actions"><a class="btn btn-primary" href="./06-course-sales-page.html">Open Template</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background:linear-gradient(135deg,#f4efe7,#e8ddd1 55%,#c3b19d 120%);">
+            <div class="mini-browser"><div class="mini-top"><span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span></div><div class="mini-body"><div class="pill" style="background:#31231f;width:92px;"></div><div class="bar w70"></div><div class="bar w40"></div><div class="block" style="background:#d9ccbc;"></div><div class="block" style="height:52px;background:#efe6da;"></div></div></div>
+          </div>
+          <div class="card-copy">
+            <span class="tag" style="background:rgba(90,59,42,.10);color:#e7d9cc;">About page</span>
+            <h3>About / Bio / Story Page</h3>
+            <p>Story-forward design for founders, authors, speakers, and experts who need a polished, credible page centered on personal authority.</p>
+            <div class="meta"><span>Story-led</span><span>Founder page</span><span>Bio site</span></div>
+            <div class="actions"><a class="btn btn-primary" href="./07-about-bio-page.html">Open Template</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background:linear-gradient(135deg,#0f172a,#1e293b 55%,#3b82f6 120%);">
+            <div class="mini-browser"><div class="mini-top"><span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span></div><div class="mini-body"><div class="pill" style="background:#60a5fa;width:100px;"></div><div class="bar w70" style="background:#2a3750;"></div><div class="bar w40" style="background:#3a4a67;"></div><div class="row"><div class="block" style="height:96px;background:#172335;"></div><div class="block" style="height:96px;background:#1d2a3f;"></div><div class="block" style="height:96px;background:#243149;"></div></div></div></div>
+          </div>
+          <div class="card-copy">
+            <span class="tag" style="background:rgba(96,165,250,.12);color:#bed7ff;">Services</span>
+            <h3>Services / Packages Site</h3>
+            <p>Structured service-business page for agencies, consultants, operators, and implementation shops that need clear offers and package logic.</p>
+            <div class="meta"><span>Service packages</span><span>Agency-friendly</span><span>Clear offers</span></div>
+            <div class="actions"><a class="btn btn-primary" href="./08-services-packages.html">Open Template</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background:linear-gradient(135deg,#eef3f8,#dde7f2 50%,#b2c8e6 120%);">
+            <div class="mini-browser"><div class="mini-top"><span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span></div><div class="mini-body"><div class="pill" style="background:#2563eb;width:110px;"></div><div class="bar w70"></div><div class="bar w50"></div><div class="block" style="background:#d4e4fb;"></div><div class="row"><div class="block" style="height:56px;background:#f5f9ff;"></div><div class="block" style="height:56px;background:#eaf3ff;"></div><div class="block" style="height:56px;background:#e1edff;"></div></div></div></div>
+          </div>
+          <div class="card-copy">
+            <span class="tag" style="background:rgba(37,99,235,.12);color:#bad2ff;">SaaS</span>
+            <h3>Modern Startup / SaaS</h3>
+            <p>Modern product-led site for software startups, AI tools, digital platforms, and clean minimal businesses that need crisp product communication.</p>
+            <div class="meta"><span>Startup</span><span>Tech-forward</span><span>Minimalist</span></div>
+            <div class="actions"><a class="btn btn-primary" href="./09-modern-startup-minimal.html">Open Template</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background:linear-gradient(135deg,#1a0f2b,#361d53 55%,#ff5f6d 125%);">
+            <div class="mini-browser"><div class="mini-top"><span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span></div><div class="mini-body"><div class="pill" style="background:#f59e0b;width:122px;"></div><div class="bar w70" style="background:#2d1b49;"></div><div class="bar w50" style="background:#3d2660;"></div><div class="block" style="background:linear-gradient(135deg,#582d7b,#ff5f6d);"></div><div class="row"><div class="block" style="height:56px;background:#2b1b44;"></div><div class="block" style="height:56px;background:#372152;"></div><div class="block" style="height:56px;background:#432863;"></div></div></div></div>
+          </div>
+          <div class="card-copy">
+            <span class="tag" style="background:rgba(245,158,11,.12);color:#ffd18a;">Event</span>
+            <h3>Event / Summit Landing Page</h3>
+            <p>Cinematic, high-energy event page for summits, workshops, launches, masterminds, and conferences that need urgency and structure.</p>
+            <div class="meta"><span>Event-led</span><span>Summit</span><span>Registration flow</span></div>
+            <div class="actions"><a class="btn btn-primary" href="./10-event-summit-landing.html">Open Template</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">Website Template Gallery — full-site examples showing the range of complete website builds we can customize for clients.</div>
+  </footer>
+</body>
+</html>
