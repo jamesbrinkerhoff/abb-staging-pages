@@ -22,21 +22,30 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
 
   <style>
     /* ===== PRACTITIONER SALES PAGE ===== */
 
     /* -- Hero -- */
     .prac-hero {
-      background: #0B1D3A;
-      background-image:
-        linear-gradient(rgba(11,29,58,0.55), rgba(11,29,58,0.55)),
-        url('/images/texture-leather-dark.png');
-      background-size: auto, 900px 900px;
+      position: relative;
+      background: var(--navy);
       color: var(--text-on-dark);
       text-align: center;
-      padding: clamp(130px, 16vw, 200px) 24px clamp(60px, 8vw, 100px);
+      padding: clamp(120px, 14vw, 180px) 0 clamp(56px, 7vw, 90px);
+      overflow: hidden;
+    }
+    .prac-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 30%, rgba(197,162,85,0.10) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .prac-hero > .container,
+    .prac-hero > * {
+      position: relative;
+      z-index: 1;
     }
     .prac-hero h1 {
       font-family: var(--font-heading);
@@ -101,10 +110,6 @@
     /* -- Problem Section -- */
     .problem-section {
       background: var(--blush);
-      background-image:
-        linear-gradient(rgba(245,237,230,0.85), rgba(245,237,230,0.85)),
-        url('/images/texture-parchment.png');
-      background-size: auto, 1000px 1000px;
       padding: var(--section-pad) 0;
     }
 
@@ -208,14 +213,22 @@
 
     /* -- Final CTA -- */
     .prac-cta {
-      background: #0B1D3A;
-      background-image:
-        linear-gradient(rgba(11,29,58,0.5), rgba(11,29,58,0.5)),
-        url('/images/texture-leather-dark.png');
-      background-size: auto, 900px 900px;
+      position: relative;
+      background: var(--navy);
       text-align: center;
-      padding: clamp(80px, 10vw, 140px) 0;
+      padding: clamp(72px, 10vw, 130px) 0;
       color: var(--text-on-dark);
+      overflow: hidden;
+    }
+    .prac-cta::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(197,162,85,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .prac-cta > .container {
+      position: relative;
+      z-index: 1;
     }
     .prac-cta h2 { color: var(--gold); font-size: clamp(26px, 3.5vw, 44px); margin-bottom: 20px; }
     .prac-cta p { color: rgba(245,240,234,0.8); font-size: 20px; max-width: 620px; margin: 0 auto 40px; }
@@ -592,6 +605,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

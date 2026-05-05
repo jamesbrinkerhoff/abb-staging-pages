@@ -22,68 +22,60 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
 
   <style>
     /* ===== CONSULTATION PAGE STYLES ===== */
 
-    /* -- Hero with Background Image -- */
+    /* -- Hero — cream, matches homepage -- */
     .consult-hero {
       position: relative;
-      min-height: 70vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: clamp(140px, 16vw, 200px) 24px clamp(80px, 10vw, 140px);
+      padding: clamp(120px, 14vw, 180px) 0 clamp(48px, 6vw, 80px);
       overflow: hidden;
+      background: var(--cream);
     }
     .consult-hero::before {
       content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600&q=80') center/cover no-repeat;
-      filter: brightness(0.55) saturate(0.8);
-      z-index: 0;
-    }
-    .consult-hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(180deg, rgba(11,29,58,0.45) 0%, rgba(11,29,58,0.65) 60%, rgba(11,29,58,0.8) 100%),
-        radial-gradient(ellipse at 50% 30%, rgba(197,162,85,0.12) 0%, transparent 60%);
-      z-index: 1;
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 20%, rgba(197,162,85,0.08) 0%, transparent 60%);
+      pointer-events: none;
     }
     .consult-hero .container {
       position: relative;
-      z-index: 2;
+      z-index: 1;
     }
     .consult-hero .section-label {
-      color: var(--gold-light);
-      margin-bottom: 20px;
+      color: var(--gold-dark);
+      margin-bottom: 16px;
     }
     .consult-hero h1 {
-      color: var(--text-on-dark);
-      font-size: clamp(32px, 5vw, 60px);
-      margin-bottom: 20px;
-      text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-transform: none;
+      color: var(--navy);
+      font-size: clamp(32px, 5vw, 56px);
+      margin-bottom: 16px;
+      line-height: 1.15;
     }
     .consult-hero .tagline {
       font-family: var(--font-heading);
-      font-size: clamp(18px, 2.5vw, 24px);
-      color: rgba(245,240,234,0.85);
+      font-size: clamp(17px, 2vw, 22px);
+      color: var(--text-medium);
       font-weight: 400;
       font-style: italic;
       max-width: 640px;
-      margin: 0 auto 36px;
-      line-height: 1.6;
+      margin: 0 auto 32px;
+      line-height: 1.55;
     }
 
     /* -- Philosophy Quotes -- */
     .philosophy-section {
-      background: linear-gradient(rgba(251,248,244,0.9), rgba(251,248,244,0.9)), url('https://images.unsplash.com/photo-1470058869958-2a77ade41c02?w=1600') center/cover no-repeat;
+      background: var(--blush);
       padding: var(--section-pad) 0;
     }
     .philosophy-quote {
@@ -232,33 +224,23 @@
       .testimonial-grid { grid-template-columns: 1fr; }
     }
 
-    /* -- Booking CTA with Background Image -- */
+    /* -- Booking CTA -- */
     .booking-cta {
       position: relative;
       padding: var(--section-pad) 0;
       text-align: center;
       overflow: hidden;
+      background: var(--navy);
     }
     .booking-cta::before {
       content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1600&q=80') center/cover no-repeat;
-      filter: brightness(0.4) saturate(0.7);
-      z-index: 0;
-    }
-    .booking-cta::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(180deg, rgba(11,29,58,0.7) 0%, rgba(11,29,58,0.85) 100%);
-      z-index: 1;
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(197,162,85,0.08) 0%, transparent 65%);
+      pointer-events: none;
     }
     .booking-cta .container {
       position: relative;
-      z-index: 2;
+      z-index: 1;
     }
     .booking-cta h2 {
       color: var(--gold);
@@ -278,31 +260,21 @@
       font-size: 15px;
     }
 
-    /* -- Conditions accent section with image -- */
+    /* -- Conditions accent section -- */
     .conditions-section {
       position: relative;
       overflow: hidden;
+      background: var(--navy);
     }
     .conditions-section::before {
       content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1600&q=80') center/cover no-repeat;
-      filter: brightness(0.2) saturate(0.5);
-      z-index: 0;
-    }
-    .conditions-section::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(180deg, rgba(11,29,58,0.88) 0%, rgba(11,29,58,0.95) 100%);
-      z-index: 1;
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(197,162,85,0.06) 0%, transparent 60%);
+      pointer-events: none;
     }
     .conditions-section .container {
       position: relative;
-      z-index: 2;
+      z-index: 1;
     }
 
     .conditions-grid {
@@ -336,9 +308,9 @@
       margin-bottom: 0;
     }
 
-    /* -- Modalities section background image -- */
+    /* -- Modalities section -- */
     .modalities-section {
-      background: linear-gradient(rgba(245,237,230,0.87), rgba(245,237,230,0.87)), url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1600') center/cover no-repeat;
+      background: var(--blush);
       position: relative;
     }
 
@@ -383,7 +355,7 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+  <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="../" style="display: flex; align-items: center; gap: 12px;">
         <img src="../images/morgan_icon_transparent.png" alt="The Morgan Institute" class="nav-logo">
@@ -691,6 +663,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

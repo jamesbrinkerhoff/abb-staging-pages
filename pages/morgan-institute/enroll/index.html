@@ -23,12 +23,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
   <!-- Minimal nav — funnel page, fewer exit points -->
-  <nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+  <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="../" style="display: flex; align-items: center; gap: 12px;">
         <img src="../images/morgan_icon_transparent.png" alt="The Morgan Institute" class="nav-logo">
@@ -50,18 +50,19 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero" style="padding-top: clamp(100px, 14vw, 160px); padding-bottom: clamp(60px, 8vw, 100px);">
+  <section class="page-hero">
     <div class="container text-center">
-      <img src="../images/morgan_logo_transparent_1024.png" alt="The Morgan Institute" class="logo" style="max-width: 180px; margin: 0 auto 28px;">
-      <span class="section-label" style="margin-bottom: 16px;">The Only Certification of Its Kind in the United States</span>
-      <h1 style="margin-bottom: 20px;">Certified Venom Medicine<br>Practitioner</h1>
-      <p class="tagline" style="max-width: 580px;">A 17-module clinical certification in biological medicine, snake venom homeopathy, and integrated healing — taught by a 50-year veteran of natural medicine.</p>
-      <a href="#apply" class="btn btn-primary btn-lg">Apply for the Next Cohort</a>
+      <img src="../images/morgan_logo_transparent_1024.png" alt="The Morgan Institute" class="logo" style="max-width: 160px; margin: 0 auto 24px;">
+      <span class="section-label">The Only Certification of Its Kind in the United States</span>
+      <h1>Certified Venom Medicine<br>Practitioner</h1>
+      <div class="divider divider-center"></div>
+      <p class="hero-tagline">A 17-module clinical certification in biological medicine, snake venom homeopathy, and integrated healing — taught by a 50-year veteran of natural medicine.</p>
+      <a href="#apply" class="btn btn-primary btn-lg" style="margin-top: 8px;">Apply for the Next Cohort</a>
     </div>
   </section>
 
   <!-- The Problem -->
-  <section class="section section-linen" style="background: linear-gradient(rgba(251,248,244,0.9), rgba(251,248,244,0.9)), url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1600') center/cover no-repeat;">
+  <section class="section section-linen" style="background: var(--blush);">
     <div class="container-narrow fade-in">
       <span class="section-label">The Challenge</span>
       <h2>Your Patients Are Stuck. You Know There's Something Deeper.</h2>
@@ -93,7 +94,7 @@
   </section>
 
   <!-- Curriculum -->
-  <section class="section section-white" id="curriculum" style="background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600') center/cover no-repeat;">
+  <section class="section section-white" id="curriculum" style="background: var(--warm-white);">
     <div class="container fade-in">
       <div class="text-center mb-6">
         <span class="section-label">17 Clinical Modules</span>
@@ -141,7 +142,7 @@
       </div>
 
       <div class="text-center mt-6">
-        <a class='btn btn-ghost' href='../certification/' style='color: var(--slate); border-color: var(--slate);'>View Full Curriculum</a>
+        <a class='btn btn-ghost' href='../certification/' style='color: var(--gold); border-color: var(--gold);'>View Full Curriculum</a>
       </div>
     </div>
   </section>
@@ -175,7 +176,7 @@
   </section>
 
   <!-- Testimonials -->
-  <section class="section section-linen" style="background: linear-gradient(rgba(251,248,244,0.88), rgba(251,248,244,0.88)), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1600') center/cover no-repeat;">
+  <section class="section section-linen" style="background: var(--blush);">
     <div class="container fade-in">
       <div class="text-center mb-6">
         <span class="section-label">Voices</span>
@@ -228,7 +229,7 @@
           <a href="#apply" class="btn btn-primary" style="width: 100%;">Apply Now</a>
         </div>
         <div class="tier-card" style="background: rgba(255,255,255,0.03); border-color: rgba(197,162,85,0.4);">
-          <span class="tier-badge" style="background: var(--slate); color: var(--linen);">Advanced</span>
+          <span class="tier-badge" style="background: var(--gold); color: var(--navy);">Advanced</span>
           <h3 class="tier-name" style="color: var(--text-on-dark);">VIP Immersive Apprenticeship</h3>
           <div class="tier-price" style="font-size: 20px;">Investment discussed during enrollment</div>
           <div class="tier-duration" style="color: var(--text-on-dark);">12–18 months · 1-on-1</div>
@@ -247,7 +248,7 @@
   </section>
 
   <!-- Application CTA -->
-  <section class="section section-white" id="apply" style="background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1457530378978-8bac673b8062?w=1600') center/cover no-repeat;">
+  <section class="section section-white" id="apply" style="background: var(--warm-white);">
     <div class="container-narrow text-center fade-in">
       <h2>This Isn't an Enrollment Form</h2>
       <p style="max-width: 540px; margin: 0 auto 32px; font-size: 19px; color: var(--text-dark);">It's the start of a conversation. Tell us about your practice and your goals. We'll schedule a call with Vanessa to see if the certification is the right fit.</p>
@@ -287,6 +288,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

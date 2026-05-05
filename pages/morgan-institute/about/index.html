@@ -23,48 +23,55 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
 
   <style>
     /* ===== ABOUT PAGE STYLES ===== */
 
-    /* -- Hero with background image -- */
+    /* -- Hero — cream background, matches homepage tone -- */
     .about-hero {
       position: relative;
-      padding: clamp(140px, 18vw, 220px) 0 clamp(80px, 10vw, 140px);
+      padding: clamp(120px, 14vw, 180px) 0 clamp(48px, 6vw, 80px);
       text-align: center;
       overflow: hidden;
-      background:
-        linear-gradient(rgba(11, 29, 58, 0.65), rgba(11, 29, 58, 0.55)),
-        url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1600&q=80') center/cover no-repeat;
+      background: var(--cream);
     }
-    .about-hero h1 {
-      color: var(--warm-white);
-      margin-bottom: 16px;
+    .about-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 20%, rgba(197,162,85,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .about-hero .container {
       position: relative;
       z-index: 1;
+    }
+    .about-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-transform: none;
+      color: var(--navy);
+      margin-bottom: 16px;
     }
     .about-hero .hero-subtitle {
       font-family: var(--font-heading);
-      font-size: clamp(18px, 2.5vw, 24px);
+      font-size: clamp(18px, 2.2vw, 22px);
       font-style: italic;
-      color: var(--gold-light);
-      position: relative;
-      z-index: 1;
+      color: var(--text-medium);
       max-width: 600px;
       margin: 0 auto;
     }
     .about-hero .divider {
       background: var(--gold);
-      margin: 24px auto;
-      position: relative;
-      z-index: 1;
+      margin: 20px auto;
     }
 
     /* -- Bio Section -- */
     .bio-section {
       padding: var(--section-pad) 0;
-      background: linear-gradient(rgba(251,248,244,0.9), rgba(251,248,244,0.9)), url('https://images.unsplash.com/photo-1457530378978-8bac673b8062?w=1600') center/cover no-repeat;
+      background: var(--warm-white);
     }
     .bio-grid {
       display: grid;
@@ -106,15 +113,23 @@
       color: var(--mauve);
     }
 
-    /* -- Philosophy Section with background image -- */
+    /* -- Philosophy Section -- */
     .philosophy-section {
       position: relative;
       padding: var(--section-pad) 0;
       overflow: hidden;
-      background:
-        linear-gradient(rgba(11, 29, 58, 0.72), rgba(11, 29, 58, 0.68)),
-        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80') center/cover no-repeat;
+      background: var(--navy);
       color: var(--text-on-dark);
+    }
+    .philosophy-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(197,162,85,0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .philosophy-section > .container {
+      position: relative;
+      z-index: 1;
     }
     .philosophy-section .section-label {
       color: var(--gold-light);
@@ -147,7 +162,7 @@
     /* -- Vision Section -- */
     .vision-section {
       padding: var(--section-pad) 0;
-      background: linear-gradient(rgba(245,237,230,0.88), rgba(245,237,230,0.88)), url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1600&q=80') center/cover no-repeat;
+      background: var(--blush);
     }
     .vision-inner {
       max-width: 760px;
@@ -175,7 +190,7 @@
     /* -- Credentials Grid -- */
     .credentials-section {
       padding: var(--section-pad) 0;
-      background: linear-gradient(rgba(251,248,244,0.88), rgba(251,248,244,0.88)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600') center/cover no-repeat;
+      background: var(--cream);
     }
     .credentials-section h2 {
       text-align: center;
@@ -236,7 +251,7 @@
     /* -- Community Photo -- */
     .community-section {
       padding: var(--section-pad-sm) 0 var(--section-pad);
-      background: linear-gradient(rgba(251,248,244,0.9), rgba(251,248,244,0.9)), url('https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=1600') center/cover no-repeat;
+      background: var(--warm-white);
       text-align: center;
     }
     .community-photo {
@@ -261,9 +276,17 @@
       padding: clamp(80px, 10vw, 140px) 0;
       text-align: center;
       overflow: hidden;
-      background:
-        linear-gradient(rgba(11, 29, 58, 0.75), rgba(11, 29, 58, 0.7)),
-        url('/images/section-herbs.png') center/cover no-repeat;
+      background: var(--navy);
+    }
+    .quote-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(197,162,85,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .quote-section .container {
+      position: relative;
+      z-index: 1;
     }
     .quote-section blockquote {
       font-family: var(--font-heading);
@@ -301,7 +324,7 @@
     /* -- CTA Section -- */
     .cta-section {
       padding: var(--section-pad) 0;
-      background: linear-gradient(rgba(245,237,230,0.85), rgba(245,237,230,0.85)), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1600') center/cover no-repeat;
+      background: var(--blush);
       text-align: center;
     }
     .cta-section h2 {
@@ -528,7 +551,7 @@
       <div class="footer-bottom"><p>&copy; 2026 The Morgan Institute for Advanced Biological Medicine. All rights reserved.</p></div>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 
 </body>
 </html>

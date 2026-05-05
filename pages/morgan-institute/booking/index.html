@@ -22,12 +22,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+  <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="../" style="display: flex; align-items: center; gap: 12px;">
         <img src="../images/morgan_icon_transparent.png" alt="The Morgan Institute" class="nav-logo">
@@ -49,28 +49,30 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero" style="padding-top: clamp(100px, 14vw, 140px); padding-bottom: var(--section-pad-sm);">
+  <section class="page-hero">
     <div class="container text-center">
       <span class="section-label">Next Step</span>
       <h1>Schedule a Conversation</h1>
-      <p class="tagline">Let's talk about your practice, your goals, and whether the certification is right for you.</p>
+      <div class="divider divider-center"></div>
+      <p class="hero-tagline">Let's talk about your practice, your goals, and whether the certification is right for you.</p>
     </div>
   </section>
 
   <!-- Calendar Embed -->
   <section class="section section-white">
     <div class="container-narrow">
-      <div class="fade-in" style="max-width: 640px; margin: 0 auto;">
+      <div class="fade-in" style="max-width: 720px; margin: 0 auto;">
         <div class="text-center mb-6">
-          <h2>What to Expect</h2>
+          <span class="section-label">What to Expect</span>
+          <h2>A Relaxed Conversation</h2>
           <div class="divider divider-center"></div>
-          <p style="color: var(--text-dark);">This is a relaxed conversation — not a sales call. Vanessa or a member of our team will learn about your background, answer your questions about the certification, and help you determine if this is the right path for your practice.</p>
+          <p style="color: var(--text-medium); max-width: 600px; margin: 0 auto;">This is not a sales call. Vanessa or a member of our team will learn about your background, answer your questions about the certification, and help you determine if this is the right path for your practice.</p>
         </div>
 
         <!-- GHL Calendar Embed Placeholder -->
-        <div style="background: var(--linen); border: 2px dashed var(--ice); border-radius: 4px; min-height: 500px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px; padding: 48px;">
-          <p style="font-size: 15px; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.1em;">[GHL Calendar Embed]</p>
-          <p style="font-size: 15px; color: var(--text-light);">Replace this with your GoHighLevel calendar embed code</p>
+        <div style="background: var(--blush); border: 1px solid var(--sand); border-radius: 12px; min-height: 480px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; padding: 48px 24px;">
+          <p style="font-size: 13px; color: var(--mauve); text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700;">Calendar</p>
+          <p style="font-size: 16px; color: var(--text-medium); text-align: center; max-width: 400px;">The booking calendar will appear here. In the meantime, please email us to schedule.</p>
           <!--
             To embed: paste your GHL iframe here, e.g.:
             <iframe src="https://app.gohighlevel.com/widget/booking/YOUR_CALENDAR_ID"
@@ -80,7 +82,7 @@
         </div>
 
         <div class="text-center mt-6">
-          <p style="font-size: 16px; color: var(--text-light);">Prefer email? Reach us at <a href="mailto:info@themorganinstitute.com" style="color: var(--gold); font-weight: 700;">info@themorganinstitute.com</a></p>
+          <p style="font-size: 16px; color: var(--text-medium);">Prefer email? Reach us at <a href="mailto:info@themorganinstitute.com" style="color: var(--mauve); font-weight: 700;">info@themorganinstitute.com</a></p>
         </div>
       </div>
     </div>
@@ -118,6 +120,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

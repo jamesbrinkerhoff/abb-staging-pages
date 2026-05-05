@@ -21,25 +21,43 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <style>
     /* ===== PODCAST PAGE STYLES ===== */
 
-    /* Hero with background image */
+    /* Hero — cream */
     .podcast-hero {
       position: relative;
-      padding: clamp(140px, 18vw, 220px) 0 clamp(60px, 8vw, 100px);
+      padding: clamp(120px, 14vw, 180px) 0 clamp(48px, 6vw, 80px);
       text-align: center;
       overflow: hidden;
-      background: url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1600&q=80') center/cover no-repeat;
+      background: var(--cream);
     }
     .podcast-hero::before {
       content: '';
-      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(180deg, rgba(11,29,58,0.78) 0%, rgba(11,29,58,0.6) 50%, rgba(11,29,58,0.82) 100%);
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 20%, rgba(197,162,85,0.08) 0%, transparent 60%);
+      pointer-events: none;
     }
     .podcast-hero .container { position: relative; z-index: 1; }
-    .podcast-hero h1 { color: var(--text-on-dark); margin-bottom: 16px; }
+    .podcast-hero h1 {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-transform: none;
+      color: var(--navy);
+      font-size: clamp(32px, 5vw, 56px);
+      margin-bottom: 16px;
+    }
+    .podcast-hero .tagline {
+      font-family: var(--font-heading);
+      font-style: italic;
+      color: var(--text-medium);
+      font-size: clamp(17px, 2vw, 22px);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.55;
+    }
 
     /* About split */
     .podcast-about {
@@ -241,25 +259,27 @@
 
     /* CTA */
     .podcast-cta {
-      background: url('https://images.unsplash.com/photo-1470137237906-d8d3e1c3d7c1?w=1600&q=80') center/cover no-repeat;
+      background: var(--navy);
       position: relative;
-      padding: clamp(60px, 8vw, 100px) 0;
+      padding: clamp(60px, 8vw, 110px) 0;
       text-align: center;
+      overflow: hidden;
     }
     .podcast-cta::before {
       content: '';
-      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(11,29,58,0.82);
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(197,162,85,0.08) 0%, transparent 65%);
+      pointer-events: none;
     }
     .podcast-cta .container { position: relative; z-index: 1; }
     .podcast-cta h2 { color: var(--gold); margin-bottom: 16px; }
-    .podcast-cta p { color: rgba(245,240,234,0.8); }
+    .podcast-cta p { color: rgba(245,240,234,0.85); }
   </style>
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+  <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="../" style="display: flex; align-items: center; gap: 12px;">
         <img src="../images/morgan_icon_transparent.png" alt="The Morgan Institute" class="nav-logo">
@@ -284,15 +304,16 @@
   <!-- 1. HERO -->
   <section class="podcast-hero">
     <div class="container">
-      <span class="section-label" style="color: var(--gold-light);">The Podcast</span>
+      <span class="section-label" style="color: var(--gold-dark);">The Podcast</span>
       <h1>The Healing Underground</h1>
-      <p class="tagline" style="color: rgba(245,240,234,0.8); max-width: 640px; margin: 0 auto;">Conversations on biological medicine, snake venom homeopathy, and the practitioners who practice medicine differently</p>
+      <div class="divider divider-center" style="background: var(--gold);"></div>
+      <p class="tagline">Conversations on biological medicine, snake venom homeopathy, and the practitioners who practice medicine differently</p>
     </div>
   </section>
 
 
   <!-- 2. ABOUT THE PODCAST -->
-  <section class="section" style="background: linear-gradient(rgba(251,248,244,0.9), rgba(251,248,244,0.9)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600') center/cover no-repeat;">
+  <section class="section" style="background: var(--warm-white);">
     <div class="container">
       <div class="podcast-about fade-in">
         <div>
@@ -318,7 +339,7 @@
 
 
   <!-- 3. LATEST EPISODES -->
-  <section class="section" style="background: linear-gradient(rgba(245,237,230,0.87), rgba(245,237,230,0.87)), url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1600') center/cover no-repeat;">
+  <section class="section" style="background: var(--blush);">
     <div class="container">
       <div class="text-center mb-6 fade-in">
         <span class="section-label">Latest Episodes</span>
@@ -408,7 +429,7 @@
 
 
   <!-- 4. SUBSCRIBE SECTION -->
-  <section class="section" style="background: linear-gradient(rgba(251,248,244,0.88), rgba(251,248,244,0.88)), url('https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=1600') center/cover no-repeat;">
+  <section class="section" style="background: var(--cream);">
     <div class="container text-center fade-in">
       <span class="section-label">Subscribe</span>
       <h2 style="margin-bottom: 12px;">Listen Wherever You Are</h2>
@@ -432,7 +453,7 @@
 
 
   <!-- 5. NEWSLETTER -->
-  <section class="section" style="background: linear-gradient(rgba(245,237,230,0.86), rgba(245,237,230,0.86)), url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1600') center/cover no-repeat;">
+  <section class="section" style="background: var(--blush);">
     <div class="container text-center fade-in">
       <span class="section-label">Stay Connected</span>
       <h2 style="margin-bottom: 12px;">Never Miss an Episode</h2>
@@ -487,6 +508,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

@@ -23,65 +23,66 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <style>
     /* ===== CERTIFICATION PAGE STYLES ===== */
 
-    /* -- Hero with background image -- */
+    /* -- Hero — cream, matches homepage -- */
     .cert-hero {
       position: relative;
-      min-height: 85vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: clamp(140px, 16vw, 220px) 0 clamp(80px, 10vw, 140px);
-      background:
-        linear-gradient(180deg, rgba(11,29,58,0.72) 0%, rgba(11,29,58,0.55) 50%, rgba(11,29,58,0.78) 100%),
-        url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1920&q=80') center/cover no-repeat;
-      color: var(--text-on-dark);
+      padding: clamp(120px, 14vw, 180px) 0 clamp(48px, 6vw, 80px);
+      background: var(--cream);
       overflow: hidden;
     }
-    .cert-hero::after {
+    .cert-hero::before {
       content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 120px;
-      background: linear-gradient(to top, var(--cream), transparent);
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 20%, rgba(197,162,85,0.08) 0%, transparent 60%);
       pointer-events: none;
     }
+    .cert-hero .container {
+      position: relative;
+      z-index: 1;
+    }
     .cert-hero .hero-eyebrow {
-      color: var(--gold-light);
-      margin-bottom: 20px;
+      color: var(--gold-dark);
+      margin-bottom: 16px;
       font-family: var(--font-body);
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
     }
     .cert-hero h1 {
-      color: var(--white);
-      font-size: clamp(32px, 5vw, 60px);
-      margin-bottom: 24px;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-transform: none;
+      color: var(--navy);
+      font-size: clamp(32px, 5vw, 56px);
+      margin-bottom: 20px;
       max-width: 800px;
       margin-left: auto;
       margin-right: auto;
+      line-height: 1.15;
     }
     .cert-hero .hero-sub {
-      color: rgba(245,240,234,0.85);
+      color: var(--text-medium);
       font-family: var(--font-heading);
       font-style: italic;
-      font-size: clamp(18px, 2.5vw, 24px);
+      font-size: clamp(17px, 2vw, 22px);
       max-width: 640px;
-      margin: 0 auto 40px;
-      line-height: 1.6;
+      margin: 0 auto 32px;
+      line-height: 1.55;
     }
 
     /* -- Problem Section -- */
     .problem-section {
-      background: linear-gradient(rgba(251,248,244,0.9), rgba(251,248,244,0.9)), url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1600') center/cover no-repeat;
+      background: var(--warm-white);
       padding: var(--section-pad) 0;
     }
     .problem-section .narrow-col {
@@ -107,7 +108,7 @@
 
     /* -- Video Section -- */
     .video-section {
-      background: linear-gradient(rgba(245,237,230,0.87), rgba(245,237,230,0.87)), url('https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=1600') center/cover no-repeat;
+      background: var(--blush);
       padding: var(--section-pad) 0;
     }
     .video-placeholder {
@@ -166,7 +167,7 @@
     /* -- About Vanessa -- */
     .about-vanessa {
       padding: var(--section-pad) 0;
-      background: linear-gradient(rgba(251,248,244,0.88), rgba(251,248,244,0.88)), url('https://images.unsplash.com/photo-1457530378978-8bac673b8062?w=1600') center/cover no-repeat;
+      background: var(--warm-white);
     }
     .about-grid {
       display: grid;
@@ -207,10 +208,18 @@
     .curriculum-section {
       position: relative;
       padding: var(--section-pad) 0;
-      background:
-        linear-gradient(180deg, rgba(11,29,58,0.92) 0%, rgba(11,29,58,0.88) 100%),
-        url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80') center/cover no-repeat;
+      background: var(--navy);
       color: var(--text-on-dark);
+    }
+    .curriculum-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(197,162,85,0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .curriculum-section > .container {
+      position: relative;
+      z-index: 1;
     }
     .curriculum-section h2 {
       color: var(--gold);
@@ -228,13 +237,13 @@
     /* -- Offers -- */
     .offers-section {
       padding: var(--section-pad) 0;
-      background: linear-gradient(rgba(251,248,244,0.89), rgba(251,248,244,0.89)), url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1600') center/cover no-repeat;
+      background: var(--cream);
     }
 
     /* -- What Makes Different -- */
     .different-section {
       padding: var(--section-pad) 0;
-      background: linear-gradient(rgba(245,237,230,0.86), rgba(245,237,230,0.86)), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1600') center/cover no-repeat;
+      background: var(--blush);
     }
     .different-grid {
       display: grid;
@@ -276,9 +285,7 @@
     .testimonials-section {
       position: relative;
       padding: var(--section-pad) 0;
-      background:
-        linear-gradient(180deg, rgba(11,29,58,0.8) 0%, rgba(11,29,58,0.75) 100%),
-        url('https://images.unsplash.com/photo-1470058869958-2a77ade41c02?w=1920&q=80') center/cover no-repeat;
+      background: var(--navy-soft);
       color: var(--text-on-dark);
     }
     .testimonials-section h2 {
@@ -309,7 +316,7 @@
     /* -- Community Photo -- */
     .community-section {
       padding: var(--section-pad-sm) 0;
-      background: linear-gradient(rgba(251,248,244,0.9), rgba(251,248,244,0.9)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600') center/cover no-repeat;
+      background: var(--warm-white);
       text-align: center;
     }
     .community-photo {
@@ -322,7 +329,7 @@
     /* -- FAQ -- */
     .faq-section {
       padding: var(--section-pad) 0;
-      background: linear-gradient(rgba(251,248,244,0.9), rgba(251,248,244,0.9)), url('https://images.unsplash.com/photo-1470058869958-2a77ade41c02?w=1600') center/cover no-repeat;
+      background: var(--cream);
     }
     .faq-item { border-bottom: 1px solid var(--sand); padding: 24px 0; }
     .faq-q {
@@ -346,11 +353,19 @@
     .final-cta {
       position: relative;
       padding: var(--section-pad) 0;
-      background:
-        linear-gradient(180deg, rgba(11,29,58,0.82) 0%, rgba(11,29,58,0.72) 100%),
-        url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80') center/cover no-repeat;
+      background: var(--navy);
       color: var(--text-on-dark);
       text-align: center;
+    }
+    .final-cta::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(197,162,85,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .final-cta > .container {
+      position: relative;
+      z-index: 1;
     }
     .final-cta h2 {
       color: var(--white);
@@ -863,7 +878,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
   <script>
     // FAQ Accordion
     document.querySelectorAll('.faq-q').forEach(q => {

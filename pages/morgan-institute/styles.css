@@ -172,13 +172,9 @@ p:last-child {
   padding: var(--section-pad-sm) 0;
 }
 
-/* Warm cream — parchment texture on light sections */
+/* Warm cream — parchment tone on light sections */
 .section-linen {
   background-color: var(--blush);
-  background-image:
-    linear-gradient(rgba(245, 237, 230, 0.85), rgba(245, 237, 230, 0.85)),
-    url('/images/texture-parchment.png');
-  background-size: auto, 1000px 1000px;
 }
 
 /* Soft sage — organic, nature feel */
@@ -186,13 +182,9 @@ p:last-child {
   background-color: var(--sage-light);
 }
 
-/* Dark section — real blue leather texture */
+/* Dark section — navy */
 .section-dark {
   background-color: var(--navy);
-  background-image:
-    linear-gradient(rgba(11, 29, 58, 0.55), rgba(11, 29, 58, 0.55)),
-    url('/images/texture-leather-dark.png');
-  background-size: auto, 900px 900px;
   color: var(--text-on-dark);
 }
 
@@ -205,13 +197,9 @@ p:last-child {
   color: var(--text-on-dark);
 }
 
-/* Slate — slate blue leather texture */
+/* Slate — slate blue */
 .section-slate {
   background-color: var(--navy-soft);
-  background-image:
-    linear-gradient(rgba(42, 61, 85, 0.5), rgba(42, 61, 85, 0.5)),
-    url('/images/texture-leather-slate.png');
-  background-size: auto, 900px 900px;
   color: var(--text-on-dark);
 }
 
@@ -242,7 +230,16 @@ p:last-child {
 }
 
 .section-dark .section-label,
-.section-slate .section-label {
+.section-slate .section-label,
+.hero .section-label,
+.about-hero .section-label,
+.prac-hero .section-label,
+.cert-hero .section-label,
+.consult-hero .section-label,
+.apply-hero .section-label,
+.podcast-hero .section-label,
+.intake-hero .section-label,
+.enroll-hero .section-label {
   color: var(--gold-light);
 }
 
@@ -261,16 +258,10 @@ p:last-child {
 
 /* --- Hero --- */
 .hero {
-  background-color: #0B1D3A;
-  background-image:
-    /* Slight dark overlay for text readability */
-    linear-gradient(rgba(11, 29, 58, 0.4), rgba(11, 29, 58, 0.6)),
-    url('/images/hero-background.png');
-  background-size: cover;
-  background-position: center;
+  background-color: var(--navy);
   color: var(--text-on-dark);
   text-align: center;
-  padding: clamp(100px, 14vw, 180px) 0 var(--section-pad);
+  padding: clamp(120px, 14vw, 180px) 0 var(--section-pad);
   position: relative;
   overflow: hidden;
 }
@@ -929,4 +920,145 @@ p:last-child {
 @media print {
   .nav, .footer, .btn { display: none; }
   body { font-size: 12pt; color: #000; background: #fff; }
+}
+
+/* --- Global safety + consistency layer --- */
+
+/* Prevent any image from overflowing its container */
+img, svg, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure all hero sections clear the fixed nav */
+.hero,
+.about-hero,
+.prac-hero,
+.cert-hero,
+.consult-hero,
+.apply-hero,
+.podcast-hero,
+.intake-hero,
+.enroll-hero,
+.page-hero,
+.hero-centered {
+  padding-top: clamp(120px, 14vw, 180px);
+}
+
+/* Wider mobile gutters so text never bleeds to the edge */
+@media (max-width: 600px) {
+  .container,
+  .container-narrow,
+  .container-wide {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Tighten nav-inner padding on narrow screens */
+@media (max-width: 600px) {
+  .nav-inner {
+    padding: 0 20px;
+  }
+}
+
+/* Ensure all sections have safe horizontal padding even when inline styles override */
+section {
+  position: relative;
+}
+
+/* Card / form helper to keep wide inline layouts contained */
+.section > .container,
+.section > .container-narrow,
+.section > .container-wide {
+  position: relative;
+}
+
+/* Footer responsive */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .footer-brand {
+    max-width: 100%;
+  }
+}
+
+/* Page hero — shared cream/navy hero for sub-pages, matching homepage tone */
+.page-hero {
+  background: var(--cream);
+  text-align: center;
+  padding-bottom: clamp(48px, 6vw, 72px);
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 20%, rgba(197,162,85,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+.page-hero .section-label {
+  color: var(--gold-dark);
+  letter-spacing: 0.22em;
+}
+.page-hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+.page-hero .hero-tagline,
+.page-hero .tagline,
+.page-hero .hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: clamp(17px, 2vw, 22px);
+  font-style: italic;
+  color: var(--text-medium);
+  max-width: 640px;
+  margin: 0 auto 24px;
+  line-height: 1.55;
+}
+.page-hero .divider {
+  background: var(--gold);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Final dark CTA section helper */
+.cta-dark {
+  background: var(--navy);
+  color: var(--text-on-dark);
+  text-align: center;
+  padding: clamp(72px, 10vw, 120px) 0;
+}
+.cta-dark h2 {
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.cta-dark p {
+  color: rgba(245,240,234,0.82);
+  font-size: 19px;
+  max-width: 620px;
+  margin: 0 auto 32px;
+}
+.cta-dark .btn {
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 17px;
+  padding: 20px 52px;
+}
+.cta-dark .btn:hover {
+  background: var(--gold-light);
+  color: var(--navy);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(197,162,85,0.3);
 }
