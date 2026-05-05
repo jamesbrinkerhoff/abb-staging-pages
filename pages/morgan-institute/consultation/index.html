@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Care &amp; Consultation — The Morgan Institute for Advanced Biological Medicine</title>
+  <meta name="description" content="Individualized patient care rooted in fifty years of integrated clinical practice. Chinese medicine, homeopathy, snake venom protocols, EAV assessment, and shamanic healing with Vanessa Morgan, L.Ac.">
+
+  <link rel="canonical" href="https://themorganinstitute.com/consultation">
+  <meta property="og:url" content="https://themorganinstitute.com/consultation">
+  <meta property="og:site_name" content="The Morgan Institute for Advanced Biological Medicine">
+  <meta property="og:image" content="https://themorganinstitute.com/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Patient Care — The Morgan Institute for Advanced Biological Medicine">
+  <meta name="twitter:description" content="Your healing begins here. Individualized care rooted in fifty years of integrated clinical practice.">
+  <meta name="twitter:image" content="https://themorganinstitute.com/images/og-image.jpg">
+
+  <meta property="og:title" content="Patient Care — The Morgan Institute for Advanced Biological Medicine">
+  <meta property="og:description" content="Your healing begins here. Individualized care rooted in fifty years of integrated clinical practice.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ===== CONSULTATION PAGE STYLES ===== */
+
+    /* -- Hero with Background Image -- */
+    .consult-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: clamp(140px, 16vw, 200px) 24px clamp(80px, 10vw, 140px);
+      overflow: hidden;
+    }
+    .consult-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600&q=80') center/cover no-repeat;
+      filter: brightness(0.55) saturate(0.8);
+      z-index: 0;
+    }
+    .consult-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(11,29,58,0.45) 0%, rgba(11,29,58,0.65) 60%, rgba(11,29,58,0.8) 100%),
+        radial-gradient(ellipse at 50% 30%, rgba(197,162,85,0.12) 0%, transparent 60%);
+      z-index: 1;
+    }
+    .consult-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    .consult-hero .section-label {
+      color: var(--gold-light);
+      margin-bottom: 20px;
+    }
+    .consult-hero h1 {
+      color: var(--text-on-dark);
+      font-size: clamp(32px, 5vw, 60px);
+      margin-bottom: 20px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    }
+    .consult-hero .tagline {
+      font-family: var(--font-heading);
+      font-size: clamp(18px, 2.5vw, 24px);
+      color: rgba(245,240,234,0.85);
+      font-weight: 400;
+      font-style: italic;
+      max-width: 640px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+
+    /* -- Philosophy Quotes -- */
+    .philosophy-section {
+      background: linear-gradient(rgba(251,248,244,0.9), rgba(251,248,244,0.9)), url('https://images.unsplash.com/photo-1470058869958-2a77ade41c02?w=1600') center/cover no-repeat;
+      padding: var(--section-pad) 0;
+    }
+    .philosophy-quote {
+      font-family: var(--font-heading);
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 0 24px;
+    }
+    .philosophy-quote:last-child {
+      margin-bottom: 0;
+    }
+    .philosophy-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--mauve-light);
+      margin: 0 auto 40px;
+    }
+
+    /* -- Modalities Grid -- */
+    .modality-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+      border: 1px solid rgba(140,90,110,0.08);
+      transition: box-shadow 0.3s var(--ease), transform 0.3s var(--ease);
+    }
+    .modality-card:hover {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.07);
+      transform: translateY(-3px);
+    }
+    .modality-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blush);
+      border-radius: 50%;
+      color: var(--mauve);
+      font-size: 24px;
+    }
+    .modality-card h3 {
+      font-size: clamp(18px, 2vw, 22px);
+      margin-bottom: 10px;
+    }
+    .modality-card p {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text-medium);
+    }
+
+    /* -- What to Expect -- */
+    .expect-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    @media (max-width: 800px) {
+      .expect-grid { grid-template-columns: 1fr; }
+    }
+    .expect-steps {
+      list-style: none;
+      counter-reset: step;
+    }
+    .expect-steps li {
+      counter-increment: step;
+      padding: 18px 0;
+      padding-left: 52px;
+      position: relative;
+      border-bottom: 1px solid rgba(140,90,110,0.1);
+      font-size: 18px;
+      color: var(--text-medium);
+      line-height: 1.6;
+    }
+    .expect-steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 18px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--mauve);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .expect-steps li:last-child {
+      border-bottom: none;
+    }
+    .expect-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    }
+    .expect-card-img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+    .expect-card-body {
+      padding: 32px;
+    }
+
+    /* -- Conditions -- */
+    .condition-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 24px 20px;
+      text-align: center;
+      border: 1px solid rgba(140,90,110,0.08);
+      transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    }
+    .condition-card:hover {
+      border-color: var(--mauve-light);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+    .condition-card h4 {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0;
+    }
+
+    /* -- Testimonials Carousel -- */
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 800px) {
+      .testimonial-grid { grid-template-columns: 1fr; }
+    }
+
+    /* -- Booking CTA with Background Image -- */
+    .booking-cta {
+      position: relative;
+      padding: var(--section-pad) 0;
+      text-align: center;
+      overflow: hidden;
+    }
+    .booking-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1600&q=80') center/cover no-repeat;
+      filter: brightness(0.4) saturate(0.7);
+      z-index: 0;
+    }
+    .booking-cta::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(11,29,58,0.7) 0%, rgba(11,29,58,0.85) 100%);
+      z-index: 1;
+    }
+    .booking-cta .container {
+      position: relative;
+      z-index: 2;
+    }
+    .booking-cta h2 {
+      color: var(--gold);
+    }
+    .booking-cta p {
+      color: var(--text-on-dark);
+    }
+
+    .booking-embed-placeholder {
+      background: rgba(255,255,255,0.06);
+      border: 2px dashed rgba(197,162,85,0.3);
+      border-radius: 16px;
+      padding: 48px 24px;
+      max-width: 700px;
+      margin: 32px auto;
+      color: rgba(245,240,234,0.6);
+      font-size: 15px;
+    }
+
+    /* -- Conditions accent section with image -- */
+    .conditions-section {
+      position: relative;
+      overflow: hidden;
+    }
+    .conditions-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1600&q=80') center/cover no-repeat;
+      filter: brightness(0.2) saturate(0.5);
+      z-index: 0;
+    }
+    .conditions-section::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(11,29,58,0.88) 0%, rgba(11,29,58,0.95) 100%);
+      z-index: 1;
+    }
+    .conditions-section .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .conditions-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 900px) {
+      .conditions-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 520px) {
+      .conditions-grid { grid-template-columns: 1fr; }
+    }
+    .condition-card-dark {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(197,162,85,0.15);
+      border-radius: 12px;
+      padding: 24px 20px;
+      text-align: center;
+      transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
+    }
+    .condition-card-dark:hover {
+      border-color: rgba(197,162,85,0.35);
+      background: rgba(255,255,255,0.09);
+    }
+    .condition-card-dark h4 {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-on-dark);
+      margin-bottom: 0;
+    }
+
+    /* -- Modalities section background image -- */
+    .modalities-section {
+      background: linear-gradient(rgba(245,237,230,0.87), rgba(245,237,230,0.87)), url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1600') center/cover no-repeat;
+      position: relative;
+    }
+
+    /* -- Testimonial dark variants -- */
+    .testimonial-dark {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(197,162,85,0.12);
+      border-radius: 12px;
+      padding: 32px;
+      padding-left: 48px;
+      position: relative;
+    }
+    .testimonial-dark::before {
+      content: '\201C';
+      font-family: var(--font-heading);
+      font-size: 64px;
+      color: var(--gold);
+      opacity: 0.3;
+      position: absolute;
+      top: 8px;
+      left: 12px;
+      line-height: 1;
+    }
+    .testimonial-dark .testimonial-text {
+      color: var(--text-on-dark);
+      font-size: 18px;
+      line-height: 1.75;
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+    .testimonial-dark .testimonial-author {
+      color: var(--gold);
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .testimonial-dark .testimonial-role {
+      color: rgba(245,240,234,0.6);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="../" style="display: flex; align-items: center; gap: 12px;">
+        <img src="../images/morgan_icon_transparent.png" alt="The Morgan Institute" class="nav-logo">
+        <span style="font-family: var(--font-display); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); white-space: nowrap; font-weight: 600;">The Morgan Institute</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href='../about/'>About</a></li>
+        <li><a href='../certification/'>Certification</a></li>
+        <li><a href='../practitioner/'>Practitioners</a></li>
+        <li><a href='../consultation/'>Patient Care</a></li>
+        <li><a href='#'>Blog</a></li>
+        <li><a href='../podcast/'>Podcast</a></li>
+        <li><a class='btn btn-primary' href='../apply/' style='padding: 10px 28px; font-size: 13px;'>Apply Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ===================== HERO ===================== -->
+  <section class="consult-hero">
+    <div class="container">
+      <span class="section-label">Patient Care</span>
+      <h1>Your Healing Begins Here</h1>
+      <p class="tagline">Individualized care rooted in fifty years of integrated clinical practice</p>
+      <a href="#booking" class="btn btn-primary btn-lg" style="background: var(--gold); color: var(--navy);">Schedule a Consultation</a>
+    </div>
+  </section>
+
+
+  <!-- ===================== PHILOSOPHY ===================== -->
+  <section class="philosophy-section">
+    <div class="container-narrow fade-in">
+      <div class="text-center mb-6">
+        <span class="section-label">Philosophy</span>
+        <h2>The Healing Perspective</h2>
+        <div class="divider divider-center"></div>
+      </div>
+
+      <p class="philosophy-quote">"The body knows how to heal itself. It just needs to be given the right tool for the job."</p>
+      <div class="philosophy-divider"></div>
+
+      <p class="philosophy-quote">"We don't treat symptoms. We treat the whole person."</p>
+      <div class="philosophy-divider"></div>
+
+      <p class="philosophy-quote">"You could have ten people with the same diagnosis, and what each one requires could be completely different."</p>
+    </div>
+  </section>
+
+
+  <!-- ===================== MODALITIES GRID ===================== -->
+  <section class="section modalities-section">
+    <div class="container fade-in">
+      <div class="text-center mb-6">
+        <span class="section-label">Modalities</span>
+        <h2>An Integrated Approach</h2>
+        <div class="divider divider-center"></div>
+        <p style="max-width: 600px; margin: 0 auto;">Each treatment plan draws from multiple traditions, combined and individualized for your specific needs.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Chinese Medicine -->
+        <div class="modality-card fade-in">
+          <div class="modality-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 2a7 7 0 0 1 0 20"/><path d="M12 2a7 7 0 0 0 0 20"/>
+            </svg>
+          </div>
+          <h3>Chinese Medicine &amp; Acupuncture</h3>
+          <p>Classical diagnostics, meridian therapy, and acupuncture rooted in thousands of years of clinical tradition.</p>
+        </div>
+
+        <!-- Homeopathy -->
+        <div class="modality-card fade-in">
+          <div class="modality-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 3v12c0 3.3 2.7 6 6 6s6-2.7 6-6V3"/><path d="M6 9h12"/>
+            </svg>
+          </div>
+          <h3>Homeopathy &amp; Miasm Treatment</h3>
+          <p>Deep constitutional work, as well as Hahnemann's miasm theory, addressing inherited patterns and chronic disease layers.</p>
+        </div>
+
+        <!-- Snake Venom -->
+        <div class="modality-card fade-in">
+          <div class="modality-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8 2 4 6 4 10c0 6 8 12 8 12s8-6 8-12c0-4-4-8-8-8z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h3>Snake Venom Protocols</h3>
+          <p>Homeopathic snake venom preparations for immune modulation, inflammatory conditions, and deep-seated chronic illness.</p>
+        </div>
+
+        <!-- EAV -->
+        <div class="modality-card fade-in">
+          <div class="modality-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <h3>EAV Meridian Assessment</h3>
+          <p>Non-invasive energetic screening to assess organ and system function, identify toxin loads, and guide treatment priorities.</p>
+        </div>
+
+        <!-- Neural Therapy -->
+        <div class="modality-card fade-in">
+          <div class="modality-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <h3>Neural Therapy</h3>
+          <p>German biological medicine technique addressing interference fields, scar tissue, and disrupted autonomic regulation.</p>
+        </div>
+
+        <!-- Shamanic -->
+        <div class="modality-card fade-in">
+          <div class="modality-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l1.5 4.5H18l-3.6 2.7 1.4 4.3L12 12l-3.8 2.5 1.4-4.3L6 7.5h4.5z"/>
+            </svg>
+          </div>
+          <h3>Shamanic Healing</h3>
+          <p>Spiritual and energetic healing work addressing the soul level of illness, trauma, and dis-ease that conventional methods cannot reach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== WHAT TO EXPECT ===================== -->
+  <section class="section section-white">
+    <div class="container fade-in">
+      <div class="text-center mb-6">
+        <span class="section-label">Your First Visit</span>
+        <h2>What to Expect</h2>
+        <div class="divider divider-center"></div>
+      </div>
+
+      <div class="expect-grid">
+        <div>
+          <p style="font-size: 19px; line-height: 1.8; margin-bottom: 28px;">Every patient who comes to me is unique. The first consultation is a comprehensive process designed to understand not just what is happening in your body, but why.</p>
+          <ol class="expect-steps">
+            <li><strong>Comprehensive Intake</strong> — Full health history, lifestyle assessment, timeline of illness, and current concerns.</li>
+            <li><strong>EAV Assessment</strong> — Non-invasive energetic screening to evaluate organ function and identify interference fields.</li>
+            <li><strong>Identify Obstacles to Healing</strong> — Toxin loads, emotional patterns, structural imbalances, and inherited tendencies.</li>
+            <li><strong>Individualized Treatment Plan</strong> — A protocol designed specifically for you, drawing from multiple modalities.</li>
+            <li><strong>Ongoing Support</strong> — Follow-up appointments, protocol adjustments, and continued guidance as your body heals.</li>
+          </ol>
+        </div>
+
+        <div class="expect-card">
+          <!-- TODO Item 53: Replace this image — Vanessa flagged the current "What to Expect" visual (looks like hot stone massage) as inappropriate. Awaiting suggestion/approval. -->
+          <img
+            src="../images/section-herbs.png"
+            alt="Healing environment at The Morgan Institute"
+            class="expect-card-img"
+          >
+          <div class="expect-card-body">
+            <h3 style="font-size: 22px;">Global Video Consultation</h3>
+            <div class="divider"></div>
+            <p style="font-size: 17px;">Consultations with Vanessa are available globally via <strong>secure video consultation (Zoom only)</strong>. In-person sessions are not currently available.</p>
+            <p style="font-size: 17px; margin-top: 16px;">Wherever you are in the world, Vanessa works with patients across time zones.</p>
+            <a href="#booking" class="btn btn-primary" style="margin-top: 20px;">Book Your Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== CONDITIONS ===================== -->
+  <section class="section conditions-section" style="padding: var(--section-pad) 0;">
+    <div class="container fade-in">
+      <div class="text-center mb-6">
+        <span class="section-label" style="color: var(--gold-light);">Areas of Focus</span>
+        <h2 style="color: var(--gold);">Conditions We Address</h2>
+        <div class="divider divider-center" style="background: rgba(197,162,85,0.4);"></div>
+      </div>
+
+      <div class="conditions-grid mb-6">
+        <div class="condition-card-dark">
+          <h4>Long-Haul COVID</h4>
+        </div>
+        <div class="condition-card-dark">
+          <h4>Vaccine Injury Recovery</h4>
+        </div>
+        <div class="condition-card-dark">
+          <h4>Chronic Fatigue</h4>
+        </div>
+        <div class="condition-card-dark">
+          <h4>Autoimmune Conditions</h4>
+        </div>
+        <div class="condition-card-dark">
+          <h4>Digestive Disorders</h4>
+        </div>
+        <div class="condition-card-dark">
+          <h4>Heavy Metal Toxicity</h4>
+        </div>
+        <div class="condition-card-dark">
+          <h4>Hormonal Imbalance</h4>
+        </div>
+        <div class="condition-card-dark">
+          <h4>Unresolved Chronic Illness</h4>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <p style="font-family: var(--font-heading); font-size: clamp(20px, 2.5vw, 26px); font-style: italic; color: var(--text-on-dark); max-width: 640px; margin: 0 auto;">"If you've tried everything and nothing sticks — this is exactly what we do."</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="section section-dark">
+    <div class="container fade-in">
+      <div class="text-center mb-6">
+        <span class="section-label">Patient Stories</span>
+        <h2 style="color: var(--gold);">In Their Words</h2>
+        <div class="divider divider-center" style="background: rgba(197,162,85,0.4);"></div>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-dark">
+          <p class="testimonial-text">Vanessa saved my life. I was diagnosed with ocular melanoma and given very few options. Her approach was unlike anything I had encountered in conventional medicine. She looked at me as a whole person, not a diagnosis.</p>
+          <p class="testimonial-author">Ocular Melanoma Patient</p>
+        </div>
+
+        <div class="testimonial-dark">
+          <p class="testimonial-text">Vanessa has been a Godsend. After years of chronic illness and being passed from specialist to specialist with no answers, she was the first practitioner who actually listened and put the pieces together.</p>
+          <p class="testimonial-author">Chronic Illness Patient</p>
+        </div>
+
+        <div class="testimonial-dark">
+          <p class="testimonial-text">She is a brilliant, wise woman. The depth of her knowledge across so many traditions is extraordinary. She connects dots that no one else can see. Working with her changed the entire trajectory of my health.</p>
+          <p class="testimonial-author">Long-Term Patient</p>
+        </div>
+
+        <div class="testimonial-dark">
+          <p class="testimonial-text">I have been working with Vanessa for twenty years. She has guided me through some of the most challenging health crises of my life with wisdom, compassion, and an uncanny ability to find what others miss.</p>
+          <p class="testimonial-author">20-Year Patient</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== BOOKING CTA ===================== -->
+  <section class="booking-cta" id="booking">
+    <div class="container fade-in">
+      <span class="section-label" style="color: var(--gold-light);">Begin Your Healing Journey</span>
+      <h2 style="color: var(--gold); font-size: clamp(28px, 4vw, 44px);">Schedule a Consultation with Vanessa</h2>
+      <div class="divider divider-center" style="background: rgba(197,162,85,0.4);"></div>
+      <p style="max-width: 600px; margin: 0 auto 12px; font-size: 19px; color: var(--text-on-dark);">Available globally via secure video consultation (Zoom only).</p>
+
+      <!-- GHL Calendar Embed Placeholder -->
+      <div class="booking-embed-placeholder">
+        <p style="margin-bottom: 8px; color: rgba(245,240,234,0.7);">Booking Calendar</p>
+        <p style="font-size: 14px; color: rgba(245,240,234,0.4);">GHL calendar embed will be placed here</p>
+        <!--
+          Replace this div with your GHL booking calendar embed code:
+          <iframe src="YOUR_GHL_CALENDAR_URL" style="width:100%;height:700px;border:none;border-radius:12px;"></iframe>
+        -->
+      </div>
+
+      <!-- TODO Item 54: Vanessa reported delivery issues with info@ alias; confirm preferred email (Gmail or other) before launch. -->
+      <p style="margin-top: 32px; font-size: 17px; color: rgba(245,240,234,0.8);">Or reach out directly at <a href="mailto:info@themorganinstitute.com" style="color: var(--gold); text-decoration: underline;">info@themorganinstitute.com</a></p>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="../images/morgan_logo_512.png" alt="The Morgan Institute" class="footer-logo">
+          <p class="footer-tagline">A Whole Systems Approach to Healing<br><span style="font-size: 13px; letter-spacing: 0.06em;">Venom Medicine · Homeopathy · Biological Medicine · Chinese Medicine</span></p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href='../about/'>About Vanessa</a></li>
+            <li><a href='../certification/'>Certification</a></li>
+            <li><a href='../consultation/'>Patient Care</a></li>
+            <li><a href='../apply/'>Apply</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:info@themorganinstitute.com">info@themorganinstitute.com</a></li>
+            <li><a href="https://www.selfhealcenter.com" target="_blank" rel="noopener">Self Heal Center</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Morgan Institute for Advanced Biological Medicine. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

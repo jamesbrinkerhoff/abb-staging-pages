@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply — The Morgan Institute for Advanced Biological Medicine</title>
+  <meta name="description" content="Apply for the Serpent&#39;s Path certification, Principles Not Protocols, or join the Healing Underground. Tell us about your practice and we'll schedule a conversation with Vanessa Morgan.">
+
+  <link rel="canonical" href="https://themorganinstitute.com/apply">
+  <meta property="og:url" content="https://themorganinstitute.com/apply">
+  <meta property="og:site_name" content="The Morgan Institute for Advanced Biological Medicine">
+  <meta property="og:title" content="Apply — The Morgan Institute for Advanced Biological Medicine">
+  <meta property="og:description" content="Apply for the Serpent&#39;s Path certification, Principles Not Protocols, or join the Healing Underground. Tell us about your practice and we'll schedule a conversation with Vanessa Morgan.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://themorganinstitute.com/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Apply — The Morgan Institute for Advanced Biological Medicine">
+  <meta name="twitter:description" content="Apply for the Serpent&#39;s Path certification, Principles Not Protocols, or join the Healing Underground. Tell us about your practice and we'll schedule a conversation with Vanessa Morgan.">
+  <meta name="twitter:image" content="https://themorganinstitute.com/images/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ===== APPLY PAGE STYLES ===== */
+
+    .apply-hero {
+      position: relative;
+      padding: clamp(140px, 18vw, 200px) 0 clamp(50px, 6vw, 80px);
+      text-align: center;
+      overflow: hidden;
+      background: url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1600&q=80') center/cover no-repeat;
+    }
+    .apply-hero::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(180deg, rgba(11,29,58,0.68) 0%, rgba(11,29,58,0.5) 50%, rgba(251,248,244,0.95) 100%);
+    }
+    .apply-hero .container { position: relative; z-index: 1; }
+    .apply-hero h1 { color: var(--text-on-dark); margin-bottom: 16px; }
+    .apply-hero .tagline { color: rgba(245,240,234,0.85); }
+
+    .form-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: clamp(32px, 5vw, 56px);
+      box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.04);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 520px) { .form-row { grid-template-columns: 1fr; } }
+
+    .callout-quote {
+      background: var(--blush);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 28px 0 20px;
+      border-left: 3px solid var(--gold);
+    }
+    .callout-quote p:first-child {
+      font-style: italic;
+      font-size: 17px;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .callout-quote .attr {
+      font-size: 14px;
+      color: var(--text-light);
+      margin: 0;
+    }
+
+    .success-panel {
+      display: none;
+      text-align: center;
+      padding: 48px 24px;
+    }
+    .success-check {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--mauve-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 28px;
+      color: var(--mauve);
+    }
+
+    .review-note {
+      font-size: 15px;
+      color: var(--text-light);
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="../" style="display: flex; align-items: center; gap: 12px;">
+        <img src="../images/morgan_icon_transparent.png" alt="The Morgan Institute" class="nav-logo">
+        <span style="font-family: var(--font-display); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); white-space: nowrap; font-weight: 600;">The Morgan Institute</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href='../about/'>About</a></li>
+        <li><a href='../certification/'>Certification</a></li>
+        <li><a href='../practitioner/'>Practitioners</a></li>
+        <li><a href='../consultation/'>Patient Care</a></li>
+        <li><a href='#'>Blog</a></li>
+        <li><a href='../podcast/'>Podcast</a></li>
+        <li><a class='btn btn-primary' href='../apply/' style='padding: 10px 28px; font-size: 13px;'>Apply Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- 1. HERO -->
+  <section class="apply-hero">
+    <div class="container">
+      <span class="section-label" style="color: var(--gold-light);">Application</span>
+      <h1>Begin Your Application</h1>
+      <p class="tagline" style="color: rgba(245,240,234,0.85);">This isn't an enrollment form — it's the start of a conversation.</p>
+    </div>
+  </section>
+
+
+  <!-- 2. INTRO + 3. APPLICATION FORM -->
+  <section class="section" style="background: linear-gradient(rgba(251,248,244,0.9), rgba(251,248,244,0.9)), url('https://images.unsplash.com/photo-1470058869958-2a77ade41c02?w=1600') center/cover no-repeat;">
+    <div class="container">
+
+      <!-- Intro text -->
+      <p class="text-center fade-in" style="font-size: 19px; color: var(--text-dark); max-width: 600px; margin: 0 auto 40px;">Tell us about your practice and what drew you to The Morgan Institute. After you submit, we'll be in touch to schedule a call with Vanessa.</p>
+
+      <!-- Form card -->
+      <div class="form-card fade-in">
+        <form id="application-form" action="/.netlify/functions/process-application" method="POST">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="first_name">First Name *</label>
+              <input type="text" id="first_name" name="first_name" class="form-input" required placeholder="First name">
+              <span class="form-error-msg" style="display: none;">Please enter your first name</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="last_name">Last Name *</label>
+              <input type="text" id="last_name" name="last_name" class="form-input" required placeholder="Last name">
+              <span class="form-error-msg" style="display: none;">Please enter your last name</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email *</label>
+            <input type="email" id="email" name="email" class="form-input" required placeholder="your@email.com">
+            <span class="form-error-msg" style="display: none;">Please enter a valid email</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="(555) 555-5555" pattern="[\d\s\-\+\(\)]{7,20}" title="Please enter a valid phone number">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="credentials">Current Credentials / Licensure *</label>
+            <input type="text" id="credentials" name="credentials" class="form-input" required placeholder="e.g., L.Ac., ND, Homeopath, MD">
+            <span class="form-error-msg" style="display: none;">Please enter your credentials</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="years_practice">Years in Practice</label>
+            <select id="years_practice" name="years_practice" class="form-select">
+              <option value="">Select...</option>
+              <option value="student">Still in training</option>
+              <option value="0-2">0-2 years</option>
+              <option value="3-5">3-5 years</option>
+              <option value="6-10">6-10 years</option>
+              <option value="11-20">11-20 years</option>
+              <option value="20+">20+ years</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="interest">What draws you to this certification? *</label>
+            <textarea id="interest" name="interest" class="form-textarea" required placeholder="Tell us about your practice, what you're looking for, and what draws you to The Morgan Institute..."></textarea>
+            <span class="form-error-msg" style="display: none;">Please tell us what draws you to this program</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="program">Which program interests you?</label>
+            <select id="program" name="program" class="form-select">
+              <option value="">Select...</option>
+              <option value="cbmp">The Serpent's Path (Apprenticeship)</option>
+              <option value="principles">Principles Not Protocols</option>
+              <option value="underground">The Healing Underground</option>
+              <option value="unsure">Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="referral">How did you hear about us?</label>
+            <select id="referral" name="referral" class="form-select">
+              <option value="">Select...</option>
+              <option value="vanessa-patient">Patient of Vanessa's</option>
+              <option value="pgbm-course">PGBM course</option>
+              <option value="bryan-ardis">Bryan Ardis / conference</option>
+              <option value="podcast">Podcast</option>
+              <option value="referral">Colleague referral</option>
+              <option value="search">Web search</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <!-- Social proof callout -->
+          <div class="callout-quote">
+            <p>"Vanessa is a uniquely versatile and compassionate practitioner. After my first session, I felt as if I'd been seen and heard more thoroughly than I ever had."</p>
+            <p class="attr">— Patient &amp; Student</p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 8px;">Submit Application</button>
+
+          <p class="review-note">We review every application personally. You'll hear from us within 48 hours.</p>
+        </form>
+
+        <!-- 4. SUCCESS MESSAGE -->
+        <div id="form-success" class="success-panel">
+          <div class="success-check">&#10003;</div>
+          <h2>Application Received</h2>
+          <p style="font-size: 19px; color: var(--text-dark); max-width: 480px; margin: 16px auto 32px;">Thank you for your interest in The Morgan Institute. We'll review your application and be in touch within 48 hours to schedule a conversation with Vanessa.</p>
+          <a class='btn btn-primary' href='../booking/'>Schedule a Call Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="../images/morgan_logo_512.png" alt="The Morgan Institute" class="footer-logo">
+          <p class="footer-tagline">A Whole Systems Approach to Healing<br><span style="font-size: 13px; letter-spacing: 0.06em;">Venom Medicine &middot; Homeopathy &middot; Biological Medicine &middot; Chinese Medicine</span></p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href='../about/'>About Vanessa</a></li>
+            <li><a href='../certification/'>Certification</a></li>
+            <li><a href='../consultation/'>Patient Care</a></li>
+            <li><a href='../apply/'>Apply</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <ul>
+            <li><!-- TODO: Vanessa reported delivery delays with info@ alias; confirm preferred contact email. --><a href="mailto:info@themorganinstitute.com">info@themorganinstitute.com</a></li>
+            <li><a href="https://www.selfhealcenter.com" target="_blank" rel="noopener">Self Heal Center</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Morgan Institute for Advanced Biological Medicine. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Pre-select program from URL parameter
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const program = params.get('program');
+      if (program) {
+        const select = document.getElementById('program');
+        if (select) {
+          const map = {
+            'underground': 'underground',
+            'certification': 'cbmp',
+            'fellowship': 'fellowship'
+          };
+          const val = map[program];
+          if (val) {
+            select.value = val;
+          }
+        }
+      }
+    })();
+
+    // Application form handler
+    document.getElementById('application-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+
+      // Basic validation
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(field => {
+        const err = field.parentElement.querySelector('.form-error-msg');
+        if (!field.value.trim()) {
+          field.classList.add('form-error');
+          if (err) err.style.display = 'block';
+          valid = false;
+        } else {
+          field.classList.remove('form-error');
+          if (err) err.style.display = 'none';
+        }
+      });
+      if (!valid) return;
+
+      const btn = form.querySelector('[type="submit"]');
+      btn.textContent = 'Submitting...';
+      btn.disabled = true;
+
+      const data = Object.fromEntries(new FormData(form));
+
+      try {
+        const res = await fetch('/.netlify/functions/process-application', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+        } else {
+          btn.textContent = 'Something went wrong — try again';
+          btn.disabled = false;
+        }
+      } catch (err) {
+        btn.textContent = 'Connection error — try again';
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Practitioners — The Morgan Institute for Advanced Biological Medicine</title>
+  <meta name="description" content="Advanced clinical certification in biological medicine and snake venom homeopathy. The only program of its kind in the United States. Taught by Vanessa Morgan, L.Ac. — 54 years of integrated clinical practice.">
+
+  <link rel="canonical" href="https://themorganinstitute.com/practitioner">
+  <meta property="og:url" content="https://themorganinstitute.com/practitioner">
+  <meta property="og:site_name" content="The Morgan Institute for Advanced Biological Medicine">
+  <meta property="og:image" content="https://themorganinstitute.com/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Practitioner Certification — The Morgan Institute for Advanced Biological Medicine">
+  <meta name="twitter:description" content="The only clinical certification in snake venom homeopathy in the United States.">
+  <meta name="twitter:image" content="https://themorganinstitute.com/images/og-image.jpg">
+
+  <meta property="og:title" content="Practitioner Certification — The Morgan Institute for Advanced Biological Medicine">
+  <meta property="og:description" content="The only clinical certification in snake venom homeopathy in the United States.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ===== PRACTITIONER SALES PAGE ===== */
+
+    /* -- Hero -- */
+    .prac-hero {
+      background: #0B1D3A;
+      background-image:
+        linear-gradient(rgba(11,29,58,0.55), rgba(11,29,58,0.55)),
+        url('/images/texture-leather-dark.png');
+      background-size: auto, 900px 900px;
+      color: var(--text-on-dark);
+      text-align: center;
+      padding: clamp(130px, 16vw, 200px) 24px clamp(60px, 8vw, 100px);
+    }
+    .prac-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text-on-dark);
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+    .prac-hero .sub {
+      font-size: clamp(17px, 2vw, 21px);
+      color: rgba(245,240,234,0.75);
+      max-width: 620px;
+      margin: 0 auto 12px;
+      line-height: 1.7;
+    }
+    .prac-hero .badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(197,162,85,0.4);
+      padding: 8px 24px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+
+    /* -- Video Section -- */
+    .video-section {
+      background: var(--warm-white);
+      padding: var(--section-pad) 0;
+    }
+    .video-container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .video-frame {
+      aspect-ratio: 16/9;
+      background: var(--navy);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 16px 56px rgba(0,0,0,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--gold);
+      font-size: 18px;
+      padding: 40px;
+    }
+    .video-caption {
+      text-align: center;
+      font-size: 15px;
+      color: var(--text-light);
+      margin-top: 16px;
+      font-style: italic;
+    }
+
+    /* -- Problem Section -- */
+    .problem-section {
+      background: var(--blush);
+      background-image:
+        linear-gradient(rgba(245,237,230,0.85), rgba(245,237,230,0.85)),
+        url('/images/texture-parchment.png');
+      background-size: auto, 1000px 1000px;
+      padding: var(--section-pad) 0;
+    }
+
+    /* -- Differentiator Cards -- */
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    @media (max-width: 768px) { .diff-grid { grid-template-columns: 1fr; } }
+    .diff-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(197,162,85,0.15);
+      border-radius: 12px;
+      padding: 32px 28px;
+    }
+    .diff-card h3 {
+      font-family: var(--font-heading);
+      color: var(--gold);
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    .diff-card p {
+      color: rgba(245,240,234,0.75);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* -- Phase Blocks (reused from index) -- */
+    .phase-block {
+      margin-bottom: 32px;
+      padding: 36px;
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .phase-label {
+      font-size: 13px; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--mauve); margin-bottom: 6px;
+    }
+    .phase-title {
+      font-family: var(--font-heading);
+      font-size: 24px; color: var(--navy); margin-bottom: 14px;
+    }
+    .phase-items {
+      list-style: none; padding: 0;
+    }
+    .phase-items li {
+      padding: 10px 0 10px 28px;
+      position: relative;
+      font-size: 17px; color: var(--text-medium);
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+    .phase-items li::before {
+      content: '✦'; position: absolute; left: 0;
+      color: var(--mauve-light); font-size: 11px; top: 14px;
+    }
+
+    /* -- Offer Cards -- */
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    @media (max-width: 900px) { .offer-grid { grid-template-columns: 1fr; } }
+    .offer-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px 28px;
+      border: 2px solid var(--sand);
+      transition: all 0.3s var(--ease);
+    }
+    .offer-card.featured {
+      border-color: var(--mauve);
+      box-shadow: 0 8px 40px rgba(140,90,110,0.08);
+    }
+    .offer-card:hover { transform: translateY(-3px); box-shadow: 0 12px 48px rgba(0,0,0,0.07); }
+
+    /* -- Testimonial -- */
+    .test-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 36px;
+      border: 1px solid rgba(0,0,0,0.04);
+      position: relative;
+    }
+    .test-card::before {
+      content: '\201C';
+      font-family: var(--font-heading);
+      font-size: 60px;
+      color: var(--mauve-light);
+      opacity: 0.25;
+      position: absolute;
+      top: 10px; left: 24px;
+      line-height: 1;
+    }
+
+    /* -- Final CTA -- */
+    .prac-cta {
+      background: #0B1D3A;
+      background-image:
+        linear-gradient(rgba(11,29,58,0.5), rgba(11,29,58,0.5)),
+        url('/images/texture-leather-dark.png');
+      background-size: auto, 900px 900px;
+      text-align: center;
+      padding: clamp(80px, 10vw, 140px) 0;
+      color: var(--text-on-dark);
+    }
+    .prac-cta h2 { color: var(--gold); font-size: clamp(26px, 3.5vw, 44px); margin-bottom: 20px; }
+    .prac-cta p { color: rgba(245,240,234,0.8); font-size: 20px; max-width: 620px; margin: 0 auto 40px; }
+    .prac-cta .btn-primary {
+      background: var(--gold); color: var(--navy);
+      font-size: 17px; padding: 22px 56px;
+    }
+    .prac-cta .btn-primary:hover {
+      background: var(--gold-light);
+      box-shadow: 0 8px 32px rgba(197,162,85,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="../" style="display: flex; align-items: center; gap: 12px;">
+        <img src="../images/morgan_icon_transparent.png" alt="The Morgan Institute" class="nav-logo">
+        <span style="font-family: var(--font-display); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); white-space: nowrap; font-weight: 600;">The Morgan Institute</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href='../about/'>About</a></li>
+        <li><a href='../certification/'>Certification</a></li>
+        <li><a href='../practitioner/'>Practitioners</a></li>
+        <li><a href='../consultation/'>Patient Care</a></li>
+        <li><a href='#'>Blog</a></li>
+        <li><a href='../podcast/'>Podcast</a></li>
+        <li><a class='btn btn-primary' href='../apply/' style='padding: 10px 28px; font-size: 13px;'>Apply Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ========================================
+       1. HERO
+       ======================================== -->
+  <section class="prac-hero">
+    <div class="container">
+      <img src="../images/morgan_icon_transparent.png" alt="" style="width: 80px; height: 80px; margin: 0 auto 24px; object-fit: contain; border-radius: 50; opacity: 0.9;">
+      <h1>The Only Clinical Certification in Snake Venom Homeopathy in the United States</h1>
+      <p class="sub">Advanced practitioner training in biological medicine, venom protocols, and whole systems healing — taught by Vanessa Morgan, L.Ac., with 54 years of integrated clinical practice across five countries.</p>
+      <div class="badge">Next Cohort: Fall 2026 · Limited to 15 Practitioners</div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       2. VIDEO / PRESENTATION
+       ======================================== -->
+  <section class="video-section" id="watch">
+    <div class="container">
+      <div class="text-center mb-6">
+        <span class="section-label">Watch</span>
+        <h2 style="margin-bottom: 8px;">Why This Certification Exists</h2>
+        <p style="color: var(--text-medium); max-width: 600px; margin: 0 auto;">Vanessa shares what 54 years of clinical practice revealed — and why she built The Morgan Institute.</p>
+      </div>
+      <div class="video-container">
+        <div class="video-frame">
+          <!-- Replace with Vimeo/YouTube embed when ready -->
+          <div>
+            <p style="font-family: var(--font-heading); font-size: 22px; font-style: italic; margin-bottom: 12px;">Presentation coming soon</p>
+            <p style="font-size: 15px; color: rgba(245,240,234,0.5);">Video will be embedded here.</p>
+          </div>
+        </div>
+        <p class="video-caption">Watch Vanessa explain what makes this certification unlike anything else available.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       3. THE PROBLEM — Why practitioners need this
+       ======================================== -->
+  <section class="problem-section">
+    <div class="container-narrow fade-in">
+      <span class="section-label">The Challenge</span>
+      <h2>Your Patients Are Stuck. You Know There's Something Deeper.</h2>
+      <div class="divider"></div>
+      <p>You've done the training. You treat patients every day. But you see the same patterns — chronic illness that circles back, patients who plateau, conditions that protocols can't quite reach.</p>
+      <p>You've added more tools. More supplements, more techniques, more continuing education. And still — some patients aren't getting better. The ones with long-haul symptoms. The vaccine-injured. The "tried everything" cases that keep you up at night.</p>
+      <p>It's not that you lack skill. It's that the tools you were given only address part of the picture.</p>
+      <p style="font-weight: 700; color: var(--navy); font-size: 20px; margin-top: 24px;">What if there was a clinical framework that addressed the root — not just the branch? One that bridged biological medicine, Chinese medicine, and homeopathy into a single integrated approach?</p>
+      <p style="font-weight: 700; color: var(--mauve);">That's what this certification teaches. And no one else in the country offers it.</p>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       4. SECTION IMAGE — Herbs flat lay
+       ======================================== -->
+  <section style="padding: 0; background: var(--navy);">
+    <img src="../images/section-herbs.png" alt="Traditional healing tools — herbs, mortar, remedies" style="width: 100%; display: block; max-height: 400px; object-fit: cover; opacity: 0.85;">
+  </section>
+
+
+  <!-- ========================================
+       5. WHAT MAKES THIS DIFFERENT
+       ======================================== -->
+  <section class="section" style="background: var(--navy); color: var(--text-on-dark);">
+    <div class="container text-center">
+      <span class="section-label" style="color: var(--gold-light);">Why This Program</span>
+      <h2 style="color: var(--gold); margin-bottom: 12px;">What Makes This Different</h2>
+      <p style="color: rgba(245,240,234,0.7); max-width: 640px; margin: 0 auto 48px;">Other programs give you a modality. This gives you a complete clinical operating system.</p>
+      <div class="diff-grid fade-in">
+        <div class="diff-card">
+          <h3>Zero Competitors</h3>
+          <p>There is no other certification in the United States for snake venom homeopathic protocols. You will be the only practitioner with this credential in your market.</p>
+        </div>
+        <div class="diff-card">
+          <h3>54 Years of Integration</h3>
+          <p>This isn't one modality. It's a whole systems framework bridging Chinese medicine, European biological medicine, homeopathy, and shamanic healing into one clinical approach.</p>
+        </div>
+        <div class="diff-card">
+          <h3>Human Heart Connection</h3>
+          <p>This is mentorship, not passive online learning. Vanessa teaches live, supervises clinical cases, and connects personally with every student.</p>
+        </div>
+        <div class="diff-card">
+          <h3>Principles, Not Protocols</h3>
+          <p>You won't just learn what to give. You'll learn how to think — how to ask the body what it needs and find the right tool for the job.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       6. SECTION IMAGE — Venom
+       ======================================== -->
+  <section style="padding: 0; background: var(--navy);">
+    <img src="../images/section-venom.png" alt="Snake venom medicine — healing through nature" style="width: 100%; display: block; max-height: 400px; object-fit: cover; opacity: 0.85;">
+  </section>
+
+
+  <!-- ========================================
+       7. YOUR TEACHER
+       ======================================== -->
+  <section class="section" style="background: var(--blush);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 2fr 3fr; gap: 60px; align-items: center;">
+        <div class="fade-in">
+          <img src="../images/vanessa-headshot.jpg" alt="Vanessa Morgan, L.Ac." style="border-radius: 16px; width: 100%; box-shadow: 0 16px 48px rgba(0,0,0,0.07);">
+        </div>
+        <div class="fade-in">
+          <span class="section-label">Your Teacher</span>
+          <h2>Vanessa Morgan, L.Ac.</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; background: rgba(140,90,110,0.08); color: var(--mauve); text-transform: uppercase;">Licensed Acupuncturist</span>
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; background: rgba(140,90,110,0.08); color: var(--mauve); text-transform: uppercase;">Diplomate of Homeopathy</span>
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; background: rgba(140,90,110,0.08); color: var(--mauve); text-transform: uppercase;">54 Years Practice</span>
+          </div>
+          <p>Vanessa began studying herbal medicine at seventeen with a Mohawk herbalist on Vancouver Island. Over the next five decades, she trained in Chinese medicine in Hawaii and China, studied biological medicine in Germany, practiced and taught in London for twelve years, and developed her own integrated approach to whole-being healing.</p>
+          <p>She has lectured across the United States, Canada, the United Kingdom, Ireland, and Germany. Her work with homeopathic snake venom remedies — particularly for long-haul recovery and vaccine injury — has helped patients worldwide.</p>
+          <p style="font-weight: 700; color: var(--navy);">The Morgan Institute is the culmination of everything she's learned — passed on through the same apprenticeship model that healers have used for generations.</p>
+          <a class='btn btn-ghost mt-4' href='../about/'>Read Her Full Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       8. SECTION IMAGE — Darkfield
+       ======================================== -->
+  <section style="padding: 0; background: var(--navy);">
+    <img src="../images/section-darkfield.png" alt="Darkfield microscopy — live blood analysis" style="width: 100%; display: block; max-height: 400px; object-fit: cover; opacity: 0.85;">
+  </section>
+
+
+  <!-- ========================================
+       9. WHAT GETS INSTALLED — 4 Phases
+       ======================================== -->
+  <section class="section" style="background: var(--warm-white);">
+    <div class="container">
+      <div class="text-center mb-6 fade-in">
+        <span class="section-label">The Certification</span>
+        <h2>What Gets Installed Over 12 Months</h2>
+        <p class="max-w-narrow mx-auto" style="color: var(--text-medium);">Four progressive phases. Not information — clinical transformation.</p>
+      </div>
+
+      <div class="phase-block fade-in">
+        <div class="phase-label">Months 1–3</div>
+        <h3 class="phase-title">The Diagnostic Lens</h3>
+        <ul class="phase-items">
+          <li>Mapping every patient's timeline from conception to present</li>
+          <li>Constitutional assessment — reading the body's capacity and resilience</li>
+          <li>The "Never Well Since" method — finding the starting point in every case</li>
+          <li>Obstacle identification — dental foci, scar interference, polarity reversal</li>
+        </ul>
+      </div>
+      <div class="phase-block fade-in">
+        <div class="phase-label">Months 4–6</div>
+        <h3 class="phase-title">The Terrain Protocol</h3>
+        <ul class="phase-items">
+          <li>Opening drainage before detox — always, no exceptions</li>
+          <li>The Six-Phase Disease Map — where each patient sits on Reckeweg's continuum</li>
+          <li>Herring's Law — reading healing responses vs. worsening in real time</li>
+          <li>Matrix and Zeta Potential — restoring the internal environment</li>
+        </ul>
+      </div>
+      <div class="phase-block fade-in">
+        <div class="phase-label">Months 7–9</div>
+        <h3 class="phase-title">The Prescribing System</h3>
+        <ul class="phase-items">
+          <li>Snake venom homeopathy — materia medica, potency selection, case matching</li>
+          <li>Darkfield microscopy interpretation — seeing the terrain with your own eyes</li>
+          <li>EAV meridian assessment — non-invasive energetic screening</li>
+          <li>Miasm treatment protocols — identifying and addressing inherited patterns</li>
+        </ul>
+      </div>
+      <div class="phase-block fade-in">
+        <div class="phase-label">Months 10–12</div>
+        <h3 class="phase-title">The Integration</h3>
+        <ul class="phase-items">
+          <li>Supervised clinical cases with Vanessa's direct feedback</li>
+          <li>Practice building — positioning your certification in your local market</li>
+          <li>Community integration — joining the only practitioner network of its kind</li>
+          <li>Advanced shamanic and spiritual healing modules</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       10. THREE PATHS
+       ======================================== -->
+  <section class="section" style="background: var(--blush);">
+    <div class="container">
+      <div class="text-center mb-6 fade-in">
+        <span class="section-label">Your Path</span>
+        <h2>Three Ways to Begin</h2>
+        <p class="max-w-narrow mx-auto" style="color: var(--text-medium);">You either join the community for everything recorded — or you work directly with Vanessa.</p>
+      </div>
+
+      <div class="offer-grid fade-in">
+        <div class="offer-card">
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mauve); margin-bottom: 8px;">The Community</div>
+          <h3 style="font-family: var(--font-heading); font-size: 24px; color: var(--navy); margin-bottom: 16px;">The Healing Underground</h3>
+          <p style="font-size: 16px; color: var(--text-medium); margin-bottom: 20px;">Every course. Every recording. Monthly live AMAs with Vanessa. A global community of people exploring this work together.</p>
+          <ul class="phase-items" style="margin-bottom: 24px;">
+            <li>Complete course library</li>
+            <li>Monthly LIVE Ask Me Anything</li>
+            <li>Guest expert interviews</li>
+            <li>Digital clinical library</li>
+          </ul>
+          <div style="font-size: 14px; color: var(--text-light); margin-bottom: 16px;">$97/year annual fee</div>
+          <a class='btn btn-secondary' href='../apply/?program=underground' style='width: 100%;'>Join the Underground</a>
+        </div>
+
+        <div class="offer-card">
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mauve); margin-bottom: 8px;">The Course</div>
+          <h3 style="font-family: var(--font-heading); font-size: 24px; color: var(--navy); margin-bottom: 16px;">Principles Not Protocols</h3>
+          <p style="font-size: 16px; color: var(--text-medium); margin-bottom: 20px;">A Whole Systems Approach to Healing. Includes the updated, revised Venom Medicine training. Self-paced, taught by Vanessa.</p>
+          <ul class="phase-items" style="margin-bottom: 24px;">
+            <li>Seven Factors That Influence Health</li>
+            <li>Updated Venom Medicine training</li>
+            <li>Recordings and clinical principles</li>
+            <li>Patient checklist for evaluation</li>
+          </ul>
+          <div style="font-size: 14px; color: var(--text-light); margin-bottom: 16px;">Pricing TBD <!-- TODO Item 30/46: Final price point pending Vanessa confirmation. --></div>
+          <a class='btn btn-secondary' href='../apply/?program=principles' style='width: 100%;'>Express Interest</a>
+        </div>
+
+        <div class="offer-card featured">
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mauve); margin-bottom: 8px;">The Apprenticeship</div>
+          <h3 style="font-family: var(--font-heading); font-size: 24px; color: var(--navy); margin-bottom: 16px;">The Serpent's Path</h3>
+          <p style="font-size: 16px; color: var(--text-medium); margin-bottom: 20px;">Become a Certified Biological Medicine Practitioner. The complete clinical system installed through mentorship and supervised practice.</p>
+          <ul class="phase-items" style="margin-bottom: 24px;">
+            <li>24 live group mentorship sessions</li>
+            <li>2 in-person immersion events</li>
+            <li>Snake Venom Materia Medica</li>
+            <li>Darkfield and EAV training</li>
+            <!-- Item 47: 90-day Clinical Emergency Hotline removed — Vanessa cannot offer it. -->
+          </ul>
+          <div style="font-size: 14px; color: var(--text-light); margin-bottom: 16px;">$17,000 · 12 months · 15 practitioners maximum <!-- TODO Item 19: cohort size may move to 20. --></div>
+          <a class='btn btn-primary' href='../apply/?program=certification' style='width: 100%;'>Apply for Certification</a>
+        </div>
+      </div>
+
+      <p class="text-center" style="margin-top: 32px; font-size: 15px; color: var(--text-light);">Investment details and payment plans discussed during your enrollment conversation with Vanessa.</p>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       11. SECTION IMAGE — New Mexico
+       ======================================== -->
+  <section style="padding: 0; background: var(--navy);">
+    <img src="../images/section-newmexico.png" alt="Northern New Mexico landscape — Taos" style="width: 100%; display: block; max-height: 350px; object-fit: cover; opacity: 0.85;">
+  </section>
+
+
+  <!-- ========================================
+       12. TESTIMONIALS
+       ======================================== -->
+  <section class="section" style="background: var(--warm-white);">
+    <div class="container">
+      <div class="text-center mb-6 fade-in">
+        <span class="section-label">In Their Own Words</span>
+        <h2>What People Say About Vanessa</h2>
+      </div>
+      <div class="grid-2" style="gap: 28px;">
+        <div class="test-card fade-in">
+          <p style="font-size: 19px; line-height: 1.8; padding-left: 20px; color: var(--text-dark);">I believe Vanessa Morgan saved my life after I was diagnosed with and treated for ocular melanoma. Her calmness, positivity, and wisdom have kept me out of fear and continually inspire in me confidence in my own body's ability to heal itself.</p>
+          <p style="color: var(--mauve); font-size: 14px; margin-top: 12px;">— Patient, 16 years with Vanessa</p>
+        </div>
+        <div class="test-card fade-in">
+          <p style="font-size: 19px; line-height: 1.8; padding-left: 20px; color: var(--text-dark);">Vanessa is a uniquely versatile and compassionate practitioner. After my first session, I felt as if I'd been seen and heard more thoroughly than I ever had. What she does feels a bit like magic, but it's grounded in wide-ranging expertise.</p>
+          <p style="color: var(--mauve); font-size: 14px; margin-top: 12px;">— Patient</p>
+        </div>
+      </div>
+      <div class="grid-2" style="gap: 28px; margin-top: 28px;">
+        <div class="test-card fade-in">
+          <p style="font-size: 17px; line-height: 1.7; padding-left: 20px; color: var(--text-dark);">Her vast knowledge of Chinese herbs, homeopathy, ability to analyze bloodwork, with her tools to personalize treatment, are indispensable. I so value her knowledge, guidance, voice of logic, and support.</p>
+          <p style="color: var(--mauve); font-size: 14px; margin-top: 12px;">— Long-term patient</p>
+        </div>
+        <div class="test-card fade-in">
+          <p style="font-size: 17px; line-height: 1.7; padding-left: 20px; color: var(--text-dark);">Can't wait for more of the population to be informed with this way of thinking. Happy to hear you're working towards an institute — love that plan.</p>
+          <p style="color: var(--mauve); font-size: 14px; margin-top: 12px;">— Emily, Silver City, NM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       13. FINAL CTA
+       ======================================== -->
+  <section class="prac-cta">
+    <div class="container fade-in">
+      <img src="../images/morgan_icon_transparent.png" alt="" style="width: 72px; height: 72px; margin: 0 auto 28px; object-fit: contain; opacity: 0.85;">
+      <h2>Ready to Transform Your Practice?</h2>
+      <p>This isn't an enrollment form — it's the start of a conversation. Tell us about your practice and your goals. We'll schedule a call with Vanessa to see if this is the right fit.</p>
+      <a class='btn btn-primary btn-lg' href='../apply/'>Book a Call with Vanessa</a>
+      <p style="margin-top: 20px; font-size: 14px; color: rgba(245,240,234,0.4);">Next cohort begins Fall 2026 · Limited to 15 practitioners</p>
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="../images/morgan_logo_512.png" alt="The Morgan Institute" class="footer-logo">
+          <p class="footer-tagline">A Whole Systems Approach to Healing<br><span style="font-size: 13px; letter-spacing: 0.06em;">Venom Medicine · Homeopathy · Biological Medicine · Chinese Medicine</span></p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href='../about/'>About Vanessa</a></li>
+            <li><a href='../certification/'>Certification</a></li>
+            <li><a href='../consultation/'>Patient Care</a></li>
+            <li><a href='../apply/'>Apply</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <ul>
+            <li><!-- TODO: Vanessa reported delivery delays with info@ alias; confirm preferred contact email. --><a href="mailto:info@themorganinstitute.com">info@themorganinstitute.com</a></li>
+            <li><a href="https://www.selfhealcenter.com" target="_blank" rel="noopener">Self Heal Center</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Morgan Institute for Advanced Biological Medicine. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

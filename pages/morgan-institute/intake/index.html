@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Healing Assessment — The Morgan Institute for Advanced Biological Medicine</title>
+  <meta name="description" content="Take the free Healing Assessment. In 5 minutes, discover what your body is carrying and what it needs to heal. Based on Vanessa Morgan's 54 years of integrated clinical practice.">
+
+  <link rel="canonical" href="https://themorganinstitute.com/intake">
+  <meta property="og:url" content="https://themorganinstitute.com/intake">
+  <meta property="og:site_name" content="The Morgan Institute for Advanced Biological Medicine">
+  <meta property="og:image" content="https://themorganinstitute.com/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your Healing Assessment — The Morgan Institute">
+  <meta name="twitter:description" content="Discover what your body is carrying. A free 5-minute assessment based on 54 years of clinical practice.">
+  <meta name="twitter:image" content="https://themorganinstitute.com/images/og-image.jpg">
+
+  <meta property="og:title" content="Your Healing Assessment — The Morgan Institute">
+  <meta property="og:description" content="Discover what your body is carrying. A free 5-minute assessment based on 54 years of clinical practice.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ===== INTAKE FORM STYLES ===== */
+
+    .intake-hero {
+      background: #080E18;
+      background-image:
+        linear-gradient(rgba(8,14,24,0.5), rgba(8,14,24,0.65)),
+        url('/images/hero-logo-background.png');
+      background-size: cover;
+      background-position: center 40%;
+      text-align: center;
+      padding: clamp(120px, 14vw, 160px) 24px clamp(40px, 6vw, 60px);
+      color: var(--text-on-dark);
+    }
+    .intake-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 4vw, 46px);
+      font-weight: 600;
+      color: var(--text-on-dark);
+      margin-bottom: 16px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .intake-hero .sub {
+      font-size: clamp(16px, 1.8vw, 20px);
+      color: rgba(245,240,234,0.7);
+      max-width: 560px;
+      margin: 0 auto 8px;
+      line-height: 1.7;
+    }
+    .intake-hero .time-badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 16px;
+    }
+
+    /* -- Form Container -- */
+    .intake-section {
+      background: var(--warm-white);
+      padding: clamp(48px, 6vw, 80px) 0;
+    }
+    .form-container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* -- Progress Bar -- */
+    .progress-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+    .progress-step {
+      flex: 1;
+      height: 4px;
+      background: var(--sand);
+      border-radius: 4px;
+      transition: background 0.4s ease;
+    }
+    .progress-step.active {
+      background: var(--gold);
+    }
+    .progress-step.completed {
+      background: var(--teal);
+    }
+    .progress-label {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mauve);
+      margin-bottom: 8px;
+    }
+
+    /* -- Form Steps -- */
+    .form-step {
+      display: none;
+    }
+    .form-step.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .step-title {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 3vw, 32px);
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .step-desc {
+      font-size: 17px;
+      color: var(--text-medium);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    /* -- Form Elements -- */
+    .field-group {
+      margin-bottom: 28px;
+    }
+    .field-label {
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .field-hint {
+      font-size: 14px;
+      color: var(--text-light);
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+    .field-input,
+    .field-select,
+    .field-textarea {
+      width: 100%;
+      padding: 14px 16px;
+      font-family: var(--font-body);
+      font-size: 17px;
+      border: 2px solid var(--sand);
+      border-radius: 8px;
+      background: var(--white);
+      color: var(--text-dark);
+      transition: border-color 0.2s ease;
+    }
+    .field-input:focus,
+    .field-select:focus,
+    .field-textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+    .field-textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    /* -- Checkbox Groups -- */
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      background: var(--white);
+      border: 2px solid var(--sand);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 15px;
+      color: var(--text-dark);
+    }
+    .checkbox-item:hover {
+      border-color: var(--gold);
+    }
+    .checkbox-item input[type="checkbox"] {
+      accent-color: var(--gold);
+      width: 18px;
+      height: 18px;
+    }
+    .checkbox-item.checked {
+      border-color: var(--gold);
+      background: rgba(197,162,85,0.06);
+    }
+
+    /* -- Radio Options -- */
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .radio-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      background: var(--white);
+      border: 2px solid var(--sand);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 16px;
+      color: var(--text-dark);
+    }
+    .radio-item:hover {
+      border-color: var(--gold);
+    }
+    .radio-item input[type="radio"] {
+      accent-color: var(--gold);
+      width: 18px;
+      height: 18px;
+    }
+    .radio-item.selected {
+      border-color: var(--gold);
+      background: rgba(197,162,85,0.06);
+    }
+
+    /* -- Vitality Slider -- */
+    .vitality-slider {
+      width: 100%;
+      appearance: none;
+      height: 8px;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #C53030 0%, var(--gold) 50%, var(--teal) 100%);
+      outline: none;
+    }
+    .vitality-slider::-webkit-slider-thumb {
+      appearance: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 3px solid var(--gold);
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .vitality-value {
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: 36px;
+      color: var(--navy);
+      margin-top: 12px;
+    }
+    .vitality-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    /* -- Navigation Buttons -- */
+    .form-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--sand);
+    }
+    .btn-back {
+      background: transparent;
+      color: var(--text-light);
+      border: none;
+      font-family: var(--font-body);
+      font-size: 16px;
+      cursor: pointer;
+      padding: 12px 24px;
+    }
+    .btn-back:hover { color: var(--navy); }
+    .btn-next {
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 16px 40px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-next:hover {
+      background: var(--gold-light);
+      box-shadow: 0 4px 16px rgba(197,162,85,0.3);
+    }
+    .btn-submit {
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 20px 52px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.25s ease;
+    }
+    .btn-submit:hover {
+      background: var(--gold-light);
+      box-shadow: 0 8px 32px rgba(197,162,85,0.3);
+      transform: translateY(-1px);
+    }
+
+    /* -- Social Proof Strip -- */
+    .proof-strip {
+      background: var(--blush);
+      padding: 20px 24px;
+      text-align: center;
+      font-size: 15px;
+      color: var(--text-medium);
+      font-style: italic;
+      border-top: 1px solid var(--sand);
+    }
+
+    /* -- Success State -- */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 60px 24px;
+    }
+    .form-success.active {
+      display: block;
+      animation: fadeIn 0.6s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="../" style="display: flex; align-items: center; gap: 12px;">
+        <img src="../images/morgan_icon_transparent.png" alt="The Morgan Institute" class="nav-logo">
+        <span style="font-family: var(--font-display); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); white-space: nowrap; font-weight: 600;">The Morgan Institute</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href='../about/'>About</a></li>
+        <li><a href='../certification/'>Certification</a></li>
+        <li><a href='../practitioner/'>Practitioners</a></li>
+        <li><a href='../consultation/'>Patient Care</a></li>
+        <li><a href='#'>Blog</a></li>
+        <li><a href='../podcast/'>Podcast</a></li>
+        <li><a class='btn btn-primary' href='../apply/' style='padding: 10px 28px; font-size: 13px;'>Apply Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ===== HERO ===== -->
+  <section class="intake-hero">
+    <div class="container">
+      <img src="../images/morgan_icon_transparent.png" alt="" style="width: 64px; height: 64px; margin: 0 auto 20px; object-fit: contain; opacity: 0.85;">
+      <h1>Your Healing Assessment</h1>
+      <p class="sub">Discover what your body is carrying — and what it needs to heal. Based on Vanessa Morgan's whole systems approach to biological medicine.</p>
+      <div class="time-badge">Free · 5 Minutes · Personalized Report</div>
+    </div>
+  </section>
+
+
+  <!-- ===== FORM ===== -->
+  <section class="intake-section">
+    <div class="form-container">
+
+      <!-- Progress Bar -->
+      <p class="progress-label">Step <span id="step-num">1</span> of 4</p>
+      <div class="progress-bar">
+        <div class="progress-step active" id="prog-1"></div>
+        <div class="progress-step" id="prog-2"></div>
+        <div class="progress-step" id="prog-3"></div>
+        <div class="progress-step" id="prog-4"></div>
+      </div>
+
+      <form id="intake-form" action="/.netlify/functions/process-intake" method="POST">
+
+        <!-- ========== STEP 1: Let's Get Started ========== -->
+        <div class="form-step active" id="step-1">
+          <h2 class="step-title">Let's Get Started</h2>
+          <p class="step-desc">So we can send you your personalized report.</p>
+
+          <div class="field-group">
+            <label class="field-label" for="full_name">Full Name *</label>
+            <input type="text" id="full_name" name="full_name" class="field-input" required placeholder="Your full name">
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="email">Email *</label>
+            <input type="email" id="email" name="email" class="field-input" required placeholder="you@example.com">
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" class="field-input" placeholder="(555) 123-4567" pattern="[\d\s\-\+\(\)]{7,20}" title="Please enter a valid phone number">
+          </div>
+
+          <div class="form-nav">
+            <div></div>
+            <button type="button" class="btn-next" onclick="nextStep(2)">Continue</button>
+          </div>
+        </div>
+
+
+        <!-- ========== STEP 2: Your Story ========== -->
+        <div class="form-step" id="step-2">
+          <h2 class="step-title">Your Story</h2>
+          <p class="step-desc">Let's start with where you are right now. There are no right or wrong answers — just your experience.</p>
+
+          <div class="field-group">
+            <label class="field-label" for="concern">What is your primary health concern right now? *</label>
+            <textarea id="concern" name="concern" class="field-textarea" required placeholder="Describe what you're dealing with in your own words..."></textarea>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="duration">How long have you been dealing with this?</label>
+            <select id="duration" name="duration" class="field-select">
+              <option value="">Select...</option>
+              <option value="less-6mo">Less than 6 months</option>
+              <option value="6mo-2yr">6 months to 2 years</option>
+              <option value="2-5yr">2 to 5 years</option>
+              <option value="5-10yr">5 to 10 years</option>
+              <option value="10plus">More than 10 years</option>
+              <option value="lifelong">Most of my life</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="never-well-since">Was there a specific event or time after which your health declined?</label>
+            <p class="field-hint">In biological medicine, we call this your "never well since" moment — a surgery, illness, accident, emotional loss, or exposure that changed things.</p>
+            <textarea id="never-well-since" name="never_well_since" class="field-textarea" placeholder="Example: 'After my car accident in 2018...' or 'Since having COVID in 2021...' or 'I'm not sure'"></textarea>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">What treatments have you tried?</label>
+            <p class="field-hint">Select all that apply.</p>
+            <div class="checkbox-group">
+              <label class="checkbox-item"><input type="checkbox" name="treatments" value="conventional"> Conventional medicine</label>
+              <label class="checkbox-item"><input type="checkbox" name="treatments" value="acupuncture"> Acupuncture / TCM</label>
+              <label class="checkbox-item"><input type="checkbox" name="treatments" value="homeopathy"> Homeopathy</label>
+              <label class="checkbox-item"><input type="checkbox" name="treatments" value="naturopathic"> Naturopathic</label>
+              <label class="checkbox-item"><input type="checkbox" name="treatments" value="functional"> Functional medicine</label>
+              <label class="checkbox-item"><input type="checkbox" name="treatments" value="supplements"> Supplements / nutrition</label>
+              <label class="checkbox-item"><input type="checkbox" name="treatments" value="chiropractic"> Chiropractic</label>
+              <label class="checkbox-item"><input type="checkbox" name="treatments" value="energy"> Energy healing / Reiki</label>
+              <label class="checkbox-item"><input type="checkbox" name="treatments" value="none"> None yet</label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">How would you rate your overall vitality right now?</label>
+            <p class="field-hint">1 = barely functioning · 10 = thriving</p>
+            <input type="range" min="1" max="10" value="5" class="vitality-slider" id="vitality" name="vitality">
+            <div class="vitality-value" id="vitality-display">5</div>
+            <div class="vitality-labels">
+              <span>Depleted</span>
+              <span>Managing</span>
+              <span>Thriving</span>
+            </div>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn-back" onclick="prevStep(1)">Back</button>
+            <button type="button" class="btn-next" onclick="nextStep(3)">Continue</button>
+          </div>
+        </div>
+
+
+        <!-- ========== STEP 3: Your Backpack ========== -->
+        <div class="form-step" id="step-3">
+          <h2 class="step-title">Your Backpack</h2>
+          <p class="step-desc">Everything unresolved, suppressed, or accumulated in your life gets carried in what we call your "backpack." Let's inventory what might be in yours.</p>
+
+          <div class="field-group">
+            <label class="field-label">Dental history — do any of these apply?</label>
+            <p class="field-hint">Dental health profoundly influences the whole body through meridian connections.</p>
+            <div class="checkbox-group">
+              <label class="checkbox-item"><input type="checkbox" name="dental" value="mercury"> Mercury / amalgam fillings</label>
+              <label class="checkbox-item"><input type="checkbox" name="dental" value="root-canal"> Root canals</label>
+              <label class="checkbox-item"><input type="checkbox" name="dental" value="implants"> Dental implants</label>
+              <label class="checkbox-item"><input type="checkbox" name="dental" value="tmj"> TMJ / jaw issues</label>
+              <label class="checkbox-item"><input type="checkbox" name="dental" value="wisdom"> Wisdom teeth removed</label>
+              <label class="checkbox-item"><input type="checkbox" name="dental" value="none"> None of these</label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">Do you have significant scars?</label>
+            <p class="field-hint">Scars can block the flow of energy through meridians and require the body to compensate.</p>
+            <div class="radio-group">
+              <label class="radio-item"><input type="radio" name="scars" value="surgery"> Yes — from surgery</label>
+              <label class="radio-item"><input type="radio" name="scars" value="csection"> Yes — C-section</label>
+              <label class="radio-item"><input type="radio" name="scars" value="injury"> Yes — from injury or accident</label>
+              <label class="radio-item"><input type="radio" name="scars" value="multiple"> Yes — multiple significant scars</label>
+              <label class="radio-item"><input type="radio" name="scars" value="none"> No significant scars</label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">Toxic exposures — have you been exposed to any of the following?</label>
+            <div class="checkbox-group">
+              <label class="checkbox-item"><input type="checkbox" name="toxins" value="mold"> Mold / water-damaged building</label>
+              <label class="checkbox-item"><input type="checkbox" name="toxins" value="heavy-metals"> Heavy metals</label>
+              <label class="checkbox-item"><input type="checkbox" name="toxins" value="pesticides"> Pesticides / herbicides</label>
+              <label class="checkbox-item"><input type="checkbox" name="toxins" value="industrial"> Industrial chemicals</label>
+              <label class="checkbox-item"><input type="checkbox" name="toxins" value="emf"> High EMF environment</label>
+              <label class="checkbox-item"><input type="checkbox" name="toxins" value="unsure"> Not sure</label>
+              <label class="checkbox-item"><input type="checkbox" name="toxins" value="none"> None that I know of</label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">Are you currently taking pharmaceutical medications?</label>
+            <select id="medications" name="medications" class="field-select">
+              <option value="">Select...</option>
+              <option value="none">No medications</option>
+              <option value="1-2">1-2 medications</option>
+              <option value="3-5">3-5 medications</option>
+              <option value="6plus">6 or more medications</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">Have you received vaccinations in the last 5 years?</label>
+            <div class="checkbox-group">
+              <label class="checkbox-item"><input type="checkbox" name="vaccines" value="covid"> COVID vaccine</label>
+              <label class="checkbox-item"><input type="checkbox" name="vaccines" value="flu"> Flu vaccine</label>
+              <label class="checkbox-item"><input type="checkbox" name="vaccines" value="other"> Other vaccines</label>
+              <label class="checkbox-item"><input type="checkbox" name="vaccines" value="none"> No recent vaccines</label>
+            </div>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn-back" onclick="prevStep(2)">Back</button>
+            <button type="button" class="btn-next" onclick="nextStep(4)">Continue</button>
+          </div>
+        </div>
+
+
+        <!-- ========== STEP 4: Your Terrain ========== -->
+        <div class="form-step" id="step-4">
+          <h2 class="step-title">Your Terrain</h2>
+          <p class="step-desc">Your daily habits and constitution shape how your body responds to what it's carrying. Let's look at your current foundation.</p>
+
+          <div class="field-group">
+            <label class="field-label" for="sleep">How would you describe your sleep?</label>
+            <select id="sleep" name="sleep" class="field-select">
+              <option value="">Select...</option>
+              <option value="restorative">Deep and restorative — I wake refreshed</option>
+              <option value="light">Light or interrupted — I wake during the night</option>
+              <option value="insomnia">Difficulty falling or staying asleep</option>
+              <option value="medicated">I rely on medication or supplements to sleep</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="digestion">How would you describe your digestion?</label>
+            <select id="digestion" name="digestion" class="field-select">
+              <option value="">Select...</option>
+              <option value="strong">Strong — I digest well with no issues</option>
+              <option value="bloating">Bloating, gas, or discomfort after eating</option>
+              <option value="constipation">Constipation</option>
+              <option value="loose">Loose stools or diarrhea</option>
+              <option value="alternating">Alternating between constipation and loose stools</option>
+              <option value="food-sensitivities">Multiple food sensitivities</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="stress">What is your primary source of stress?</label>
+            <select id="stress" name="stress" class="field-select">
+              <option value="">Select...</option>
+              <option value="health">My health</option>
+              <option value="work">Work or career</option>
+              <option value="family">Family or relationships</option>
+              <option value="financial">Financial</option>
+              <option value="emotional">Emotional or psychological</option>
+              <option value="all">All of the above</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="energy">When is your energy lowest?</label>
+            <select id="energy" name="energy" class="field-select">
+              <option value="">Select...</option>
+              <option value="morning">Morning — hard to get going</option>
+              <option value="afternoon">Afternoon — the 2-4pm crash</option>
+              <option value="evening">Evening — exhausted by dinner</option>
+              <option value="always">Always low — I have no reserves</option>
+              <option value="fluctuates">Unpredictable — it fluctuates throughout the day</option>
+            </select>
+          </div>
+
+          <!-- Social proof near submit -->
+          <div style="background: rgba(197,162,85,0.06); border-radius: 8px; padding: 20px; margin: 24px 0; border-left: 3px solid var(--gold);">
+            <p style="font-style: italic; font-size: 16px; color: var(--text-dark); margin-bottom: 6px;">"I believe Vanessa Morgan saved my life. Her calmness, positivity, and wisdom continually inspire confidence in my own body's ability to heal itself."</p>
+            <p style="font-size: 13px; color: var(--text-light); margin: 0;">— Patient, 16 years with Vanessa</p>
+          </div>
+
+          <button type="submit" class="btn-submit">Get My Healing Assessment</button>
+
+          <p style="text-align: center; margin-top: 16px; font-size: 14px; color: var(--text-light);">Free. No credit card required. Your information is kept strictly confidential.</p>
+        </div>
+
+      </form>
+
+      <!-- ========== LOADING STATE ========== -->
+      <div id="form-loading" style="display: none; text-align: center; padding: 60px 24px;">
+        <div style="width: 48px; height: 48px; border: 3px solid var(--sand); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 24px;"></div>
+        <h2 style="font-family: var(--font-heading); font-size: 28px; color: var(--navy); margin-bottom: 12px;">Preparing Your Healing Assessment</h2>
+        <p style="font-size: 17px; color: var(--text-medium); max-width: 480px; margin: 0 auto; line-height: 1.7;">Vanessa's clinical framework is analyzing your answers. This typically takes 15-30 seconds.</p>
+      </div>
+      <style>@keyframes spin { to { transform: rotate(360deg); } }</style>
+
+      <!-- ========== REPORT STATE ========== -->
+      <div id="form-report" style="display: none;">
+        <div style="text-align: center; margin-bottom: 40px;">
+          <img src="../images/morgan_icon_transparent.png" alt="" style="width: 56px; height: 56px; margin: 0 auto 16px; object-fit: contain; opacity: 0.85;">
+          <h2 style="font-family: var(--font-heading); font-size: 32px; color: var(--navy); margin-bottom: 8px;">Your Healing Assessment</h2>
+          <p style="font-size: 15px; color: var(--text-light);">Prepared for <span id="report-name"></span> by The Morgan Institute</p>
+        </div>
+        <div id="report-content" style="font-size: 17px; line-height: 1.8; color: var(--text-dark);"></div>
+        <div style="text-align: center; margin-top: 48px; padding: 40px; background: var(--navy); border-radius: 12px;">
+          <h3 style="color: var(--gold); font-family: var(--font-heading); font-size: 26px; margin-bottom: 12px;">Ready to Begin Your Healing Journey?</h3>
+          <p style="color: rgba(245,240,234,0.8); font-size: 17px; max-width: 500px; margin: 0 auto 24px;">Your consultation includes a full clinical assessment, individualized treatment plan, and your first indicated remedy shipped to your door.</p>
+          <a class='btn btn-primary btn-lg' href='../booking/' style='background: var(--gold); color: var(--navy); font-size: 17px; padding: 20px 48px;'>Book Your Consultation — $297</a>
+        </div>
+      </div>
+
+      <!-- ========== FALLBACK SUCCESS STATE ========== -->
+      <div class="form-success" id="form-success">
+        <div style="font-size: 48px; margin-bottom: 16px;">✦</div>
+        <h2 style="font-family: var(--font-heading); font-size: 32px; color: var(--navy); margin-bottom: 16px;">Your Assessment Has Been Received</h2>
+        <p style="font-size: 19px; color: var(--text-medium); max-width: 480px; margin: 0 auto 20px; line-height: 1.7;">Vanessa will review your answers and prepare your personalized report. Check your email within 24 hours.</p>
+        <a class='btn btn-primary btn-lg' href='../booking/' style='background: var(--gold); color: var(--navy);'>Book a Consultation with Vanessa</a>
+        <p style="margin-top: 16px; font-size: 15px; color: var(--text-light);">$297 — includes full clinical assessment, individualized treatment plan, and first indicated remedy shipped to you.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Social proof strip -->
+  <div class="proof-strip">
+    "The body knows how to heal itself. It just needs to be given the right tool for the job." — Vanessa Morgan
+  </div>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="../images/morgan_logo_512.png" alt="The Morgan Institute" class="footer-logo">
+          <p class="footer-tagline">A Whole Systems Approach to Healing<br><span style="font-size: 13px; letter-spacing: 0.06em;">Venom Medicine · Homeopathy · Biological Medicine · Chinese Medicine</span></p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href='../about/'>About Vanessa</a></li>
+            <li><a href='../consultation/'>Patient Care</a></li>
+            <li><a href='../practitioner/'>For Practitioners</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <ul>
+            <li><!-- TODO: Vanessa reported delivery delays with info@ alias; confirm preferred contact email. --><a href="mailto:info@themorganinstitute.com">info@themorganinstitute.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Morgan Institute for Advanced Biological Medicine. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+  <script>
+    // ===== STEPPED FORM LOGIC =====
+
+    let currentStep = 1;
+    const totalSteps = 4;
+
+    function nextStep(step) {
+      document.getElementById('step-' + currentStep).classList.remove('active');
+      document.getElementById('step-' + step).classList.add('active');
+      document.getElementById('prog-' + currentStep).classList.remove('active');
+      document.getElementById('prog-' + currentStep).classList.add('completed');
+      document.getElementById('prog-' + step).classList.add('active');
+      document.getElementById('step-num').textContent = step;
+      currentStep = step;
+      window.scrollTo({ top: document.querySelector('.intake-section').offsetTop - 20, behavior: 'smooth' });
+    }
+
+    function prevStep(step) {
+      document.getElementById('step-' + currentStep).classList.remove('active');
+      document.getElementById('step-' + step).classList.add('active');
+      document.getElementById('prog-' + currentStep).classList.remove('active');
+      document.getElementById('prog-' + step).classList.remove('completed');
+      document.getElementById('prog-' + step).classList.add('active');
+      document.getElementById('step-num').textContent = step;
+      currentStep = step;
+      window.scrollTo({ top: document.querySelector('.intake-section').offsetTop - 20, behavior: 'smooth' });
+    }
+
+    // Vitality slider
+    const slider = document.getElementById('vitality');
+    const display = document.getElementById('vitality-display');
+    if (slider && display) {
+      slider.addEventListener('input', function() {
+        display.textContent = this.value;
+      });
+    }
+
+    // Checkbox visual feedback
+    document.querySelectorAll('.checkbox-item input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', function() {
+        this.closest('.checkbox-item').classList.toggle('checked', this.checked);
+      });
+    });
+
+    // Radio visual feedback
+    document.querySelectorAll('.radio-item input[type="radio"]').forEach(rb => {
+      rb.addEventListener('change', function() {
+        this.closest('.radio-group').querySelectorAll('.radio-item').forEach(item => {
+          item.classList.remove('selected');
+        });
+        this.closest('.radio-item').classList.add('selected');
+      });
+    });
+
+    // Form submission
+    document.getElementById('intake-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+      const data = {};
+
+      // Handle regular fields
+      for (const [key, value] of formData.entries()) {
+        if (data[key]) {
+          if (Array.isArray(data[key])) {
+            data[key].push(value);
+          } else {
+            data[key] = [data[key], value];
+          }
+        } else {
+          data[key] = value;
+        }
+      }
+
+      const submitBtn = this.querySelector('.btn-submit');
+      submitBtn.textContent = 'Preparing your assessment...';
+      submitBtn.disabled = true;
+
+      // Hide form, show loading
+      this.style.display = 'none';
+      document.querySelector('.progress-bar').style.display = 'none';
+      document.querySelector('.progress-label').style.display = 'none';
+      document.getElementById('form-loading').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      try {
+        const response = await fetch('/.netlify/functions/process-intake', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        document.getElementById('form-loading').style.display = 'none';
+
+        if (response.ok && result.report) {
+          // Show the AI-generated report
+          document.getElementById('report-name').textContent = result.name || data.full_name;
+          document.getElementById('report-content').innerHTML = result.report;
+          document.getElementById('form-report').style.display = 'block';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          // Fallback to simple success
+          document.getElementById('form-success').classList.add('active');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      } catch (err) {
+        document.getElementById('form-loading').style.display = 'none';
+        document.getElementById('form-success').classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  </script>
+</body>
+</html>

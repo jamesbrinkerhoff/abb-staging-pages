@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Vanessa Morgan — The Morgan Institute for Advanced Biological Medicine</title>
+  <meta name="description" content="Meet Vanessa Morgan, L.Ac. — over 50 years bridging Chinese medicine, European biological medicine, homeopathy, and whole systems healing. Her story, philosophy, and mission.">
+
+  <link rel="canonical" href="https://themorganinstitute.com/about">
+  <meta property="og:url" content="https://themorganinstitute.com/about">
+  <meta property="og:site_name" content="The Morgan Institute for Advanced Biological Medicine">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Vanessa Morgan — The Morgan Institute for Advanced Biological Medicine">
+  <meta name="twitter:description" content="Over 50 years bridging Chinese medicine, European biological medicine, homeopathy, and whole systems healing.">
+  <meta name="twitter:image" content="https://themorganinstitute.com/images/vanessa-headshot.jpg">
+
+  <meta property="og:title" content="About Vanessa Morgan — The Morgan Institute for Advanced Biological Medicine">
+  <meta property="og:description" content="Over 50 years bridging Chinese medicine, European biological medicine, homeopathy, and whole systems healing.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://themorganinstitute.com/images/vanessa-headshot.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ===== ABOUT PAGE STYLES ===== */
+
+    /* -- Hero with background image -- */
+    .about-hero {
+      position: relative;
+      padding: clamp(140px, 18vw, 220px) 0 clamp(80px, 10vw, 140px);
+      text-align: center;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(11, 29, 58, 0.65), rgba(11, 29, 58, 0.55)),
+        url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1600&q=80') center/cover no-repeat;
+    }
+    .about-hero h1 {
+      color: var(--warm-white);
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .about-hero .hero-subtitle {
+      font-family: var(--font-heading);
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-style: italic;
+      color: var(--gold-light);
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .about-hero .divider {
+      background: var(--gold);
+      margin: 24px auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* -- Bio Section -- */
+    .bio-section {
+      padding: var(--section-pad) 0;
+      background: linear-gradient(rgba(251,248,244,0.9), rgba(251,248,244,0.9)), url('https://images.unsplash.com/photo-1457530378978-8bac673b8062?w=1600') center/cover no-repeat;
+    }
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .bio-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+    .bio-photo {
+      border-radius: 16px;
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 3/4;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+    }
+    .bio-content .section-label {
+      margin-bottom: 8px;
+    }
+    .bio-content h2 {
+      margin-bottom: 24px;
+    }
+    .bio-text p {
+      font-size: 18px;
+      line-height: 1.85;
+      margin-bottom: 1.4em;
+    }
+    .bio-text p:first-of-type::first-letter {
+      font-family: var(--font-heading);
+      font-size: 3.4em;
+      float: left;
+      line-height: 0.8;
+      margin-right: 8px;
+      margin-top: 6px;
+      color: var(--mauve);
+    }
+
+    /* -- Philosophy Section with background image -- */
+    .philosophy-section {
+      position: relative;
+      padding: var(--section-pad) 0;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(11, 29, 58, 0.72), rgba(11, 29, 58, 0.68)),
+        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80') center/cover no-repeat;
+      color: var(--text-on-dark);
+    }
+    .philosophy-section .section-label {
+      color: var(--gold-light);
+    }
+    .philosophy-section h2 {
+      color: var(--gold);
+      margin-bottom: 32px;
+    }
+    .philosophy-section p {
+      color: var(--text-on-dark);
+      font-size: 18px;
+      line-height: 1.85;
+      max-width: 760px;
+    }
+    .philosophy-section .divider {
+      background: var(--gold);
+    }
+    .philosophy-pullquote {
+      font-family: var(--font-heading);
+      font-size: clamp(22px, 3vw, 30px);
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--gold-light);
+      border-left: 3px solid var(--gold);
+      padding-left: 28px;
+      margin: 40px 0;
+      max-width: 680px;
+    }
+
+    /* -- Vision Section -- */
+    .vision-section {
+      padding: var(--section-pad) 0;
+      background: linear-gradient(rgba(245,237,230,0.88), rgba(245,237,230,0.88)), url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1600&q=80') center/cover no-repeat;
+    }
+    .vision-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .vision-inner h2 {
+      margin-bottom: 28px;
+    }
+    .vision-inner p {
+      font-size: 18px;
+      line-height: 1.85;
+      margin-bottom: 1.4em;
+    }
+    .vision-callout {
+      font-family: var(--font-heading);
+      font-size: clamp(20px, 2.8vw, 26px);
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--mauve);
+      border-left: 3px solid var(--mauve-light);
+      padding-left: 24px;
+      margin: 36px 0;
+    }
+
+    /* -- Credentials Grid -- */
+    .credentials-section {
+      padding: var(--section-pad) 0;
+      background: linear-gradient(rgba(251,248,244,0.88), rgba(251,248,244,0.88)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600') center/cover no-repeat;
+    }
+    .credentials-section h2 {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .credentials-section .section-label {
+      text-align: center;
+      display: block;
+    }
+    .credentials-section .divider {
+      margin: 20px auto 48px;
+    }
+    .credential-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 40px 32px;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      transition: box-shadow 0.3s var(--ease), transform 0.3s var(--ease);
+    }
+    .credential-card:hover {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      transform: translateY(-3px);
+    }
+    .credential-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .credential-card h3 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      color: var(--navy);
+    }
+    .credential-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .credential-card ul li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-medium);
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+    .credential-card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--mauve-light);
+    }
+
+    /* -- Community Photo -- */
+    .community-section {
+      padding: var(--section-pad-sm) 0 var(--section-pad);
+      background: linear-gradient(rgba(251,248,244,0.9), rgba(251,248,244,0.9)), url('https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=1600') center/cover no-repeat;
+      text-align: center;
+    }
+    .community-photo {
+      border-radius: 16px;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto 24px;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+    }
+    .community-caption {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: 17px;
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* -- Quote Section -- */
+    .quote-section {
+      position: relative;
+      padding: clamp(80px, 10vw, 140px) 0;
+      text-align: center;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(11, 29, 58, 0.75), rgba(11, 29, 58, 0.7)),
+        url('/images/section-herbs.png') center/cover no-repeat;
+    }
+    .quote-section blockquote {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 3.5vw, 38px);
+      font-style: italic;
+      line-height: 1.45;
+      color: var(--warm-white);
+      max-width: 780px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .quote-section blockquote::before {
+      content: '\201C';
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 80px;
+      color: var(--gold);
+      line-height: 0.6;
+      margin-bottom: 16px;
+      opacity: 0.6;
+    }
+    .quote-section .quote-author {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* -- CTA Section -- */
+    .cta-section {
+      padding: var(--section-pad) 0;
+      background: linear-gradient(rgba(245,237,230,0.85), rgba(245,237,230,0.85)), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1600') center/cover no-repeat;
+      text-align: center;
+    }
+    .cta-section h2 {
+      margin-bottom: 16px;
+    }
+    .cta-section p {
+      font-size: 19px;
+      line-height: 1.75;
+      max-width: 600px;
+      margin: 0 auto 36px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="../" style="display: flex; align-items: center; gap: 12px;">
+        <img src="../images/morgan_icon_transparent.png" alt="The Morgan Institute" class="nav-logo">
+        <span style="font-family: var(--font-display); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); white-space: nowrap; font-weight: 600;">The Morgan Institute</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href='../about/'>About</a></li>
+        <li><a href='../certification/'>Certification</a></li>
+        <li><a href='../practitioner/'>Practitioners</a></li>
+        <li><a href='../consultation/'>Patient Care</a></li>
+        <li><a href='#'>Blog</a></li>
+        <li><a href='../podcast/'>Podcast</a></li>
+        <li><a class='btn btn-primary' href='../apply/' style='padding: 10px 28px; font-size: 13px;'>Apply Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ===== 1. HERO ===== -->
+  <section class="about-hero">
+    <div class="container">
+      <h1 class="page-title">About Vanessa</h1>
+      <div class="divider divider-center"></div>
+      <p class="hero-subtitle">Over fifty years devoted to the art and science of healing</p>
+    </div>
+  </section>
+
+
+  <!-- ===== 2. BIO SECTION ===== -->
+  <section class="bio-section">
+    <div class="container">
+      <div class="bio-grid">
+        <div>
+          <img src="../images/vanessa-headshot.jpg" alt="Vanessa Morgan, L.Ac." class="bio-photo" loading="lazy">
+        </div>
+        <div class="bio-content">
+          <span class="section-label">Her Story</span>
+          <h2>A Life Shaped by Plants, Teachers, and an Unrelenting Curiosity</h2>
+          <div class="divider"></div>
+          <div class="bio-text">
+            <p>At seventeen, I became fascinated with plants and their capacity to heal. That curiosity led me to Vancouver Island, where I met a Mohawk healer and herbalist named Norma Myers. Norma took me in, and for nine months I lived in her attic surrounded by baskets of drying herbs, learning the old ways of plant medicine from someone who carried them in her bones.</p>
+
+            <p>From there, the path kept unfolding. I trained as a massage therapist and Jin Shin practitioner, then enrolled at the British Institute of Homeopathy because I wanted to understand the subtler dimensions of healing. I continued on to the Oriental Medical Institute in Hawaii, where I studied acupuncture and Chinese medicine, and eventually traveled to China to deepen that training at its source.</p>
+
+            <p>It was EAV testing that opened the next door. The technology pointed me toward Germany, where I began studying Neural Therapy, Darkfield Microscopy, and the principles of pleomorphism. These were not popular subjects in the English-speaking world at the time, but they changed everything I understood about the body and disease.</p>
+
+            <p>I lived in London for twelve years, building a practice and continuing to study with some of the most brilliant clinicians in Europe. During those years and since, I have lectured across the United States, Canada, the United Kingdom, Ireland, and Germany. Each place, each teacher, each patient added another layer to what eventually became a whole-systems approach to healing.</p>
+
+            <p>Today I bring all of those threads together in my clinical work and my teaching. More than fifty years of practice has taught me that the body is always trying to heal itself. Our job is to listen to it carefully, remove what is in the way, and provide what is missing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 3. PHILOSOPHY SECTION ===== -->
+  <section class="philosophy-section">
+    <div class="container">
+      <span class="section-label">Philosophy</span>
+      <h2>Principles, Not Protocols</h2>
+      <div class="divider"></div>
+      <p>I have always believed that real medicine begins with the individual, not the diagnosis. A label tells you very little about what a person actually needs. You could have ten people given the same medical diagnosis, and what each one requires to resolve it could be completely different. That is why I teach principles rather than protocols.</p>
+
+      <div class="philosophy-pullquote">
+        A return to a more feminine approach to health and healing &mdash; one that listens before it prescribes, observes before it intervenes.
+      </div>
+
+      <p>The feminine approach is not about gender. It is about receptivity. It is about trusting the body's intelligence and working with it rather than overriding it. It is about holding space for complexity instead of reducing everything to a single mechanism and a single drug. When we honor that complexity, we find that healing is not only possible but natural.</p>
+
+      <p>This is the approach I teach at The Morgan Institute. Not a rigid system of rules, but a living framework that adapts to each patient, each situation, each moment. My students learn to see the whole person and respond to what is actually there, not what a textbook says should be there.</p>
+    </div>
+  </section>
+
+
+  <!-- ===== 4. VISION SECTION ===== -->
+  <section class="vision-section">
+    <div class="container">
+      <div class="vision-inner">
+        <span class="section-label">Vision</span>
+        <h2>Why The Morgan Institute</h2>
+        <div class="divider"></div>
+
+        <p>I created The Morgan Institute because I saw a gap that no one else was filling. There are brilliant practitioners working in isolation, students hungry for knowledge that no single school offers, and patients who deserve better than the assembly-line medicine they are receiving. I wanted to build a bridge between all of them.</p>
+
+        <div class="vision-callout">
+          I am on a mission to help create and reestablish whole being medicine &mdash; medicine that treats the person, not just the pathology.
+        </div>
+
+        <p>I want to connect with my students through real human heart connection. This is not passive learning. This is not watching recorded lectures and checking boxes. This is apprenticeship. It is the way medicine was taught for thousands of years before institutions turned it into a conveyor belt.</p>
+
+        <p>We are living in extraordinary times. There is more information available than at any point in human history, and yet people are sicker, more confused, and more disconnected from their own bodies than ever before. The Morgan Institute exists to restore that connection &mdash; between practitioner and patient, between ancient wisdom and modern science, between the head and the heart.</p>
+
+        <p>If that resonates with you, I invite you to learn more about our certification program and see if this path is yours to walk.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 5. CREDENTIALS GRID ===== -->
+  <section class="credentials-section">
+    <div class="container">
+      <span class="section-label">Credentials</span>
+      <h2>Education, Licensure &amp; Teaching</h2>
+      <div class="divider divider-center"></div>
+
+      <div class="grid-3">
+
+        <div class="credential-card">
+          <span class="credential-icon" aria-hidden="true">&#127793;</span>
+          <h3>Education</h3>
+          <ul>
+            <li>Apprenticeship in Indigenous Herbal Medicine (Vancouver Island)</li>
+            <li>Green Veil Herbal College, Vancouver Island</li>
+            <li>International Teaching</li>
+            <li>Certified Massage Therapist &amp; Jin Shin Practitioner</li>
+            <li>British Institute of Homeopathy</li>
+            <li>Oriental Medical Institute, Honolulu (Acupuncture &amp; Chinese Medicine)</li>
+            <li>Advanced training in China</li>
+            <li>Neural Therapy &amp; Darkfield Microscopy (Germany)</li>
+            <li>EAV / Electrodermal Testing</li>
+          </ul>
+        </div>
+
+        <div class="credential-card">
+          <span class="credential-icon" aria-hidden="true">&#128220;</span>
+          <h3>Licensure &amp; Practice</h3>
+          <ul>
+            <li>Licensed Acupuncturist (L.Ac.)</li>
+            <li>50+ years of clinical practice</li>
+            <li>12 years based in London, UK</li>
+            <li>Clinical specialization in pleomorphism &amp; biological terrain</li>
+            <li>Venom medicine practitioner &amp; researcher</li>
+            <li>Founder, Self Heal Center</li>
+          </ul>
+        </div>
+
+        <div class="credential-card">
+          <span class="credential-icon" aria-hidden="true">&#127758;</span>
+          <h3>International Teaching</h3>
+          <ul>
+            <li>Lectured across the United States &amp; Canada</li>
+            <li>United Kingdom &amp; Ireland</li>
+            <li>Germany</li>
+            <li>Guest instructor at integrative medicine conferences</li>
+            <li>Mentor to practitioners worldwide</li>
+            <li>Founder, The Morgan Institute for Advanced Biological Medicine</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 6. COMMUNITY PHOTO ===== -->
+  <section class="community-section">
+    <div class="container">
+      <!-- TODO Item 37: Replace this image with photos from UK venom medicine teaching (Aurora or Sharon to send). -->
+      <img src="../images/vanessa-students.jpg" alt="Vanessa Morgan with her students" class="community-photo" loading="lazy">
+      <p class="community-caption">Vanessa with students during a clinical training intensive</p>
+    </div>
+  </section>
+
+
+  <!-- ===== 7. QUOTE ===== -->
+  <section class="quote-section">
+    <div class="container">
+      <blockquote>
+        The deepest practitioners are those who pass on what they know.
+      </blockquote>
+      <p class="quote-author">&mdash; Vanessa Morgan</p>
+    </div>
+  </section>
+
+
+  <!-- ===== 8. CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <span class="section-label">Next Step</span>
+      <h2>Learn From Vanessa Directly</h2>
+      <div class="divider divider-center"></div>
+      <p>The Morgan Institute certification program is an intimate, mentorship-driven experience for practitioners who are ready to deepen their clinical skills and expand their understanding of whole-systems medicine.</p>
+      <a class='btn btn-primary btn-lg' href='../certification/'>Explore the Certification</a>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="../images/morgan_logo_512.png" alt="The Morgan Institute" class="footer-logo">
+          <p class="footer-tagline">A Whole Systems Approach to Healing<br><span style="font-size: 13px; letter-spacing: 0.06em;">Venom Medicine &middot; Homeopathy &middot; Biological Medicine &middot; Chinese Medicine</span></p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul><li><a href="../">Home</a></li><li><a href='../about/'>About Vanessa</a></li><li><a href='../certification/'>Certification</a></li><li><a href='../consultation/'>Patient Care</a></li><li><a href='../apply/'>Apply</a></li></ul>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <ul><li><!-- TODO: Vanessa reported delivery delays with info@ alias; confirm preferred contact email. --><a href="mailto:info@themorganinstitute.com">info@themorganinstitute.com</a></li><li><a href="https://www.selfhealcenter.com" target="_blank" rel="noopener">Self Heal Center</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 The Morgan Institute for Advanced Biological Medicine. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>
