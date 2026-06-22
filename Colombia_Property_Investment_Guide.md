@@ -106,6 +106,22 @@ After ~5 years of residency she can pursue **citizenship** if she ever wants it.
 
 ---
 
+## 4b. If You're Buying on Installments / Seller Financing (important)
+
+If the purchase is **paid over time with title transferring later** (a *promesa de compraventa* or installment deal — e.g., ~$200K–$300K down and ~$500K paid over a couple of years), several things change:
+
+**The visa problem:** The real-estate investor visa requires the **Certificado de Tradición y Libertad (title) in her name.** A promise-to-buy + down payment does **not** give title, so **on a "title-later" structure she cannot qualify for the real-estate visa until the deed transfers.** Two fixes:
+- **Fix A — Take title now with a registered mortgage (*hipoteca*) to the seller** for the unpaid balance. She owns it (encumbered), gets title in her name, can register the investment, and **qualifies for the visa now.** Easy to do when the seller is Colombian.
+- **Fix B — Hold the property in the SAS.** Then her visa becomes the **Socio/Propietario (investor) visa, keyed to her registered capital/investment in the company** (which accrues as she pays), **not to holding title.** This **decouples the visa from the deed** and may let her qualify *before* the property is fully paid/deeded. ⭐ Since the SAS is already recommended for the rental business and underpins a family member's Socio visa, this route does triple duty.
+
+**The money/registration side:**
+- **Each USD payment must be individually channeled through a Colombian bank (IMC) and declared** as *inversión extranjera directa en inmuebles*; her registered investment and repatriation rights **build up tranche by tranche.**
+- A down payment can sometimes be registered *before* title via **Form 11 + the promesa + a seller certification**, but that pre-title path is clearest for **developer/construction projects** and **less certain for a private second-hand seller** — the cambiario specialist must confirm.
+- **Seller financing by a Colombian resident is domestic** — no foreign-debt registration. Only the money brought from the US gets registered. (A *non-resident* seller financing the balance could trigger external-debt registration.)
+- **Silver lining:** paying in installments means selling the US investments in tranches across years — which **naturally spreads the US capital-gains hit** (see §6, lever #1).
+
+**The risk to manage 🚩:** A large down payment on a property she doesn't hold title to needs an **estudio de títulos** (title/lien search) and ideally either the title-now-with-mortgage structure or a **fiducia/escrow** holding payments until the deed registers. The highest-value thing to confirm in the contract: **does title transfer now (with a mortgage) or only at final payment?** — that single point decides whether her visa clock can start now.
+
 ## 5. Long-Term vs. Short-Term Rentals — the Decision
 
 Because there are **six units**, Colombia treats this as a **business either way** (six exceeds the 5-contract threshold that makes renting "mercantil") — so RUT, ICA, and e-invoicing apply regardless. The big differences:
