@@ -79,6 +79,31 @@
 
 > Avoid the **business-owner (Socio/Propietario) visa** unless forced into it — lower investment bar but a renewal treadmill that requires continuously proving the company is economically active.
 
+### Retirement (Pensionado) visa vs. the Investor visa — the Investor visa wins
+
+The retirement (Pensionado, M-11) visa is **not** the better fit for her, for three concrete reasons:
+
+| | **Retirement (Pensionado) visa** | **R Investor visa (recommended)** |
+|---|---|---|
+| What qualifies you | A **lifetime pension** of ~**3× minimum wage ≈ $1,382/month** — *Social Security counts*, but **savings, rental, and investment income do NOT** | Her **$700K investment** — already qualifies |
+| Can she run the rentals? | **No** — the Pensionado M visa does **not permit work or business** | **Yes** — broad rights to run the business |
+| Time to residency | Temporary M visa; **5 years of renewals** before she can apply for R | **Lands at residency immediately** |
+
+Unless she has a qualifying monthly *pension* **and** didn't intend to run the rentals, the retirement visa is a slower, more restrictive path. Her investment already buys her the better visa outright. (If she does receive Social Security/pension income, it can serve as backup eligibility, but the investor route is still superior.)
+
+### How long does the visa last? — effectively permanent, with conditions
+
+The R (Resident) visa is Colombia's permanent-residency tier — she can stay indefinitely. But to **keep** it she must:
+1. **Renew/"transfer" the visa every 5 years** (the card is valid 5 years; re-stamp at least 1 month before expiry — a formality, not a re-qualification).
+2. **Not be absent from Colombia for 2 continuous years** — leaving for 2 straight years **automatically cancels** the R visa. *(This is fully compatible with the under-183-days/year tax plan below — she just can't disappear for two full years in a row. Note: the sometimes-cited "180 days" cancellation figure is incorrect for the R visa; the real rule is 2 continuous years.)*
+3. **Keep the registered investment** that grounds the visa, and keep her **cédula** current.
+
+After ~5 years of residency she can pursue **citizenship** if she ever wants it.
+
+### Visa vs. tax residency — a key distinction
+
+**Holding the residency visa does NOT make her a Colombian tax resident.** Tax residency is decided **only by days present** (>183 in any 365-day window), not by visa status. So she can hold permanent residency *and* keep her stays **under 183 days/year** to remain a non-tax-resident — getting residency rights without triggering worldwide-income taxation. See the money-saving lever #5 below.
+
 ---
 
 ## 5. Long-Term vs. Short-Term Rentals — the Decision
@@ -125,9 +150,10 @@ Selling ~$700K of investments can trigger a large US capital-gains bill. Ways to
 - **Retain/reinvest** profits in the SAS instead of distributing every year to defer that second layer; pull cash out in lower-income years.
 - Maximize **deductible expenses/depreciation** to shrink the 35% base.
 
-**Lever #5 — Manage the 183-day tax-residency line.**
-- Spending **>183 days/year** in Colombia makes her a **Colombian tax resident — taxed on worldwide income** (up to 39%), not just Colombian income.
-- If she has substantial US income, **staying under 183 days** can save significantly. (Doesn't affect visa eligibility — only tax.)
+**Lever #5 — Manage the 183-day tax-residency line (confirmed money-saver).**
+- Spending **>183 days/year** in Colombia makes her a **Colombian tax resident — taxed on worldwide income** (up to 39%), including her US income.
+- Staying **under 183 days** keeps her a non-resident, taxed only on Colombian-source income (the rentals). If she has meaningful US income, this saves significantly.
+- **The visa does not control this — the days do.** She can hold permanent residency *and* stay under 183 days and still avoid worldwide taxation. The only catch is the R visa's separate rule that she not be absent **2 continuous years** — staying under 183 days/year is fully compatible with that.
 
 **Lever #6 — Smaller but real savings.**
 - **GMF "4×1000":** the 0.4% transaction tax hits when paying the seller from the peso account (~$2,800 on $700K). A **cuenta de compensación** can avoid GMF on the channeled operation — ask the contador if it's worth it for a one-off.
