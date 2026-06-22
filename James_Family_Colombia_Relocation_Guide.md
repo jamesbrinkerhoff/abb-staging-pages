@@ -4,61 +4,55 @@
 
 **Status:** Research summary for decision-making. **Not legal advice** — §9 lists the professionals to engage. Costs/thresholds are approximate and reset each January with Colombia's minimum wage (SMMLV); verify before filing.
 
-> **One-paragraph version:** The fastest realistic way to land this summer with your daughter in school by September is for your aunt's company to make you a **part-owner (Visa M – Socio/Propietario)** — that lets the company give you income *and* counts toward permanent residency — with your **wife and daughter as dependents (beneficiaries)** on your visa. If you have your own remote US income, the **Digital Nomad visa** is an even faster bridge, but it *bans* taking income from your aunt's Colombian company. Pursue the **Argentine passports** (daughter via her father; you via your mother) in **parallel** — they unlock Colombia's easiest residency (Mercosur), but they take months-to-over-a-year, so they're an upgrade, not your summer ticket.
+> **One-paragraph version:** Your route is the **Digital Nomad visa** — the fastest way to land this summer with your daughter in school by September. You apply online (~2–4 weeks), with your **wife and daughter as dependents (beneficiaries)** on your visa. It requires ~**$1,400/month of your own remote US income** and does **not** let you draw income from your aunt's Colombian company, but it gets the family here quickly. In **parallel**, pursue your **wife's Argentine passport** (through her Argentine father) → Colombia's **Mercosur visa**, which gives *her* an open work permit and the family permanent residency in ~2 years — the best long-term anchor.
 
 ---
 
-## 1. The Visa Decision — Read This First
+## 1. Your Visa — the Digital Nomad Route
 
-There are three viable routes. They are **not** equal, and one important option (a work/employee visa) is effectively **off the table** right now:
+You've decided on the **Digital Nomad visa (Visa V – Nómada Digital)** — the fastest way to relocate the family this summer.
 
-| Route | Lets aunt's company pay you? | Speed to move | Counts toward residency? | Catch |
-|---|---|---|---|---|
-| **Visa M – Socio/Propietario** (you own shares of the SAS) ✅ *recommended* | **Yes** — you can work in/run the company | ~2–6 weeks once SAS + capital are in place | **Yes** (5 yrs → Resident visa) | You must hold ~**100 minimum-wages of registered capital ≈ $44K–$51K** in the company |
-| **Digital Nomad visa (V)** | **No** — banned from working for a Colombian company | **Fastest** (~2–4 weeks, apply online) | **No** | Needs ~**$1,400/mo** of *foreign/remote* income, each of last 3 months |
-| **Mercosur visa (via Argentine passport)** 🏆 *best long-term* | **Yes** — open work permit | Gated by passport (months–1yr+) | **Yes, fast** (only **2 yrs** → Resident) | Requires the Argentine passport first (see §6) |
+| | Digital Nomad visa (your choice) |
+|---|---|
+| Speed | **Fastest** — apply online, ~2–4 weeks |
+| Income proof | ~**$1,400/mo** of *foreign/remote* income (yours), each of the last 3 months |
+| Dependents | **Wife + daughter included as beneficiaries** |
+| Validity | **Up to 2 years**, renewable |
+| Limits | ❌ Can't earn from your aunt's Colombian company · ❌ Doesn't count toward permanent residency |
 
-**Why the employee "work visa" doesn't work right now:** A Visa M – Trabajador requires the **employer** to show ~**100 minimum-wages (~$44K–$51K) of average monthly income across 4 months of bank statements.** Your aunt's brand-new SAS has no banking history yet, so it would **fail that test**. Making you a **part-owner (Socio)** sidesteps this entirely — that's the practical "company gives me income" path for a new company.
+**Two things to keep in mind:**
+- It requires **your own remote/US-source income** (employer or clients). You **cannot** be paid by your aunt's Colombian company on this visa.
+- It **doesn't build toward residency**, so for the long term, pursue your **wife's Argentine passport → Mercosur visa** in parallel (§6) — that's the family's path to permanent residency and open work rights.
 
 ### Recommended plan
-1. **This summer:** Go on the **Socio/Propietario visa** (your aunt adds you as a shareholder of the SAS), with **wife + daughter as beneficiaries.** If you also have remote US income and want the *fastest* possible landing, the **Digital Nomad** visa is a bridge — but you can't draw company income on it.
-2. **In parallel:** Start the **Argentine passport** process for your daughter (fast-ish) and yourself (slow). When they come through, **switch to the Mercosur visa** — no capital, open work, residency in just 2 years.
+1. **This summer:** You apply for the **Digital Nomad visa**, with **wife + daughter as beneficiaries**.
+2. **In parallel:** Start your **wife's Argentine citizenship** (through her father) → when her passport comes, she gets the **Mercosur visa** (open work + residency in ~2 years), and the family can move onto that durable footing.
 
 ---
 
-## 2. Step-by-Step — Landing This Summer (Socio route)
+## 2. Step-by-Step — Landing This Summer (Digital Nomad route)
 
 ### Phase A — Before you leave the US (do now)
-1. **Engage the team** (§9): a Colombian immigration lawyer, the corporate lawyer/contador already setting up your aunt's SAS, and (for the passport track) an Argentine immigration lawyer/consulate.
-2. **Apostille US documents** — your **marriage certificate** and your **daughter's birth certificate** (proving parentage), plus her **school transcripts** and an **FBI background check** (often needed). Apostille is done by the issuing US state's Secretary of State (vital records) or the US Dept of State (FBI check). Get **official Spanish translations** of each.
-3. **Contact target schools NOW** (see §5 — Calendario B seats fill months ahead).
+1. **Engage the team** (§9): a Colombian immigration lawyer, and (for the long-term track) an Argentine immigration lawyer/consulate for your wife.
+2. **Apostille US documents** — your **marriage certificate** and your **daughter's birth certificate** (proving parentage), her **school transcripts**, and an **FBI background check**. Apostille via the issuing US state's Secretary of State (vital records) or the US Dept of State (FBI check). Get **official Spanish translations**.
+3. **Gather your income proof** — 3 months of bank statements (**each** month ≥ ~$1,400), a **foreign-employer/client letter**, and buy **health insurance valid in Colombia**.
+4. **Contact target schools NOW** (see §5 — Calendario B seats fill months ahead).
 
-### Phase B — Set up your ownership stake
-4. **Your aunt's SAS issues/sells you shares** representing at least **~100 minimum-wages of paid-in capital (~$44K–$51K).** This can be funded from your own money or structured with the family — the corporate lawyer handles it. If funded from abroad, register it as **foreign investment with Banco de la República** (the cleanest proof for the visa).
-5. Get the **Certificado de Existencia y Representación Legal** (Cámara de Comercio) and a contador's certificate of your shareholding — these are your visa evidence.
+### Phase B — Apply for your Digital Nomad visa
+5. **File online** at the Cancillería **SITAC** portal — from inside or outside Colombia (if inside, on your tourist stamp; don't let it lapse). Government fees ≈ **$54 study + ~$177 issuance**. Processing ~2–4 weeks.
+6. **Register for your cédula de extranjería** at Migración Colombia **within 15 days** of visa issuance.
 
-### Phase C — Apply for your visa
-6. **File the Visa M – Socio online** at the Cancillería **SITAC** portal. You can apply **from inside Colombia** on your tourist entry stamp (just don't let it lapse mid-process). Government fees ≈ **$54 study + ~$230–270 issuance**. Processing ~2–4 weeks.
-7. **Register for your cédula de extranjería** at Migración Colombia **within 15 days** of visa issuance.
+### Phase C — Bring your wife and daughter
+7. **With your visa (or alongside it),** apply for their **beneficiary visas.** Documents: your apostilled **marriage certificate** (wife) and the apostilled **birth certificate** (daughter), plus a letter assuming their support. Their visas **mirror yours** and expire with yours.
+8. **Cédulas** for them too (the daughter gets one if over 7), within 15 days.
 
-### Phase D — Bring your wife and daughter
-8. **Once your visa is issued,** apply for their **beneficiary visas** (they can't apply until you're approved). Documents: your apostilled **marriage certificate** (wife) and the apostilled **birth certificate** (daughter), plus a letter from you assuming their support. Their visas **mirror yours** and expire with it.
-9. **Cédulas** for them too (the daughter gets one if over 7), within 15 days.
-
-> ⚠️ **Your wife cannot legally work** on a beneficiary visa — beneficiaries are limited to "homemaker or student." If she needs to work, she'd need her own qualifying visa (e.g., her own Argentine passport/Mercosur, or a job that sponsors her). **Your daughter CAN attend school** on her beneficiary visa.
+> ⚠️ **Beneficiaries can study but not work** — your wife **cannot legally work** on a beneficiary visa (limited to "homemaker or student"); your **daughter CAN attend school**. For your wife to work, she'll want her **own Argentine/Mercosur visa** (§6).
 
 ---
 
-## 3. The Digital Nomad Alternative (only if you have remote US income)
+## 3. If Your Remote Income Doesn't Qualify
 
-If you personally earn **~$1,400+/month from US/foreign clients or employer** (remote), this is the **fastest** way in:
-- Apply **online**, ~2–4 weeks, from inside or outside Colombia.
-- Proof: 3 months of bank statements (**each** month ≥ ~$1,400), a foreign-employer/client letter, **health insurance** valid in Colombia, passport, apostilled FBI check.
-- **Wife + daughter allowed as beneficiaries** (this V visa permits dependents).
-- **Valid up to 2 years**, renewable.
-- ❌ **Does NOT let you take income from your aunt's Colombian company**, and ❌ **does not count toward residency.**
-
-**Use it if:** you want to land *immediately* and your income is remote/US-based. **Skip it if:** the whole point is drawing income from your aunt's company — then go Socio.
+The Digital Nomad visa needs ~**$1,400/mo of *foreign/remote* income** for **each** of the last 3 months. If you can't show that, the realistic fallbacks are: (a) **enter as a tourist** (90 days, extendable to 180/year) while your **wife's Argentine/Mercosur visa** comes through, then ride as her dependent; or (b) revisit a company-ownership (Socio) visa, which requires ~$44K–$51K of documented paid-in capital in your name. Discuss with the immigration lawyer before relying on the tourist bridge.
 
 ---
 
@@ -66,10 +60,10 @@ If you personally earn **~$1,400+/month from US/foreign clients or employer** (r
 
 | Item | Approx. cost |
 |---|---|
-| Socio or Digital Nomad visa (study + issuance) | **~$285–325** each |
+| Digital Nomad visa (study + issuance) | **~$231** |
 | Beneficiary visa (wife, daughter) | **~$250–325** each |
 | Cédula de extranjería | **~COP $294,000 (~$75)** each |
-| Socio capital you must hold in the SAS | **~$44K–$51K** (an asset you own, not a fee) |
+| Health insurance (Colombia coverage) | required — varies by plan |
 | Lawyer fees (immigration) | varies — typically several hundred to low thousands $ |
 
 ---
