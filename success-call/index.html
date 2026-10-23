@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
-<!-- Meta Pixel 4598310753722166: fires only on soniagomez.net / www.soniagomez.net (or ?pixeltest=1). Elsewhere it logs a dry run. -->
+<!-- Meta Pixel 4598310753722166: fires only on soniagomez.net / www.soniagomez.net / vip.soniagomez.net (or ?pixeltest=1). Elsewhere it logs a dry run. -->
 <script>
 (function(){
   var PIXEL_ID='4598310753722166';
@@ -32,6 +32,7 @@
   var LIVE=(h==='soniagomez.net'||h==='www.soniagomez.net'||h==='vip.soniagomez.net');
   var TEST=/[?&]pixeltest=1(&|$)/.test(location.search);
   var ENABLED=LIVE||TEST;
+  window.sgTrackEnabled=ENABLED;
   function eid(p){return p+'-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,10);}
   if(ENABLED){
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -121,6 +122,17 @@ h1 em{font-style:italic;font-weight:500;color:var(--gold-dark)}
 <script>
 (function(){
   var fired=false;
+  function ck(n){var m=document.cookie.match('(?:^|; )'+n+'=([^;]*)');return m?decodeURIComponent(m[1]):'';}
+  // Server copy of Schedule via CAPI, same eventID as the browser event so Meta dedupes the pair.
+  function sendCapi(id){
+    var body={event_id:id,fbp:ck('_fbp'),fbc:ck('_fbc'),page_url:location.href.split('#')[0]};
+    if(!window.sgTrackEnabled){console.log('[meta-capi dry-run] would POST /.netlify/functions/capi-schedule',body);return;}
+    var json=JSON.stringify(body);
+    try{
+      if(window.fetch){fetch('/.netlify/functions/capi-schedule',{method:'POST',headers:{'content-type':'application/json'},body:json,keepalive:true,credentials:'same-origin'}).catch(function(){});}
+      else if(navigator.sendBeacon){navigator.sendBeacon('/.netlify/functions/capi-schedule',new Blob([json],{type:'application/json'}));}
+    }catch(_){}
+  }
   var frame=document.getElementById('YezNdONJGkx9dSAMimut_1761256800000');
   window.addEventListener('message',function(e){
     if(fired||!frame||e.source!==frame.contentWindow)return;
@@ -129,6 +141,7 @@ h1 em{font-style:italic;font-weight:500;color:var(--gold-dark)}
       fired=true;
       var id=window.sgTrack('Schedule',{content_name:'Success Call with Sonia'});
       try{sessionStorage.setItem('sg_schedule_event_id',id);}catch(_){}
+      sendCapi(id);
     }
   });
 })();
