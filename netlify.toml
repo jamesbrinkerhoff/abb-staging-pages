@@ -27,3 +27,24 @@
   to = "/404.html"
   status = 404
   force = true
+
+# PP27 sales page on vip.soniagomez.net/workshop (James OK Oct 23 2026, 6:21 PM COT, "set up b").
+# Proxy (status 200) to the Cloudflare Worker abb-join-live. No DNS change. Checkout links stay on pay.authoritybrandbuilder.com.
+# The page's only other root-relative URLs are its /_a/ images. Its tracking relay posts to https://join.authoritybrandbuilder.com directly.
+[[redirects]]
+  from = "/workshop"
+  to = "https://join.authoritybrandbuilder.com/perfect-pitch-workshop"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/workshop/"
+  to = "https://join.authoritybrandbuilder.com/perfect-pitch-workshop"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/_a/*"
+  to = "https://join.authoritybrandbuilder.com/_a/:splat"
+  status = 200
+  force = true
