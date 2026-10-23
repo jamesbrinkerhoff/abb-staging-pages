@@ -48,3 +48,10 @@
   to = "https://join.authoritybrandbuilder.com/_a/:splat"
   status = 200
   force = true
+
+# Cloudflare Web Analytics beacon (zone-injected into the proxied join page) posts to same-origin /cdn-cgi/rum; forward it to join so it does not 404.
+[[redirects]]
+  from = "/cdn-cgi/rum"
+  to = "https://join.authoritybrandbuilder.com/cdn-cgi/rum"
+  status = 200
+  force = true
