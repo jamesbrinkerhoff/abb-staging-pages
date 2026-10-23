@@ -16,3 +16,14 @@
   for = "/shared/*"
   [headers.values]
     Cache-Control = "public, max-age=3600"
+
+[functions]
+  directory = "netlify/functions"
+
+# Publish dir is the repo root, so function source would otherwise be static.
+# Force 404 for /netlify/*; /.netlify/functions/* is the function endpoint.
+[[redirects]]
+  from = "/netlify/*"
+  to = "/404.html"
+  status = 404
+  force = true
