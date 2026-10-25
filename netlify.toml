@@ -55,3 +55,12 @@
   to = "https://join.authoritybrandbuilder.com/cdn-cgi/rum"
   status = 200
   force = true
+
+# The Swipe File PDF (PP27 bump 2 delivery) on vip.soniagomez.net/files/<token>/the-swipe-file.pdf.
+# Proxied (status 200) to the static asset on Cloudflare Worker abb-join-live (James OK Oct 24 2026, 10:07 PM COT: "Use the vip.soniagomez.net link").
+# Unknown paths under /files/ 404 at join. No file in this repo lives under /files/.
+[[redirects]]
+  from = "/files/*"
+  to = "https://join.authoritybrandbuilder.com/files/:splat"
+  status = 200
+  force = true
