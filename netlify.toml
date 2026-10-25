@@ -64,3 +64,17 @@
   to = "https://join.authoritybrandbuilder.com/files/:splat"
   status = 200
   force = true
+
+# PP27 "you're set" confirmation page for the GHL trigger links 'PP27 link OK' and 'PP27 I'm coming' (James go Oct 25 2026, 5:08 PM COT; vip host 5:11 PM COT).
+# Proxied (status 200) to Cloudflare Worker abb-join-live /pp27-youre-set. noindex, no nav, no pixel. The page has no root-relative URLs.
+[[redirects]]
+  from = "/youre-set"
+  to = "https://join.authoritybrandbuilder.com/pp27-youre-set"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/youre-set/"
+  to = "https://join.authoritybrandbuilder.com/pp27-youre-set"
+  status = 200
+  force = true
