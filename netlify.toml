@@ -78,3 +78,17 @@
   to = "https://join.authoritybrandbuilder.com/pp27-youre-set"
   status = 200
   force = true
+
+# Privacy Policy for You Prosper LLC / Authority Brand Builder (James OK Oct 25 2026, 6:36 PM COT, Marcus chat: "Can you guys create the privacy policy link? Host it wherever it needs to be hosted?").
+# Needed for the Meta app to go Live. Static page in this repo at pages/privacy/index.html. /privacy serves it (200), /privacy/ 301s to /privacy.
+[[redirects]]
+  from = "/privacy"
+  to = "/pages/privacy/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/privacy/"
+  to = "/privacy"
+  status = 301
+  force = true
