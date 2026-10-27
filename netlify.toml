@@ -92,3 +92,17 @@
   to = "/privacy"
   status = 301
   force = true
+
+# Terms of use for You Prosper LLC (James OK Oct 27 2026, 9:43 AM COT, Finn chat: "Fix it. Fix it."). Ported from join.authoritybrandbuilder.com/terms, placeholder email replaced with sonia@soniagomez.tv (James, Marcus chat Oct 27 9:43 AM COT).
+# Static page at pages/terms/index.html. /terms serves it (200), /terms/ 301s to /terms.
+[[redirects]]
+  from = "/terms"
+  to = "/pages/terms/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/terms/"
+  to = "/terms"
+  status = 301
+  force = true
